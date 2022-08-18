@@ -1,4 +1,5 @@
 - [1. Longest Increasing Subsequence](#1-longest-increasing-subsequence)
+- [2. Generate Parentheses](#2-generate-parentheses)
 
 ## 1. Longest Increasing Subsequence
 
@@ -21,4 +22,47 @@ int lengthOfLIS(vector<int>& nums) {
     
     return dp.size();
 }
+```
+
+## 2. Generate Parentheses
+
+```cpp
+class Solution {
+public:
+    
+    vector<string> ans;
+    
+    void backtracking(string &temp, int leftCnt, int rightCnt) {
+        
+        // We found a valid parentheses.
+        if(leftCnt == 0 && rightCnt == 0) {
+            ans.push_back(temp);
+            return;
+        }
+        
+        // Include left parentheses
+        
+        if(leftCnt) {
+            temp += "(";
+            backtracking(temp, leftCnt - 1, rightCnt);
+            temp.pop_back();
+        }
+        
+        // Include right parentheses
+        
+        if(rightCnt > leftCnt) {
+            temp += ")";
+            backtracking(temp, leftCnt, rightCnt - 1);
+            temp.pop_back();
+        }
+        
+    }
+    
+    vector<string> generateParenthesis(int n) {
+        string temp = "";
+        backtracking(temp, n, n);
+        
+        return ans;
+    }
+};
 ```
