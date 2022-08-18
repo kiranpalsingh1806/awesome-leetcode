@@ -1,3 +1,4 @@
+
 - [1. Longest Increasing Subsequence](#1-longest-increasing-subsequence)
 - [2. Generate Parentheses](#2-generate-parentheses)
 
