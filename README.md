@@ -23,7 +23,7 @@
 |19|[My Calendar I]()|Binary Search|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |20|[Sliding Window Maximum]()|Deque, Sliding Window|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |21|[Best Time To Buy and Sell Stock]()|Array, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|22|[Maximum Subarray]()|Kadana Algorithm|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|22|[Maximum Subarray]()|Kadane Algorithm|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |23|[Cracking The Safe]()|Heirholzer Algorithm|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |24|[Find If Path Exists In Graph]()|Graphs, BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |25|[Next Greater Node In Linked List]()|Linked List, Stack|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
