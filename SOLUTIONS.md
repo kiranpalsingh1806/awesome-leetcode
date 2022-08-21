@@ -1,6 +1,24 @@
 
 - [1. Longest Increasing Subsequence](#1-longest-increasing-subsequence)
 - [2. Generate Parentheses](#2-generate-parentheses)
+- [3. Sort Array By Parity](#3-sort-array-by-parity)
+- [4. Min Cost To Connect All Points](#4-min-cost-to-connect-all-points)
+- [5. Power(x, n)](#5-powerx-n)
+- [6. Critical Connections In A Network](#6-critical-connections-in-a-network)
+- [7. Longest Increasing Path In A Matrix](#7-longest-increasing-path-in-a-matrix)
+- [8. Valid Arrangement of Pairs](#8-valid-arrangement-of-pairs)
+- [9. Next Greater Element II](#9-next-greater-element-ii)
+- [10. Container With Most Water](#10-container-with-most-water)
+- [11. Implement Trie (Prefix Tree)](#11-implement-trie-prefix-tree)
+- [12. Sort The Matrix Diagonally](#12-sort-the-matrix-diagonally)
+- [13. Minimum Window Substring](#13-minimum-window-substring)
+- [14. Increasing Triplet Subsequence](#14-increasing-triplet-subsequence)
+- [15. Target Sum](#15-target-sum)
+- [16. Check If There Is A Valid Partition For The Array](#16-check-if-there-is-a-valid-partition-for-the-array)
+- [17. Longest Consecutive Sequence](#17-longest-consecutive-sequence)
+- [18. Valid Sudoku](#18-valid-sudoku)
+- [19. My Calendar I](#19-my-calendar-i)
+- [20. Sliding Window Maximum](#20-sliding-window-maximum)
 - [21. Best Time To Buy and Sell Stock](#21-best-time-to-buy-and-sell-stock)
 - [22. Maximum Subarray](#22-maximum-subarray)
 - [23. Cracking The Safe](#23-cracking-the-safe)
@@ -81,6 +99,735 @@ public:
     vector<string> generateParenthesis(int n) {
         string temp = "";
         backtracking(temp, n, n);
+        
+        return ans;
+    }
+};
+```
+
+## 3. Sort Array By Parity
+```cpp
+vector<int> sortArrayByParity(vector<int>& A) {
+    sort(A.begin(), A.end(), [](int a, int b) {
+        return a % 2 < b % 2;
+    });
+    
+    return A;
+}
+```
+
+## 4. Min Cost To Connect All Points
+```cpp
+class UnionFind {
+    private:
+        vector<int> id, rank;
+        int cnt;
+    public:
+        UnionFind(int cnt) : cnt(cnt) {
+            id = vector<int>(cnt);
+            rank = vector<int>(cnt, 0);
+            for (int i = 0; i < cnt; ++i) id[i] = i;
+        }
+        int find(int p) {
+            if (id[p] == p) return p;
+            return id[p] = find(id[p]);
+        }
+        int getCount() { 
+            return cnt; 
+        }
+        bool connected(int p, int q) { 
+            return find(p) == find(q); 
+        }
+        void connect(int p, int q) {
+            int i = find(p), j = find(q);
+            if (i == j) return;
+            if (rank[i] < rank[j]) {
+                id[i] = j;  
+            } else {
+                id[j] = i;
+                if (rank[i] == rank[j]) rank[j]++;
+            }
+            --cnt;
+        }
+};
+
+class Solution {
+public:
+    int minCostConnectPoints(vector<vector<int>>& points) {
+        
+        int N = points.size();
+        
+        vector<array<int, 3>> E;
+        
+        for(int i = 0; i < N; i++) {
+            for(int j = i + 1; j < N; j++) {
+                E.push_back({abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]), i, j});
+            }
+        }
+        
+        UnionFind uf(N);
+        
+        int ans = 0;
+        
+        // How to convert vector into heap.
+        make_heap(E.begin(), E.end(), greater<array<int, 3>>());
+        
+        while(uf.getCount() > 1) {
+            pop_heap(E.begin(), E.end(), greater<array<int, 3>>());
+            auto [w, u, v] = E.back();
+            
+            E.pop_back();
+            
+            if(uf.connected(u, v)) continue;
+            
+            uf.connect(u, v);
+            ans += w;
+        }
+        
+        return ans;
+        
+    }
+};
+```
+
+## 5. Power(x, n)
+```cpp
+double recursion(double x, long n) {
+        
+    if(n < 0) {
+        return 1 / recursion(x, -n);
+    }
+    
+    if(n == 0) {
+        return 1;
+    }
+    
+    if(n == 1) {
+        return x;
+    }
+    
+    if(n == 2) {
+        return x * x;
+    }
+    
+    return recursion( recursion (x, n / 2), 2) * (n % 2 ? x : 1);
+}
+
+double myPow(double x, int n) {
+    return recursion(x, (long)n);
+}
+```
+
+## 6. Critical Connections In A Network
+```cpp
+class Solution {
+public:
+    vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
+        vector<int> ranks(n, INT_MIN);
+        
+        vector<vector<int>> G(n), ans;
+        
+        for(auto &e : connections) {
+            int u = e[0], v = e[1];
+            G[u].push_back(v);
+            G[v].push_back(u);
+        }
+        
+        function<int(int, int)> dfs = [&](int u, int rank) {
+            if(ranks[u] >= 0) return ranks[u];
+            
+            ranks[u] = rank;
+            int minRank = rank;
+            
+            for(int v : G[u]) {
+                
+                if(ranks[v] >= rank - 1) continue; 
+                
+                int neighbourMinRank = dfs(v, rank + 1);
+                minRank = min(minRank, neighbourMinRank);
+                
+                if (neighbourMinRank > rank) {
+                    ans.push_back({u, v});
+                }
+            }
+            
+            return minRank;
+        };
+        
+        
+        dfs(0, 0);
+        return ans;
+    }
+};
+```
+
+## 7. Longest Increasing Path In A Matrix
+```cpp
+class Solution {
+public:
+    int M, N;
+    vector<vector<int>> cnt;
+    
+    int dirs[4][2] = { {1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+    
+    int dfs(vector<vector<int>> &A, int i, int j) {
+        
+        if(cnt[i][j] != -1e9) {
+            return cnt[i][j];
+        }
+        
+        cnt[i][j] = 1;
+        
+        for(auto &dir : dirs) {
+            int a = i + dir[0];
+            int b = j + dir[1];
+            
+            if(a < 0 || b < 0 || a >= M || b >= N || A[a][b] <= A[i][j]) continue;
+            
+            cnt[i][j] = max(cnt[i][j] , 1 + dfs(A, a, b));
+        }
+        
+        return cnt[i][j];
+    }
+    
+    int longestIncreasingPath(vector<vector<int>>& matrix) {
+        M = matrix.size();
+        N = matrix[0].size();
+        
+        cnt.assign(M, vector<int>(N, -1e9));
+        
+        int ans = 0;
+        
+        for(int i = 0; i < M; i++) {
+            for(int j = 0; j < N; j++) {
+                ans = max(ans, dfs(matrix, i, j));
+            }
+        }
+        
+        return ans;
+    }
+};
+```
+
+## 8. Valid Arrangement of Pairs
+```cpp
+class Solution {
+public:
+    vector<vector<int>> validArrangement(vector<vector<int>>& pairs) {
+        unordered_map<int, vector<int>> G;
+        unordered_map<int, int> indegrees, outdegrees;
+        
+        for(auto &e : pairs) {
+            int u = e[0], v = e[1];
+            G[u].push_back(v);
+            indegrees[v]++;
+            outdegrees[u]++;
+        }
+        
+        // Select the starting node.
+        int start = -1;
+        
+        for(auto &[u, ad] : G ) {
+            if(outdegrees[u] - indegrees[u] == 1) {
+                start = u;
+                break;
+            }
+        }
+        
+        if(start == -1) {
+            start = pairs[0][0];
+        }
+        
+        vector<vector<int>> ans;
+        
+        function<void(int)> euler = [&](int u) {
+            
+            auto &ad = G[u];
+            
+            while(ad.size()) {
+                int v = ad.back();
+                ad.pop_back();
+                
+                euler(v);
+                ans.push_back({u, v});
+            }
+        };
+        
+        euler(start);
+        reverse(ans.begin(), ans.end());
+        
+        return ans;
+    }
+};
+```
+
+## 9. Next Greater Element II
+```cpp
+class Solution {
+public:
+    vector<int> nextGreaterElements(vector<int>& nums) {
+        int N = nums.size();
+        
+        // Stores index.
+        stack<int> S;
+        
+        // Stores element
+        vector<int> ans(N, -1);
+        
+        for(int i = 0; i < 2 * N; i++) {
+            
+            int n = nums[i % N];
+            
+            while(S.size() && nums[S.top()] < n) {
+                ans[S.top()] = n;
+                S.pop();
+            }
+            
+            S.push(i % N);
+        }
+        
+        return ans;
+    }
+};
+```
+
+## 10. Container With Most Water
+```cpp
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        
+        int N = height.size();
+        int L = 0, R = N - 1;
+        
+        int ans = 0;
+        
+        while(L < R) {
+            int area = min(height[L], height[R]) * (R - L);
+            
+            ans = max(ans, area);
+            
+            if(height[L] < height[R]) {
+                L++;
+            } else {
+                R--;
+            }
+        }
+        
+        return ans;
+    }
+};
+```
+
+## 11. Implement Trie (Prefix Tree)
+```cpp
+struct TrieNode {
+    TrieNode *next[26] = {};
+    bool word = false;
+};
+
+class Trie {
+    
+    TrieNode root;
+    
+    TrieNode *find(string s) {
+        
+        auto node = &root;
+        
+        for(char c : s) {
+            if(!node->next[c - 'a']) return NULL;
+            
+            node = node->next[c - 'a'];
+        }
+        
+        return node;
+    }
+    
+public:
+    
+    void insert(string word) {
+        
+        auto node = &root;
+        
+        for(char c : word) {
+            if(!node->next[c - 'a']) node->next[c - 'a'] = new TrieNode();
+            
+            node = node->next[c - 'a'];
+        }
+        
+        node->word = true;
+    }
+    
+    bool search(string word) {
+        auto wordFind = find(word);
+        return wordFind && (wordFind->word == true);
+    }
+    
+    bool startsWith(string prefix) {
+        return find(prefix);
+    }
+};
+```
+
+## 12. Sort The Matrix Diagonally
+```cpp
+class Solution {
+public:
+    vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {
+        int M = mat.size();
+        int N = mat[0].size();
+        
+        for (int i = 0; i < M; ++i) {
+            vector<int> v;
+            for (int x = i, y = 0; x < M && y < N; ++x, ++y) {
+                v.push_back(mat[x][y]);
+            }
+            sort(v.begin(), v.end());
+            int index = 0;
+            for (int x = i, y = 0; x < M && y < N; ++x, ++y) {
+                mat[x][y] = v[index++];
+            }
+        }
+        
+         for (int j = 1; j < N; ++j) {
+             vector<int> v;
+             for(int x = 0, y = j; x < M && y < N; ++x, ++y) {
+                 v.push_back(mat[x][y]);
+             }
+             sort(v.begin(), v.end());
+             int index = 0;
+             for (int x = 0, y = j; x < M && y < N; ++x, ++y) {
+                 mat[x][y] = v[index++];
+             }
+         }
+        
+        return mat;
+    }
+};
+```
+
+## 13. Minimum Window Substring
+```cpp
+class Solution {
+public:
+    string minWindow(string s, string t) {
+        
+        unordered_map<char, int> target, cnt;
+        int N = s.length();
+        
+        // Store the frequency of target string
+        for(char c : t) {
+            target[c]++;
+        }
+        
+        int matched = 0;
+        int start = 0, len = INT_MAX;
+        int i = 0;
+        
+        // Traverse the s string, j - right boundary, left boundary - 0
+        for(int j = 0; j < N; j++) {
+            
+            if(++cnt[s[j]] <= target[s[j]]) matched++;
+            
+            // Target string comes inside this window substring.
+            while(matched == t.size()) {
+                
+                // Update the answer start and its length
+                if(len > j - i + 1) {
+                    len = j - i + 1;
+                    start = i;
+                }
+                
+                // Decrease the length of window.
+                if(--cnt[s[i]] < target[s[i]]) matched--;
+                i++;
+            }
+            
+        }
+        
+        if(len == INT_MAX) {
+            return "";
+        } else {
+            return s.substr(start, len);
+        }
+    }
+};
+```
+
+## 14. Increasing Triplet Subsequence
+```cpp
+class Solution {
+public:
+    bool increasingTriplet(vector<int>& nums) {
+        
+        int N = nums.size();
+        
+        vector<int> dp;
+        
+        for(int i = 0; i < N; i++) {
+            
+            auto it = lower_bound(dp.begin(), dp.end(), nums[i]);
+            
+            if(it != dp.end()) {
+                *it = nums[i];
+            } else {
+                dp.push_back(nums[i]);
+            }
+        }
+        
+        return (dp.size() >= 3);
+        
+    }
+};
+```
+
+## 15. Target Sum
+```cpp
+class Solution {
+public:
+    
+    int recur(vector<int>& nums, int sum, int target, int i) {
+        int n = nums.size();
+        
+        if(n == i) {
+            // Check the sum if it is equal to target
+            if(sum == target) return 1;
+            
+            return 0;
+        }
+        
+        int res = 0;
+        
+        // Include
+        res += recur(nums, sum + nums[i], target, i + 1);
+        
+        // Not Include
+        res += recur(nums, sum - nums[i], target, i + 1);
+        
+        return res;
+        
+    }
+    
+    int findTargetSumWays(vector<int>& nums, int target) {
+        // (vector, sum, target, index);
+        return recur(nums, 0, target, 0);
+    }
+};
+
+class Solution {
+public:
+    
+    int recursion(vector<int>& nums, int i, int target, int n, vector<vector<int>> &dp) {
+        if(i == n) {
+            if(target == 0) return 1;
+            return 0;
+        }
+        
+        if(dp[i][target + 1000] != -1) return dp[i][target + 1000];
+        
+        int include = recursion(nums, i + 1, target + nums[i], n, dp);
+        int notInclude = recursion(nums, i + 1, target - nums[i], n, dp);
+        
+        dp[i][target + 1000] = include + notInclude;
+        return dp[i][target + 1000];
+    }
+    
+    int findTargetSumWays(vector<int>& nums, int target) {
+        
+        vector<vector<int>> dp(nums.size() + 1, vector<int>(3000, -1));
+        
+        return recursion(nums, 0, target, nums.size(), dp);
+    }
+};
+```
+
+## 16. Check If There Is A Valid Partition For The Array
+```cpp
+class Solution {
+public:
+    bool validPartition(vector<int>& nums) {
+        int N = nums.size();
+        bool dp[N + 1];
+        
+        for(int i = 0; i <= N; i++) dp[i] = false;
+        
+        dp[0] = true;
+        
+        for(int i = 0; i < N; i++) {
+            // for two elements
+            if(i >= 1) {
+                if(dp[i - 1] && nums[i] == nums[i - 1]) {
+                    dp[i + 1] = true;
+                }
+            }
+            
+            // for three elements
+            if(i >= 2) {
+                if(dp[i - 2] && nums[i] == nums[i - 1] && nums[i - 1] == nums[i - 2]) {
+                    dp[i + 1] = true;
+                }
+            }
+            
+            // for three consecutive elements
+            if(i >= 2) {
+                if(dp[i - 2] && nums[i] == nums[i - 1] + 1 && nums[i - 1] == nums[i - 2] + 1) {
+                    dp[i + 1] = true;
+                }
+            }
+        }
+        
+        return dp[N];
+    }
+};
+```
+
+## 17. Longest Consecutive Sequence
+```cpp
+// Union Find that also return the vector of size of components.
+class UnionFind {
+    vector<int> id, size;
+public:
+    UnionFind(int n) : id(n), size(n, 1) {
+        for (int i = 0; i < n; ++i) id[i] = i;
+    }
+    void connect(int a, int b) {
+        int x = find(a), y = find(b);
+        if (x == y) return;
+        id[x] = y;
+        size[y] += size[x];
+    }
+    int find(int a) {
+        return id[a] == a ? a : (id[a] = find(id[a]));
+    }
+    vector<int> &getSizes() {
+        return size;
+    }
+};
+
+class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        
+        int N = nums.size();
+        
+        if(N == 0) {
+            return 0;
+        }
+        
+        UnionFind uf(N);
+        
+        unordered_map<int, int> M;
+        
+        // We have to store indexes in UnionFind instead of integer values.
+        
+        for(int i = 0; i < N; i++) {
+            int n = nums[i];
+            
+            if(M.count(n)) continue;
+            
+            M[n] = i;
+            
+            if(M.count(n - 1)) uf.connect(M[n], M[n - 1]);
+            if(M.count(n + 1)) uf.connect(M[n], M[n + 1]);
+        }
+        
+        // ans -> maximum component size
+        vector<int> ans = uf.getSizes();
+        return *max_element(ans.begin(), ans.end());
+    }
+};
+```
+
+## 18. Valid Sudoku
+```cpp
+class Solution {
+public:
+    bool isValidSudoku(vector<vector<char>>& board) {
+        int row[9][9] = {}, col[9][9] = {}, box[9][9] = {};
+        
+        for(int i = 0; i < 9; i++) {
+            for(int j = 0; j < 9; j++) {
+                int n = board[i][j] - '1';
+                
+                if(board[i][j] == '.') continue;
+                
+                if(row[i][n] || col[j][n] || box[(i / 3) * 3 + (j / 3)][n]) return false;
+                
+                
+                row[i][n] = col[j][n] = box[i / 3 * 3 + j / 3][n] = 1;
+            }
+        }
+        
+        return true;
+    }
+};
+```
+
+## 19. My Calendar I
+```cpp
+class MyCalendar {
+public:
+    MyCalendar() {
+        
+    }
+
+    map<int, int> M;
+    
+    bool book(int start, int end) {
+        
+        if(M.empty()) {
+            M[start] = end;
+            return true;
+        }
+        
+        // Conditions 
+        
+        auto it = M.upper_bound(start);
+        
+        // Check the later intersection
+        if(it != M.end() && it->first < end) return false;
+        
+        // Check the starting intersection
+        if(it != M.begin() && prev(it)->second > start) return false;
+        
+        
+        // After checking conditions
+        M[start] = end;
+        return true;
+    }
+};
+```
+
+## 20. Sliding Window Maximum
+```cpp
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        int N = nums.size();
+        deque<int> d; // Deque will store the index
+        
+        vector<int> ans;
+        
+        for(int i = 0; i < N; i++) {
+            
+            int n = nums[i];
+            
+            // When the element goes out of window, remove from the deque.
+            if(d.size() && d.front() == i - k) d.pop_front();
+            
+            // We have to store monotonically decreasing sequence.
+            while(d.size() && nums[d.back()]  <= n) {
+                d.pop_back();
+            }
+            
+            d.push_back(i);
+            
+            if(i >= k - 1) {
+                // Push maximum element in answer.
+                ans.push_back(nums[d.front()]);
+            }
+            
+        }
         
         return ans;
     }
