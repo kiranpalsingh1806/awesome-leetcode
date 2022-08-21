@@ -12,8 +12,11 @@
 - [29. Daily Temperatures](#29-daily-temperatures)
 - [30. Merge Intervals](#30-merge-intervals)
 - [33. Flatten Binary Tree To Linked List](#33-flatten-binary-tree-to-linked-list)
+- [35. Median of Two Sorted Arrays](#35-median-of-two-sorted-arrays)
+- [36. LRU Cache](#36-lru-cache)
 - [37. Gas Station](#37-gas-station)
 - [38. Max Points On A Line](#38-max-points-on-a-line)
+- [40. Regular Expression Matching](#40-regular-expression-matching)
 
 ## 1. Longest Increasing Subsequence
 
@@ -413,6 +416,64 @@ void flatten(TreeNode* root) {
 }
 ```
 
+## 35. Median of Two Sorted Arrays
+```cpp
+double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    if (nums1.size() > nums2.size()) swap(nums1, nums2);
+    int M = nums1.size(), N = nums2.size(), L = 0, R = M, K = (M + N + 1) / 2;
+    while (true) {
+        int i = (L + R) / 2, j = K - i;
+        if (i < M && nums2[j - 1] > nums1[i]) L = i + 1;
+        else if (i > L && nums1[i - 1] > nums2[j]) R = i - 1;
+        else {
+            int maxLeft = max(i ? nums1[i - 1] : INT_MIN, j ? nums2[j - 1] : INT_MIN);
+            if ((M + N) % 2) return maxLeft;
+            int minRight = min(i == M ? INT_MAX : nums1[i], j == N ? INT_MAX : nums2[j]);
+            return (maxLeft + minRight) / 2.0;
+        }
+    }
+}
+```
+
+## 36. LRU Cache
+```cpp
+class LRUCache {
+    int capacity;
+    list<pair<int, int>> data;
+    unordered_map<int, list<pair<int, int>>::iterator> m;
+    void moveToFront(int key) {
+        auto node = m[key];
+        data.splice(data.begin(), data, node);
+        m[key] = data.begin();
+    }
+public:
+    LRUCache(int capacity) : capacity(capacity) {}
+    int get(int key) {
+        // get node given key, put the node at the beginning of the list, return the value in the node
+        if (m.count(key)) {
+            moveToFront(key);
+            return m[key]->second;
+        }
+        return -1;
+    }
+    void put(int key, int value) {
+        // if key exists in the map, get node given key, put the node at the beginning of the list and update the value in the node
+        // otherwise, put a new node at the beginning of the list with the <key, value> and update the map. If capacity exceeded, remove the last node from the list and map.
+        if (m.count(key)) {
+            moveToFront(key);
+            m[key]->second = value;
+        } else {
+            data.emplace_front(key, value);
+            m[key] = data.begin();
+            if (data.size() > capacity) {
+                m.erase(data.rbegin()->first);
+                data.pop_back();
+            }
+        }
+    }
+};
+```
+
 ## 37. Gas Station
 ```cpp
 int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
@@ -459,6 +520,31 @@ public:
             }
         }
         return res + 1;
+    }
+};
+```
+
+## 40. Regular Expression Matching
+```cpp
+class Solution {
+private:
+    inline bool matchChar(string &s, int i, string &p, int j) {
+        return p[j] == '.' ? i < s.size() : s[i] == p[j];
+    }
+    bool isMatch(string s, int i, string p, int j) {
+        if (j == p.size()) return i == s.size();
+        if (j + 1 < p.size() && p[j + 1] == '*') {
+            bool ans = false;
+            while (!(ans = isMatch(s, i, p, j + 2))
+            && matchChar(s, i, p, j)) ++i;
+            return ans;
+        } else {
+            return matchChar(s, i, p, j) && isMatch(s, i + 1, p, j + 1);
+        }
+    }
+public:
+    bool isMatch(string s, string p) {
+        return isMatch(s, 0, p, 0);
     }
 };
 ```
