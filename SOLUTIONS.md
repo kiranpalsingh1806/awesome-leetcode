@@ -11,6 +11,9 @@
 - [28. Merge K Sorted Lists](#28-merge-k-sorted-lists)
 - [29. Daily Temperatures](#29-daily-temperatures)
 - [30. Merge Intervals](#30-merge-intervals)
+- [33. Flatten Binary Tree To Linked List](#33-flatten-binary-tree-to-linked-list)
+- [37. Gas Station](#37-gas-station)
+- [38. Max Points On A Line](#38-max-points-on-a-line)
 
 ## 1. Longest Increasing Subsequence
 
@@ -381,6 +384,81 @@ public:
         }
         
         return ans;
+    }
+};
+```
+
+## 33. Flatten Binary Tree To Linked List
+```cpp
+void flatten(TreeNode* root) {
+    if(!root) return;
+    TreeNode *tail = nullptr;
+    
+    stack<TreeNode*> S;
+    
+    S.push({root});
+    
+    while(S.size()) {
+        auto node = S.top();
+        S.pop();
+        
+        if(tail) tail->right = node;
+        tail = node;
+        
+        if(node->right) S.push(node->right);
+        if(node->left) S.push(node->left);
+        
+        node->left = node->right = nullptr;
+    }
+}
+```
+
+## 37. Gas Station
+```cpp
+int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
+    int N = gas.size(), len = 0, start = 0;
+    for (int i = 0, sum = 0; i < 2 * N && len < N; ++i) {
+        sum += gas[i % N] - cost[i % N];
+        if (sum < 0) {
+            len = sum = 0;
+            start = (i + 1) % N;
+        } else ++len;
+    }
+    return len == N ? start : -1;
+}
+```
+
+## 38. Max Points On A Line
+```cpp
+class Solution {
+public:
+    int maxPoints(vector<vector<int>>& points) {
+        
+        int res = 0;
+        for(int i = 0; i<points.size(); i++){
+            
+            unordered_map<long double,int> noOfPointsInLine;
+            
+            for(int j = i + 1; j < points.size(); j++){
+                
+                int x1 = points[i][0], y1 = points[i][1], x2 = points[j][0], y2 = points[j][1];
+                
+                if(y2 == y1) {     
+                    noOfPointsInLine[INT_MIN]++;
+                } else if(x1 == x2){ 
+                    noOfPointsInLine[INT_MAX]++;
+                } else {               
+                    long double slope = (long double)(y2 - y1) /(long double)(x2 - x1);
+                    noOfPointsInLine[slope]++;
+                }
+                
+            }
+            
+            for(auto i : noOfPointsInLine){
+                res = max(i.second, res);
+            }
+        }
+        return res + 1;
     }
 };
 ```
