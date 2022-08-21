@@ -11,7 +11,10 @@
 - [28. Merge K Sorted Lists](#28-merge-k-sorted-lists)
 - [29. Daily Temperatures](#29-daily-temperatures)
 - [30. Merge Intervals](#30-merge-intervals)
+- [31. Word Ladder](#31-word-ladder)
+- [32. 3Sum](#32-3sum)
 - [33. Flatten Binary Tree To Linked List](#33-flatten-binary-tree-to-linked-list)
+- [34. Sum of Subarray Minimums](#34-sum-of-subarray-minimums)
 - [35. Median of Two Sorted Arrays](#35-median-of-two-sorted-arrays)
 - [36. LRU Cache](#36-lru-cache)
 - [37. Gas Station](#37-gas-station)
@@ -391,6 +394,78 @@ public:
 };
 ```
 
+## 31. Word Ladder
+```cpp
+int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+    unordered_set<string> s(begin(wordList), end(wordList));
+    if (s.count(endWord) == 0) return 0;
+    queue<string> q{{beginWord}};
+    s.erase(beginWord);
+    int step = 1;
+    while (q.size()) {
+        int cnt = q.size();
+        while (cnt--) {
+            auto u = q.front();
+            q.pop();
+            if (u == endWord) return step;
+            for (char &c : u) { // add unvisited neighbors of `u`
+                char tmp = c;
+                for (char ch = 'a'; ch <= 'z'; ++ch) {
+                    if (tmp == ch) continue;
+                    c = ch;
+                    if (s.count(u) == 0) continue;
+                    s.erase(u);
+                    q.push(u);
+                }
+                c = tmp;
+            }
+        }
+        ++step;
+    }
+    return 0;
+}
+```
+
+## 32. 3Sum
+```cpp
+vector<vector<int>> threeSum(vector<int>& A) {
+    vector<vector<int>> ans;
+    sort(A.begin(), A.end());
+    
+    int N = A.size();
+    int L = 0, R = N - 1;
+    
+    for(int i = 0; i < N - 2; i++) {
+        
+        if(i > 0 && A[i] == A[i - 1]) continue;
+        
+        int L = i + 1, R = N - 1;
+        
+        while(L < R) {
+            int sum = A[i] + A[L] + A[R];
+            
+            if(sum == 0) {
+                ans.push_back({A[i], A[L], A[R]});
+            }
+            
+            if(sum <= 0) {
+                L++;
+
+                while(L < R && A[L] == A[L - 1]) L++;
+            }
+            
+            if(sum >= 0) {
+                R--;
+
+                while(L < R && A[R] == A[R + 1]) R--;
+            }
+        }
+    }
+    
+    return ans;
+}
+```
+
 ## 33. Flatten Binary Tree To Linked List
 ```cpp
 void flatten(TreeNode* root) {
@@ -413,6 +488,27 @@ void flatten(TreeNode* root) {
         
         node->left = node->right = nullptr;
     }
+}
+```
+
+## 34. Sum of Subarray Minimums
+```cpp
+int sumSubarrayMins(vector<int>& A) {
+    stack<int> q;
+    q.push(-1);
+    long N = A.size(), ans = 0, sum = 0, mod = 1e9+7;
+    for (int i = 0; i < N; ++i) {
+        sum = (sum + A[i]) % mod;
+        while (q.top() != -1 && A[q.top()] >= A[i]) {
+            int j = q.top();
+            q.pop();
+            int c = j - q.top();
+            sum = (sum + c * (A[i] - A[j]) % mod) % mod;
+        }
+        q.push(i);
+        ans = (ans + sum) % mod;
+    }
+    return ans;
 }
 ```
 
