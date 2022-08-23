@@ -52,3 +52,8 @@
 |48|[Group Anagrams](https://leetcode.com/problems/group-anagrams/)|Sorting|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |49|[Satisfiability Of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)|Union Find|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |50|[Range Sum BST](https://leetcode.com/problems/range-sum-of-bst/)|Binary Search Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|51|[Number of Islands]()|DFS, BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|52|[Wildcard Matching]()|Strings, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|53|[Min Stack]()|Data Structure|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|54|[Combinations]()|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|55|[Permutations]()|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
