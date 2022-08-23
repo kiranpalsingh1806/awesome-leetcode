@@ -4,8 +4,8 @@
 |------|------|--------|------|
 |1|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |2|[Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|3|[Sort Array By Parity]()|Custom Comparator|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|4|[Min Cost To Connect All Points]()|Kruskal Algorithm|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|3|[Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|Custom Comparator|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|4|[Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)|Kruskal Algorithm|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |5|[Power(X, n)](https://leetcode.com/problems/powx-n/)|Recursion|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |6|[Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/)|Tarjan's Algorithm|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |7|[Longest Increasing Path in Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)|DFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
@@ -45,10 +45,10 @@
 |41|[Minimum Deletions To Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/)|Strings|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |42|[Jump Game II](https://leetcode.com/problems/jump-game-ii/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |43|[Count Good Nodes In Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)|Binary Trees|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|44|[Unique Paths]()|DP, Grid|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|45|[Coin Change]()|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|46|[Is Graph Bipartite ?]()|DFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|47|[Frequency of Most Frequent Element]()|Sliding Window|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|48|[Group Anagrams]()|Sorting|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|49|[Satisfiability Of Equality Equations]()|Union Find|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|50|[Range Sum BST]()|Binary Search Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|44|[Unique Paths](https://leetcode.com/problems/unique-paths/)|DP, Grid|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|45|[Coin Change](https://leetcode.com/problems/coin-change/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|46|[Is Graph Bipartite ?](https://leetcode.com/problems/is-graph-bipartite/)|DFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|47|[Frequency of Most Frequent Element](https://leetcode.com/problems/frequency-of-the-most-frequent-element/)|Sliding Window|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|48|[Group Anagrams](https://leetcode.com/problems/group-anagrams/)|Sorting|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|49|[Satisfiability Of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)|Union Find|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|50|[Range Sum BST](https://leetcode.com/problems/range-sum-of-bst/)|Binary Search Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|

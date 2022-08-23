@@ -37,7 +37,18 @@
 - [36. LRU Cache](#36-lru-cache)
 - [37. Gas Station](#37-gas-station)
 - [38. Max Points On A Line](#38-max-points-on-a-line)
+- [39. Largest Rectangle In Histogram](#39-largest-rectangle-in-histogram)
 - [40. Regular Expression Matching](#40-regular-expression-matching)
+- [41. Minimum Deletions To Make Character Frequencies Unique](#41-minimum-deletions-to-make-character-frequencies-unique)
+- [42. Jump Game II](#42-jump-game-ii)
+- [43. Count Good Nodes In Binary Tree](#43-count-good-nodes-in-binary-tree)
+- [44. Unique Paths](#44-unique-paths)
+- [45. Coin Change](#45-coin-change)
+- [46. Is Graph Bipartite ?](#46-is-graph-bipartite-)
+- [47. Frequency of Most Frequent Elements](#47-frequency-of-most-frequent-elements)
+- [48. Group Anagrams](#48-group-anagrams)
+- [49. Satisfiability of Equality Equations](#49-satisfiability-of-equality-equations)
+- [50. Range Sum BST](#50-range-sum-bst)
 
 ## 1. Longest Increasing Subsequence
 
@@ -1367,6 +1378,43 @@ public:
 };
 ```
 
+## 39. Largest Rectangle In Histogram
+```cpp
+class Solution {
+public:
+    int largestRectangleArea(vector<int>& A) {
+        int N = A.size();
+        
+        int ans = 0;
+        
+        stack<int> S;
+        vector<int> next(N, N), prev(N, -1);
+        
+        for(int i = 0; i < N; i++) {
+            while(S.size() && A[i] < A[S.top()]) {
+                next[S.top()] = i;
+                S.pop();
+            }
+            S.push(i);
+        }
+        
+        for(int i = N - 1; i >= 0; i--) {
+            while(S.size() && A[i] < A[S.top()]) {
+                prev[S.top()] = i;
+                S.pop();
+            }
+            S.push(i);
+        }
+        
+        for(int i = 0; i < N; i++) {
+            ans = max(ans, A[i] * (next[i] - prev[i] - 1));
+        }
+        
+        return ans;
+    }
+};
+```
+
 ## 40. Regular Expression Matching
 ```cpp
 class Solution {
@@ -1388,6 +1436,296 @@ private:
 public:
     bool isMatch(string s, string p) {
         return isMatch(s, 0, p, 0);
+    }
+};
+```
+
+## 41. Minimum Deletions To Make Character Frequencies Unique
+```cpp
+class Solution {
+public:
+    int minDeletions(string s) {
+        int cnt[26] = {0};
+        set<int> S;
+        int ans = 0;
+        for (char c : s) {
+          cnt[c - 'a']++;  
+        } 
+        
+        for(int i = 0; i < 26; i++) {
+            while(cnt[i]-- && !S.insert(cnt[i]).second) {
+                ans++;
+            }
+        }
+        return ans;
+    }
+};
+```
+
+## 42. Jump Game II
+```cpp
+class Solution {
+public:
+    int jump(vector<int>& nums) {
+        int N = nums.size();
+        vector<int> dp(N, 1e9);
+        
+        dp[0] = 0;
+        
+        for(int i = 0; i < N; i++) {
+            for(int j = 1; j <= nums[i] && i + j < N; j++) {
+                dp[i + j] = min(dp[i + j], 1 + dp[i]);
+            }
+        }
+        
+        return dp[N - 1];
+    }
+};
+```
+
+## 43. Count Good Nodes In Binary Tree
+```cpp
+class Solution {
+public:
+    int ans = 0;
+    int dfs(TreeNode* root, int maxVal) {
+        if(root->val >= maxVal) {
+            ans++;
+        }
+        maxVal = max(maxVal, root->val);
+        
+        if(root->left) {
+            dfs(root->left, maxVal);
+        }
+        
+        if(root->right) {
+            dfs(root->right, maxVal);
+        }
+        
+        return ans;
+    }
+    int goodNodes(TreeNode* root) {
+        return dfs(root, INT_MIN);
+    }
+};
+```
+
+## 44. Unique Paths
+```cpp
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        vector<int> dp(n + 1, 0);
+        dp[n - 1] = 1;
+        
+        for(int i = m - 1; i >= 0; i--) {
+            for(int j = n - 1; j >= 0; j--){
+                dp[j] += dp[j + 1];
+            }
+        }
+        
+        return dp[0];
+    }
+};
+```
+
+## 45. Coin Change
+```cpp
+class Solution {
+public:
+    int coinChange(vector<int>& coins, int amount) {
+        int dp[amount + 1];
+        dp[0] = 0;
+        
+        sort(coins.begin(), coins.end());
+        
+        for(int i = 1; i <= amount; i++) {
+            
+            dp[i] = INT_MAX;
+            for(auto &coin : coins) {
+                if(i - coin < 0) break;
+                
+                if(dp[i - coin] != INT_MAX) {
+                    dp[i] = min(dp[i], 1 + dp[i - coin]);
+                }
+            }
+        }
+        
+        if(dp[amount] != INT_MAX) {
+            return dp[amount];
+        } else {
+            return -1;
+        }
+    }
+};
+```
+
+## 46. Is Graph Bipartite ?
+```cpp
+class Solution {
+public:
+    bool isBipartite(vector<vector<int>>& G) {
+        int N = G.size();
+        vector<int> id(N); // 0 unseen, 1 and -1 are different colors
+        function<bool(int, int)> dfs = [&](int u, int color) {
+            if (id[u]) return id[u] == color;
+            id[u] = color;
+            for (int v : G[u]) {
+                if (!dfs(v, -color)) return false;
+            }
+            return true;
+        };
+        for (int i = 0; i < N; ++i) {
+            if (!id[i] && !dfs(i, 1)) return false;
+        }
+        return true;
+    }
+};
+```
+
+## 47. Frequency of Most Frequent Elements
+```cpp
+class Solution {
+public:
+    int maxFrequency(vector<int>& A, int k) {
+        int N = A.size();
+        
+        sort(A.begin(), A.end());
+        
+        long ans = 1, sum = 0, i = 0;
+        
+        for(int j = 0; j < N; j++) {
+            sum += A[j];
+            
+            // Increase the left boundary of window :
+            // (Length of window * currentElement) - Sum of all elements > k 
+            while( (j - i + 1) * A[j] - sum > k) {
+                sum -= A[i++];
+            }
+            
+            ans = max(ans, j - i + 1);
+            
+        }
+        
+        return ans;
+    }
+};
+```
+
+## 48. Group Anagrams
+```cpp
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        
+        unordered_map<string, vector<string>> M;
+        
+        for(string &s : strs) {
+            
+            string t = s;
+            sort(t.begin(), t.end());
+            
+            M[t].push_back(s);
+        }
+        
+        vector<vector<string>> ans;
+        
+        for(auto &[s, vs] : M) {
+            ans.push_back(vs);    
+        }
+        
+        return ans;
+    }
+};
+```
+
+## 49. Satisfiability of Equality Equations
+```cpp
+class UnionFind {
+    private:
+        vector<int> id, rank;
+        int cnt;
+    public:
+        UnionFind(int cnt) : cnt(cnt) {
+            id = vector<int>(cnt);
+            rank = vector<int>(cnt, 0);
+            for (int i = 0; i < cnt; ++i) id[i] = i;
+        }
+        int find(int p) {
+            if (id[p] == p) return p;
+            return id[p] = find(id[p]);
+        }
+        int getCount() { 
+            return cnt; 
+        }
+        bool connected(int p, int q) { 
+            return find(p) == find(q); 
+        }
+        void connect(int p, int q) {
+            int i = find(p), j = find(q);
+            if (i == j) return;
+            if (rank[i] < rank[j]) {
+                id[i] = j;  
+            } else {
+                id[j] = i;
+                if (rank[i] == rank[j]) rank[j]++;
+            }
+            --cnt;
+        }
+};
+
+class Solution {
+public:
+    bool equationsPossible(vector<string>& equations) {
+        int N = equations.size();
+        
+        UnionFind uf(26);
+        
+        for(auto &e : equations) {
+            if(e[1] == '=') {
+                int num1 = e[0] - 'a';
+                int num2 = e[3] - 'a';
+                uf.connect(num1, num2);
+            }
+        }
+        
+        for(auto &e : equations) {
+            if(e[1] == '!') {
+                int num1 = e[0] - 'a';
+                int num2 = e[3] - 'a';
+                if(uf.connected(num1, num2)) {
+                    return false;
+                }
+            }
+        }
+        
+        return true;
+    }
+};
+```
+
+## 50. Range Sum BST
+```cpp
+class Solution {
+public:
+    int sum = 0;
+    
+    void preorder(TreeNode* root, int L, int R) {
+        if(!root) {
+            return;
+        }
+        
+        if(root->val >= L && root->val <= R) {
+            sum += root->val;
+        }
+        
+        preorder(root->left, L, R);
+        preorder(root->right, L, R);
+    }
+    
+    int rangeSumBST(TreeNode* root, int low, int high) {
+        preorder(root, low, high);
+        return sum;
     }
 };
 ```
