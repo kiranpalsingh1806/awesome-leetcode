@@ -57,7 +57,7 @@
 |53|[Min Stack](https://leetcode.com/problems/min-stack/)|Data Structure|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |54|[Permutations](https://leetcode.com/problems/permutations/)|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |55|[Combinations](https://leetcode.com/problems/combinations/)|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|56|[Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)|Binary Search Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|56|[Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)|BST|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |57|[Peak Index In A Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)|Binary Search|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |58|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |59|[Find Minimum In Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|Binary Search|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
