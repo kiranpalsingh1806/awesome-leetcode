@@ -54,6 +54,11 @@
 - [53. Min Stack](#53-min-stack)
 - [54. Permutations](#54-permutations)
 - [55. Combinations](#55-combinations)
+- [56. Diameter of Binary Tree](#56-diameter-of-binary-tree)
+- [57. Peak Index In Mountain Array](#57-peak-index-in-mountain-array)
+- [58. Maximum Depth of Binary Tree](#58-maximum-depth-of-binary-tree)
+- [59. Find Minimum In Rotated Sorted Array](#59-find-minimum-in-rotated-sorted-array)
+- [60. Binary Tree Zigzag Level Order Traversal](#60-binary-tree-zigzag-level-order-traversal)
 
 ## 1. Longest Increasing Subsequence
 
@@ -1911,6 +1916,135 @@ public:
     vector<vector<int>> combine(int n, int k) {
         vector<int> temp;
         combine(temp, n, k, 0);
+        return ans;
+    }
+};
+```
+
+## 56. Diameter of Binary Tree
+```cpp
+class Solution {
+public:
+    int diameter = 0;
+
+    int dfs(TreeNode* root) {
+        if(!root) {
+            return 0;
+        }
+        
+        int left = dfs(root->left);
+        int right = dfs(root->right);
+        
+        diameter = max(diameter, left + right);
+        
+        return (1 + max(left, right));
+    }
+    
+    int diameterOfBinaryTree(TreeNode* root) {
+        dfs(root);
+        return diameter;
+    }
+};
+```
+
+## 57. Peak Index In Mountain Array
+```cpp
+int peakIndexInMountainArray(vector<int>& arr) {
+    int N = arr.size();
+    
+    int L = 1, R = N - 2, M;
+    
+    while(L <= R) {
+        M = (L + R) / 2;
+        
+        if(arr[M] > arr[M - 1]) {
+            L = M + 1;
+        } else {
+            R = M - 1;
+        }
+    }
+    
+    return R;
+}
+```
+
+## 58. Maximum Depth of Binary Tree
+```cpp
+int maxDepth(TreeNode* root) {
+    if(!root) {
+        return 0;
+    }
+    
+    return (1 + max(maxDepth(root->left), maxDepth(root->right)));
+}
+```
+
+## 59. Find Minimum In Rotated Sorted Array
+```cpp
+int findMin(vector<int>& nums) {
+    int N = nums.size();
+    
+    int L = 0, R = N - 1, M;
+    
+    while(L < R) {
+        M = (L + R) / 2;
+        
+        if(nums[M] < nums[R]) {
+            R = M;
+        } else {
+            L = M + 1;
+        }
+    }
+    
+    return nums[R];
+}
+```
+
+## 60. Binary Tree Zigzag Level Order Traversal
+```cpp
+class Solution {
+public:
+    
+    vector<vector<int>> ans;
+    
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        if(!root) {
+            return {};
+        }
+        
+        bool l2r = true;
+        
+        queue<TreeNode*> q;
+        q.push({root});
+        
+        while(q.size()) {
+            int cnt = q.size();
+            
+            vector<int> temp;
+            
+            while(cnt--) {
+                auto node = q.front();
+                q.pop();
+                
+                temp.push_back(node->val);
+                
+                if(node->left) {
+                    q.push(node->left);
+                }
+                
+                if(node->right) {
+                    q.push(node->right);
+                }
+            }
+            
+            if(!l2r) {
+                reverse(temp.begin(), temp.end());
+            }
+            
+            l2r = !l2r;
+            ans.push_back(temp);
+        }
+        
         return ans;
     }
 };
