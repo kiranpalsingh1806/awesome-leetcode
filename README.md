@@ -52,8 +52,13 @@
 |48|[Group Anagrams](https://leetcode.com/problems/group-anagrams/)|Sorting|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |49|[Satisfiability Of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)|Union Find|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |50|[Range Sum BST](https://leetcode.com/problems/range-sum-of-bst/)|Binary Search Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|51|[Number of Islands]()|DFS, BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|52|[Wildcard Matching]()|Strings, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|53|[Min Stack]()|Data Structure|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|54|[Combinations]()|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|55|[Permutations]()|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|51|[Number of Islands](https://leetcode.com/problems/number-of-islands/)|DFS, BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|52|[Wildcard Matching](https://leetcode.com/problems/wildcard-matching/)|Strings, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|53|[Min Stack](https://leetcode.com/problems/min-stack/)|Data Structure|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|54|[Permutations](https://leetcode.com/problems/permutations/)|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|55|[Combinations](https://leetcode.com/problems/combinations/)|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|56|[Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)|Binary Search Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|57|[Peak Index In A Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)|Binary Search|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|58|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|59|[Find Minimum In Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|Binary Search|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|60|[Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)|BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|

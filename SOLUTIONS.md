@@ -49,6 +49,11 @@
 - [48. Group Anagrams](#48-group-anagrams)
 - [49. Satisfiability of Equality Equations](#49-satisfiability-of-equality-equations)
 - [50. Range Sum BST](#50-range-sum-bst)
+- [51. Number of Islands](#51-number-of-islands)
+- [52. Wildcard Matching](#52-wildcard-matching)
+- [53. Min Stack](#53-min-stack)
+- [54. Permutations](#54-permutations)
+- [55. Combinations](#55-combinations)
 
 ## 1. Longest Increasing Subsequence
 
@@ -1726,6 +1731,187 @@ public:
     int rangeSumBST(TreeNode* root, int low, int high) {
         preorder(root, low, high);
         return sum;
+    }
+};
+```
+
+## 51. Number of Islands
+```cpp
+class Solution {
+public:
+    
+    int M, N;
+    
+    int dirs[4][2] = { {0, 1}, {1, 0}, {-1, 0}, {0, -1}};
+    
+    void dfs(vector<vector<char>> &grid, int i, int j) {
+        
+        // This cell of grid has been visited.
+        grid[i][j] = '2';
+        
+        // Go to the four sides of grid.
+        for(auto &dir : dirs) {
+            int a = i + dir[0];
+            int b = j + dir[1];
+            
+            if(a < 0 || b < 0 || a >= M || b >= N || grid[a][b] != '1') continue;
+            
+            dfs(grid, a, b);
+        }
+    }
+    
+    int numIslands(vector<vector<char>>& grid) {
+        M = grid.size();
+        N = grid[0].size();
+        
+        int islandCnt = 0;
+        
+        for(int i = 0; i < M; i++) {
+            for(int j = 0; j < N; j++) {
+                if(grid[i][j] == '1') {
+                    dfs(grid, i, j);
+                    islandCnt++;
+                }
+            }
+        }
+        
+        return islandCnt;
+    }
+};
+```
+
+## 52. Wildcard Matching
+```cpp
+class Solution {
+public:
+    
+    int M, N;
+    vector<vector<int>> dp;
+    
+    bool wildcardMatching(string &s, string &p, int i, int j) {
+        
+        if(dp[i][j] != -1) return dp[i][j]; 
+        int &ans = dp[i][j];
+        
+        for(; j < N; j++) {
+            
+            if(p[j] != '*' && i >= M) return ans = false;
+            if(p[j] == '?') {
+                i++;
+            } else if(p[j] == '*') {
+                while(j + 1 < N && p[j + 1] == '*') j++;
+                for(int k = 0; i + k <= M; i++) {
+                    if(wildcardMatching(s, p, i + k, j + 1)) {
+                        return ans = true;
+                    }
+                }
+            } else if(s[i++] != p[j]) {
+                return ans = false;
+            }
+        }
+        
+        return ans = i >= M;
+        
+    }
+    
+    bool isMatch(string s, string p) {
+        M = s.size();
+        N = p.size();
+        
+        dp.assign(M + 1, vector<int>(N + 1, -1));
+        return wildcardMatching(s, p, 0, 0);
+    }
+};
+```
+
+## 53. Min Stack
+```cpp
+class MinStack {
+public:
+    
+    stack<int> S, M;
+    
+    void push(int val) {
+        S.push(val);
+        if(M.empty() || M.top() >= val) {
+            M.push(val);
+        }
+    }
+    
+    void pop() {
+        int x = S.top();
+        S.pop();
+        
+        // If popped element is minimum
+        if(M.top() == x) {
+            M.pop();
+        }
+    }
+    
+    int top() {
+        return S.top();
+    }
+    
+    int getMin() {
+        return M.top();
+    }
+};
+```
+
+## 54. Permutations
+```cpp
+class Solution {
+public:
+    
+    vector<vector<int>> ans;
+    
+    void permute(vector<int> &nums, int start) {
+        // Base case
+        if(start == nums.size()) {
+            ans.push_back(nums);
+            return;
+        }
+        
+        for(int i = start; i < nums.size(); i++) {
+            swap(nums[start], nums[i]);
+            permute(nums, start + 1);
+            swap(nums[start], nums[i]);
+        }
+        
+    }
+    
+    vector<vector<int>> permute(vector<int>& nums) {
+        permute(nums, 0);
+        return ans;
+    }
+};
+```
+
+## 55. Combinations
+```cpp
+class Solution {
+public:
+    
+    vector<vector<int>> ans;
+    
+    void combine(vector<int> &temp, int n, int k, int start) {
+        // Base case
+        if(temp.size() == k) {
+            ans.push_back(temp);
+            return;
+        }
+        
+        for(int i = start, end = n - k + temp.size(); i <= end; i++) {
+            temp.push_back(i + 1);
+            combine(temp, n, k, i + 1);
+            temp.pop_back();
+        }
+    }
+    
+    vector<vector<int>> combine(int n, int k) {
+        vector<int> temp;
+        combine(temp, n, k, 0);
+        return ans;
     }
 };
 ```
