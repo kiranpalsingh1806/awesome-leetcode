@@ -59,6 +59,11 @@
 - [58. Maximum Depth of Binary Tree](#58-maximum-depth-of-binary-tree)
 - [59. Find Minimum In Rotated Sorted Array](#59-find-minimum-in-rotated-sorted-array)
 - [60. Binary Tree Zigzag Level Order Traversal](#60-binary-tree-zigzag-level-order-traversal)
+- [61. Longest Substring Without Repeating Characters](#61-longest-substring-without-repeating-characters)
+- [62. Combination Sum](#62-combination-sum)
+- [63. N-Queens](#63-n-queens)
+- [64. Subsets](#64-subsets)
+- [65. Pascal's Triangl](#65-pascals-triangl)
 
 ## 1. Longest Increasing Subsequence
 
@@ -2048,4 +2053,115 @@ public:
         return ans;
     }
 };
+```
+
+## 61. Longest Substring Without Repeating Characters
+```cpp
+int lengthOfLongestSubstring(string s) {
+    int N = s.length();
+    int length = 0, i = 0;
+    unordered_map<int, int> M;
+    
+    for(int j = 0; j < N; j++) {
+        
+        M[s[j]]++;
+        
+        // Increase the window size from left side if there are multiple characters
+        while(M[s[j]] > 1) {
+            M[s[i++]]--;
+        }
+        
+        length = max(length, j - i + 1);
+    }
+    
+    return length;
+}
+```
+
+## 62. Combination Sum
+```cpp
+vector<vector<int>> combinationSum(vector<int>& A, int target) {
+    vector<vector<int>> ans;
+    vector<int> tmp;
+    sort(begin(A), end(A));
+    function<void(int, int)> dfs = [&](int start, int goal) {
+        if (goal == 0) {
+            ans.push_back(tmp);
+        }
+        for (int i = start; i < A.size() && gaol - A[i] >= 0; ++i) {
+            tmp.push_back(A[i]);
+            dfs(i, goal - A[i]);
+            tmp.pop_back();
+        }
+    };
+    dfs(0, target);
+    return ans;
+}
+```
+
+## 63. N-Queens
+```cpp
+class Solution {
+    vector<vector<string>> ans;
+    vector<string> B;
+    vector<bool> col, hill, dale;
+    int n;
+    void dfs(int i) {
+        if (i == n) {
+            ans.push_back(B);
+            return;
+        }
+        for (int j = 0; j < n; ++j) {
+            int h = i + j, d = i + n - 1 - j;
+            if (col[j] || hill[h] || dale[d]) continue;
+            col[j] = hill[h] = dale[d] = true;
+            B[i][j] = 'Q';
+            dfs(i + 1);
+            B[i][j] = '.';
+            col[j] = hill[h] = dale[d] = false;
+        }
+    }
+public:
+    vector<vector<string>> solveNQueens(int n) {
+        this->n = n;
+        B.assign(n, string(n, '.'));
+        col.assign(n, false);
+        hill.assign(2 * n - 1, false);
+        dale.assign(2 * n - 1, false);
+        dfs(0);
+        return ans;
+    }
+};
+```
+
+## 64. Subsets
+```cpp
+vector<vector<int>> subsets(vector<int>& A) {
+    vector<vector<int>> ans;
+    vector<int> tmp;
+    function<void(int)> dfs = [&](int i) {
+        if (i == A.size()) {
+            ans.push_back(tmp);
+            return;
+        }
+        tmp.push_back(A[i]);
+        dfs(i + 1); // Pick A[i]
+        tmp.pop_back();
+        dfs(i + 1); // Skip A[i]
+    };
+    dfs(0);
+    return ans;
+}
+```
+
+## 65. Pascal's Triangl
+```cpp
+vector<vector<int>> generate(int numRows) {
+    vector<vector<int>> ans(numRows);
+    for (int i = 0; i < numRows; ++i) {
+        ans[i] = vector<int>(i + 1, 1);
+        for (int j = 1; j < i; ++j) ans[i][j] = ans[i - 1][j - 1] + ans[i - 1][j];
+    }
+    return ans;
+}
 ```
