@@ -63,7 +63,7 @@
 - [62. Combination Sum](#62-combination-sum)
 - [63. N-Queens](#63-n-queens)
 - [64. Subsets](#64-subsets)
-- [65. Pascal's Triangl](#65-pascals-triangl)
+- [65. Pascal's Triangle](#65-pascals-triangle)
 
 ## 1. Longest Increasing Subsequence
 
@@ -2154,7 +2154,7 @@ vector<vector<int>> subsets(vector<int>& A) {
 }
 ```
 
-## 65. Pascal's Triangl
+## 65. Pascal's Triangle
 ```cpp
 vector<vector<int>> generate(int numRows) {
     vector<vector<int>> ans(numRows);
