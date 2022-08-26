@@ -2102,34 +2102,45 @@ vector<vector<int>> combinationSum(vector<int>& A, int target) {
 ## 63. N-Queens
 ```cpp
 class Solution {
-    vector<vector<string>> ans;
-    vector<string> B;
-    vector<bool> col, hill, dale;
-    int n;
-    void dfs(int i) {
-        if (i == n) {
-            ans.push_back(B);
+public:
+    vector<vector<string>> ret;
+    
+    bool is_valid(vector<string> &board, int row, int col) {
+        
+        for(int i = row; i >= 0; --i) {
+            if(board[i][col] == 'Q') return false;
+        }
+            
+        for(int i = row, j = col; i >= 0 && j >= 0; --i, --j) {
+            if(board[i][j] == 'Q') return false;
+        }
+        
+        for(int i = row, j = col; i >= 0 && j < board.size(); --i, ++j) {
+            if(board[i][j] == 'Q') return false;
+        }
+            
+        return true;
+    }
+    
+    void dfs(vector<string> &board, int row){
+        if(row == board.size()){
+            ret.push_back(board);
             return;
         }
-        for (int j = 0; j < n; ++j) {
-            int h = i + j, d = i + n - 1 - j;
-            if (col[j] || hill[h] || dale[d]) continue;
-            col[j] = hill[h] = dale[d] = true;
-            B[i][j] = 'Q';
-            dfs(i + 1);
-            B[i][j] = '.';
-            col[j] = hill[h] = dale[d] = false;
+        
+        for(int i=0; i < board.size(); ++i) {
+            if(is_valid(board, row, i)){
+                board[row][i] = 'Q';
+                dfs(board, row + 1);
+                board[row][i] = '.';
+            }
         }
     }
-public:
+    
     vector<vector<string>> solveNQueens(int n) {
-        this->n = n;
-        B.assign(n, string(n, '.'));
-        col.assign(n, false);
-        hill.assign(2 * n - 1, false);
-        dale.assign(2 * n - 1, false);
-        dfs(0);
-        return ans;
+        vector<string>board(n, string(n, '.'));
+        dfs(board, 0);
+        return ret;
     }
 };
 ```
