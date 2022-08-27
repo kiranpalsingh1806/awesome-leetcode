@@ -72,8 +72,8 @@
 |68|[Number of Submatrices That Sum To Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)|Grid, Prefix Sum 2D|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |69|[Shortest Path In Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)|BFS, Shortest Path|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |70|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)|BST, Recursion|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|71|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|72|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|73|[Find Missing Positive](https://leetcode.com/problems/first-missing-positive/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|74|[Edit Distance](https://leetcode.com/problems/edit-distance/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|75|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|71|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|Linked List|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|72|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|73|[Find Missing Positive](https://leetcode.com/problems/first-missing-positive/)|Implementation|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|74|[Edit Distance](https://leetcode.com/problems/edit-distance/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|75|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
