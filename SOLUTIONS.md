@@ -64,6 +64,16 @@
 - [63. N-Queens](#63-n-queens)
 - [64. Subsets](#64-subsets)
 - [65. Pascal's Triangle](#65-pascals-triangle)
+- [66. House Robber II](#66-house-robber-ii)
+- [67. Partition Equal Subset Sum](#67-partition-equal-subset-sum)
+- [68. Number of Submatrices That Sum To Target](#68-number-of-submatrices-that-sum-to-target)
+- [69. Shortest Path in Binary Matrix](#69-shortest-path-in-binary-matrix)
+- [70.Validate Binary Search Tree](#70validate-binary-search-tree)
+- [71. Reverse Nodes in k-Group](#71-reverse-nodes-in-k-group)
+- [72. Trapping Rain Water](#72-trapping-rain-water)
+- [73. Find Missing Positive](#73-find-missing-positive)
+- [74. Edit Distance](#74-edit-distance)
+- [75. Climbing Stairs](#75-climbing-stairs)
 
 ## 1. Longest Increasing Subsequence
 
@@ -2175,4 +2185,155 @@ vector<vector<int>> generate(int numRows) {
     }
     return ans;
 }
+```
+
+## 66. House Robber II
+```cpp
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        int N = nums.size();
+        
+        if(N == 1) return nums[0];
+        
+        if(N == 2) return max(nums[0], nums[1]);
+        
+        return max(robber(nums, 0, N - 2), robber(nums, 1, N - 1));
+    }
+    
+    int robber(vector<int> &nums, int l, int r) {
+        int pre = 0, cur = 0;
+        
+        for(int i = l; i <= r; i++) {
+            int temp = max(pre + nums[i], cur);
+            pre = cur;
+            cur = temp;
+        }
+        
+        return cur;
+    }
+};
+```
+
+## 67. Partition Equal Subset Sum
+```cpp
+class Solution {
+public:
+    vector<vector<int>> dp;
+    bool recurse(vector<int>& nums, int i, int target, vector<vector<int>> &dp) {
+        if(i >= nums.size()) {
+            return false;
+        }
+        if(target <= 0) {
+            return target == 0;
+        }
+        if(dp[i][target] != -1) {
+            return dp[i][target];
+        } 
+        
+        return dp[i][target] = (recurse(nums, i + 1, target - nums[i], dp) || recurse(nums, i + 1, target, dp));
+    }
+    
+    bool canPartition(vector<int>& nums) {
+        
+        int sum = accumulate(nums.begin(), nums.end(), 0);
+        if(sum % 2) return false;
+        sum /= 2;
+        dp.assign(nums.size() + 1, vector<int>(sum + 1, -1));
+        return recurse(nums, 0, sum, dp);
+    }
+};
+```
+
+## 68. Number of Submatrices That Sum To Target
+```cpp
+class Solution {
+public:
+    int numSubmatrixSumTarget(vector<vector<int>>& matrix, int target) {
+        int M = matrix.size(), N = matrix[0].size(), ans = 0;
+        vector<vector<int>> sum(M + 1, vector<int>(N + 1, 0));
+        for (int i = 1; i <= M; ++i) {
+            for (int j = 1; j <= N; ++j) {
+                sum[i][j] = sum[i][j - 1] + sum[i - 1][j] - sum[i - 1][j - 1] + matrix[i - 1][j - 1];
+            }
+        }
+        for (int i = 0; i < N; ++i) {
+           for (int j = i + 1; j <= N; ++j) {
+               unordered_map<int, int> m {{ 0, 1 }};
+               for (int k = 1; k <= M; ++k) {
+                   int val = sum[k][j] - sum[k][i];
+                   ans += m[val - target];
+                   m[val]++;
+               }
+           }
+        }
+        return ans;
+    }
+};
+```
+
+## 69. Shortest Path in Binary Matrix
+```cpp
+class Solution {
+public:
+    int dirs[8][2] = { {-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
+    int shortestPathBinaryMatrix(vector<vector<int>>& G) {
+        if (G[0][0] == 1) return -1;
+        int N = G.size();
+        vector<vector<int>> dist(N, vector<int>(N, INT_MAX));
+        queue<pair<int, int>> q;
+        q.emplace(0, 0);
+        dist[0][0] = 1;
+        while (q.size()) {
+            auto [x, y] = q.front();
+            q.pop();
+            for(int i = 0; i < 8; i++) {
+                int a = x + dirs[i][0];
+                int b = y + dirs[i][1];
+                if (a < 0 || a >= N || b < 0 || b >= N || G[a][b] == 1 || dist[a][b] != INT_MAX) continue;
+                dist[a][b] = dist[x][y] + 1;
+                q.emplace(a, b);
+            }
+        }
+        return dist[N - 1][N - 1] == INT_MAX ? -1 : dist[N - 1][N - 1];
+    }
+};
+```
+
+## 70.Validate Binary Search Tree
+```cpp
+class Solution {
+public:
+    bool isValidBST(TreeNode* root, TreeNode* left = NULL, TreeNode* right = NULL) {
+        if(!root) {
+            return true;
+        }
+        
+        if(left && root->val <= left->val || right && root->val >= right->val) {
+            return false;
+        }
+        
+        return (isValidBST(root->left, left, root) && isValidBST(root->right, root, right));
+    }
+};
+```
+
+## 71. Reverse Nodes in k-Group
+```cpp
+```
+
+## 72. Trapping Rain Water
+```cpp
+```
+
+## 73. Find Missing Positive
+```cpp
+```
+
+## 74. Edit Distance
+```cpp
+```
+
+## 75. Climbing Stairs
+```cpp
 ```

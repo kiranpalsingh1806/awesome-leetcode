@@ -67,8 +67,13 @@
 |63|[N-Queens](https://leetcode.com/problems/n-queens/)|Grid, Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |64|[Subsets](https://leetcode.com/problems/subsets/)|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |65|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|66|[House Robber II](https://leetcode.com/problems/house-robber-ii/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|67|[Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|68|[Number of Submatrices That Sum To Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|69|[Shortest Path In Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|70|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|66|[House Robber II](https://leetcode.com/problems/house-robber-ii/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|67|[Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|DP, Subset Sum|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|68|[Number of Submatrices That Sum To Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)|Grid, Prefix Sum 2D|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|69|[Shortest Path In Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)|BFS, Shortest Path|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|70|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)|BST, Recursion|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|71|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|72|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|73|[Find Missing Positive](https://leetcode.com/problems/first-missing-positive/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|74|[Edit Distance](https://leetcode.com/problems/edit-distance/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|75|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
