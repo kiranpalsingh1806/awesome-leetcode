@@ -2320,20 +2320,126 @@ public:
 
 ## 71. Reverse Nodes in k-Group
 ```cpp
+class Solution {
+public:
+    ListNode* reverseKGroup(ListNode* head, int k) {
+        ListNode h, *tail = &h;
+        while (head) {
+            auto prev = tail;
+            int i = 0;
+            for (auto p = head; i < k && p; ++i, p = p->next);
+            if (i < k) {
+                tail->next = head;
+                break;
+            }
+            for (int i = 0; i < k && head; ++i) {
+                auto node = head;
+                head = head->next;
+                node->next = prev->next;
+                prev->next = node;
+            }
+            while (tail->next) tail = tail->next;
+        }
+        return h.next;
+    }
+};
 ```
 
 ## 72. Trapping Rain Water
 ```cpp
+class Solution {
+public:
+    int trap(vector<int>& A) {
+        int N = A.size(), ans = 0;
+        vector<int> left(N, 0), right(N, 0);
+        for (int i = 1; i < N; ++i) left[i] = max(left[i - 1], A[i - 1]);
+        for (int i = N - 2; i >= 0; --i) right[i] = max(right[i + 1], A[i + 1]);
+        for (int i = 1; i < N - 1; ++i) ans += max(0, min(left[i], right[i]) - A[i]);
+        return ans;
+    }
+};
 ```
 
 ## 73. Find Missing Positive
 ```cpp
+int firstMissingPositive(vector<int>& A) {
+    int i, N = A.size();
+    for (i = 0; i < N; ) {
+        if (A[i] == i + 1 || A[i] < 1 || A[i] >= N + 1 || A[i] == A[A[i] - 1]) ++i;
+        else swap(A[i], A[A[i] - 1]);
+    }
+    for (i = 0; i < N && A[i] == i + 1; ++i);
+    return i + 1;
+}
+
+int firstMissingPositive(vector<int>& nums) {
+    int N = nums.size();
+    // Ignore negatives and zero.
+    for(int i = 0; i < N; i++) if(nums[i] <= 0) nums[i] = N + 1;
+    
+    // Replacing numbers with their negatives
+    for(int i = 0; i < N; i++) {
+        if(abs(nums[i]) <= N && nums[abs(nums[i]) - 1] > 0) {
+            nums[abs(nums[i]) - 1] *= -1;
+        }
+    }
+    
+    for(int i = 0; i < N; i++) {
+        if(nums[i] > 0) {
+            return i + 1;
+        }
+    }
+    
+    return N + 1;
+}
 ```
 
 ## 74. Edit Distance
 ```cpp
+class Solution {
+public:
+    int minDistance(string word1, string word2) {
+        int M = word1.size();
+        int N = word2.size();
+        if(!M) return N;
+        if(!N) return M;
+        
+        vector<vector<int>> dp(M + 1, vector<int>(N + 1, INT_MAX));
+        
+        dp[0][0] = 0;
+        
+        for(int i = 0; i < M; i++) {
+            dp[i + 1][0] = i + 1;
+        }
+        
+        for(int j = 0; j < N; j++) {
+            dp[0][j + 1] = j + 1;
+        }
+        
+        for(int i = 0; i < M; i++) {
+            for(int j = 0; j < N; j++) {
+                if(word1[i] == word2[j]) {
+                    dp[i + 1][j + 1] = dp[i][j];
+                } else {
+                    dp[i + 1][j + 1] = 1 + min({dp[i][j], dp[i + 1][j], dp[i][j + 1]});
+                }
+            }
+        }
+        
+        return dp[M][N];
+    }
+};
 ```
 
 ## 75. Climbing Stairs
 ```cpp
+int climbStairs(int n) {
+    int prev = 0, cur = 1;
+    while (n--) {
+        int next = cur + prev;
+        prev = cur;
+        cur = next;
+    }
+    return cur;
+}
 ```
