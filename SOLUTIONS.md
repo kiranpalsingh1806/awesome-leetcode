@@ -74,6 +74,11 @@
 - [73. Find Missing Positive](#73-find-missing-positive)
 - [74. Edit Distance](#74-edit-distance)
 - [75. Climbing Stairs](#75-climbing-stairs)
+- [76. Shifting Letters II](#76-shifting-letters-ii)
+- [76. Build A Matrix With Conditions](#76-build-a-matrix-with-conditions)
+- [76. Serialize and Deserialize Binary Tree](#76-serialize-and-deserialize-binary-tree)
+- [76. Pacific Atlantic Water Flow](#76-pacific-atlantic-water-flow)
+- [76. Delete and Earn](#76-delete-and-earn)
 
 ## 1. Longest Increasing Subsequence
 
@@ -2442,4 +2447,24 @@ int climbStairs(int n) {
     }
     return cur;
 }
+```
+
+## 76. Shifting Letters II
+```cpp
+```
+
+## 76. Build A Matrix With Conditions
+```cpp
+```
+
+## 76. Serialize and Deserialize Binary Tree
+```cpp
+```
+
+## 76. Pacific Atlantic Water Flow
+```cpp
+```
+
+## 76. Delete and Earn
+```cpp
 ```

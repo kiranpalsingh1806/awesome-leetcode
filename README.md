@@ -77,3 +77,8 @@
 |73|[Find Missing Positive](https://leetcode.com/problems/first-missing-positive/)|Implementation|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |74|[Edit Distance](https://leetcode.com/problems/edit-distance/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |75|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|76|[Shifting Letters II](https://leetcode.com/problems/shifting-letters-ii/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|77|[Build a Matrix With Conditions](https://leetcode.com/problems/build-a-matrix-with-conditions/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|78|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-bst/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|79|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|80|[Delete And Earn](https://leetcode.com/problems/delete-and-earn/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
