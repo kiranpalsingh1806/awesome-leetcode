@@ -75,10 +75,10 @@
 - [74. Edit Distance](#74-edit-distance)
 - [75. Climbing Stairs](#75-climbing-stairs)
 - [76. Shifting Letters II](#76-shifting-letters-ii)
-- [76. Build A Matrix With Conditions](#76-build-a-matrix-with-conditions)
-- [76. Serialize and Deserialize Binary Tree](#76-serialize-and-deserialize-binary-tree)
-- [76. Pacific Atlantic Water Flow](#76-pacific-atlantic-water-flow)
-- [76. Delete and Earn](#76-delete-and-earn)
+- [77. Build A Matrix With Conditions](#77-build-a-matrix-with-conditions)
+- [78. Serialize and Deserialize Binary Tree](#78-serialize-and-deserialize-binary-tree)
+- [79. Pacific Atlantic Water Flow](#79-pacific-atlantic-water-flow)
+- [80. Delete and Earn](#80-delete-and-earn)
 
 ## 1. Longest Increasing Subsequence
 
@@ -2451,20 +2451,235 @@ int climbStairs(int n) {
 
 ## 76. Shifting Letters II
 ```cpp
+// Solution 1 - Line Sweep
+string shiftingLetters(string s, vector<vector<int>>& shifts) {
+    int line[50001] = {};
+    for (auto &shift : shifts) {
+        line[shift[0]] += shift[2] ? 1 : -1;
+        line[shift[1] + 1] += shift[2] ? -1 : 1;
+    }
+    for (int i = 0, val = 0; i < s.size(); ++i) {
+        val = (val + line[i]) % 26;
+        s[i] = 'a' + (26 + (s[i] - 'a') + val) % 26;
+    }
+    return s;
+}
+
+// Solution 2 - Fenwick Tree
+constexpr int static n = 50000;
+int bt[n + 1] = {};
+int prefix_sum(int i)
+{
+    int sum = 0;
+    for (i = i + 1; i > 0; i -= i & (-i))
+        sum += bt[i];
+    return sum;
+}
+void add(int i, int val)
+{
+    for (i = i + 1; i <= n; i += i & (-i))
+        bt[i] += val;
+}
+string shiftingLetters(string s, vector<vector<int>>& shifts) {
+    for (auto &shift : shifts) {
+        add(shift[0], shift[2] == 1 ? 1 : -1);
+        add(shift[1] + 1, shift[2] == 1 ? -1 : 1);
+    }
+    for (int i = 0; i < s.size(); ++i)
+        s[i] = 'a' + (26 + (s[i] - 'a') + prefix_sum(i) % 26) % 26;
+    return s;
+}
+
+// Solution 3 - Segment Tree
+class Solution {
+public:
+    vector<int> seg;
+
+    void upd(int l, int r, int v, int x, int lx, int rx) {
+        if(lx > r or rx < l) return;
+        if(lx >= l and rx <= r) {
+            seg[x] += v;
+            return;
+        }
+        int mid = (lx + rx) / 2;
+        upd(l, r, v, 2 * x + 1, lx, mid);
+        upd(l, r, v, 2 * x + 2, mid + 1, rx);
+    }
+
+    int query(int i, int x, int lx, int rx) {
+        if(lx == rx) return seg[x];
+
+        int mid = (lx + rx) / 2;
+
+        if(i <= mid)
+            return seg[x] + query(i, 2 * x + 1, lx, mid);
+
+        return seg[x] + query(i, 2 * x + 2, mid + 1, rx);
+    }
+    
+    string shiftingLetters(string s, vector<vector<int>>& shifts) {
+        long x = 1;
+        while(x <= s.length()) x <<= 1;
+        seg.resize(2 * x, 0);
+        
+        for(int i = 0; i < shifts.size(); ++i) {
+            int l = shifts[i][0], r = shifts[i][1], dir;
+            if(shifts[i][2] == 0) dir = -1;
+            else dir = 1;
+            upd(l, r, dir, 0, 0, x - 1);
+        }
+        
+        for(int i = 0; i < s.length(); ++i) {
+            int shift = query(i, 0, 0, x - 1);
+            int dir = (shift > 0) ? 1 : -1;
+            shift = abs(shift) % 26; 
+            
+            shift *= dir;
+            int cur = s[i] - 'a';
+            cur = (cur + shift + 26) % 26;
+            s[i] = char(cur + 'a');
+        }
+        return s;
+    }
+};
 ```
 
-## 76. Build A Matrix With Conditions
+## 77. Build A Matrix With Conditions
 ```cpp
+vector<vector<int>> buildMatrix(int k, vector<vector<int>>& rowConditions, vector<vector<int>>& colConditions) {
+	vector<int> order1 = topologicalSort(rowConditions, k);
+	vector<int> order2 = topologicalSort(colConditions, k);
+	if (order1.size() < k || order2.size() < k) return {};
+	unordered_map<int, int> m;
+	for (int i = 0; i < k; i++) m[order2[i]] = i;
+	vector<vector<int>> ans(k, vector<int>(k, 0));
+	for (int i = 0; i < k; i++)
+		ans[i][m[order1[i]]] = order1[i];
+	return ans;
+}
+vector<int> topologicalSort(vector<vector<int>> &A, int k) {
+	vector<int> deg(k, 0), order;
+	vector<vector<int>> graph(k, vector<int>(0));
+	queue<int> q;
+	for (auto &c: A) {
+		graph[c[0] - 1].push_back(c[1] - 1);
+		deg[c[1] - 1]++;
+	}
+	for(int i = 0; i < k; i++) 
+		if (!deg[i]) q.push(i);
+	while (!q.empty()) {
+		int x = q.front(); q.pop();
+		order.push_back(x + 1);
+		for (int& y: graph[x]) 
+			if (--deg[y] == 0) 
+				q.push(y);
+	}
+	return order;
+}
 ```
 
-## 76. Serialize and Deserialize Binary Tree
+## 78. Serialize and Deserialize Binary Tree
 ```cpp
+class Codec {
+private:
+    TreeNode *getNode(vector<string> &v, int &i) {
+        string s = v[i++];
+        return s == "#" ? NULL : new TreeNode(stoi(s));
+    }
+public:
+    string serialize(TreeNode* root) {
+        if (!root) return "";
+        queue<TreeNode*> q;
+        q.push(root);
+        string ans;
+        while (!q.empty()) {
+            root = q.front();
+            q.pop();
+            if (!ans.empty()) ans += ',';
+            if (root) {
+                ans += to_string(root->val);
+                q.push(root->left);
+                q.push(root->right);
+            } else ans += '#';
+        }
+        return ans;
+    }
+    TreeNode* deserialize(string data) {
+        if (data.empty()) return NULL;
+        stringstream ss(data);
+        string val;
+        vector<string> v;
+        while (getline(ss, val, ',')) v.push_back(val);
+        TreeNode *root = new TreeNode(stoi(v[0]));
+        queue<TreeNode*> q;
+        q.push(root);
+        int i = 1;
+        while (i < v.size()) {
+            TreeNode *node = q.front();
+            q.pop();
+            node->left = getNode(v, i);
+            node->right = getNode(v, i);
+            if (node->left) q.push(node->left);
+            if (node->right) q.push(node->right);
+        }
+        return root;
+    }
+};
 ```
 
-## 76. Pacific Atlantic Water Flow
+## 79. Pacific Atlantic Water Flow
 ```cpp
+class Solution {
+    int dirs[4][2] = {{0,1},{0,-1},{1,0},{-1,0}}, M, N;
+    void dfs(vector<vector<int>> &A, int x, int y, vector<vector<int>> &m) {
+        if (m[x][y]) return;
+        m[x][y] = 1;
+        for (auto &[dx, dy] : dirs) {
+            int a = x + dx, b = y + dy;
+            if (a < 0 || a >= M || b < 0 || b >= N || A[a][b] < A[x][y]) continue;
+            dfs(A, a, b, m);
+        }
+    }
+public:
+    vector<vector<int>> pacificAtlantic(vector<vector<int>>& A) {
+        if (A.empty() || A[0].empty()) return {};
+        M = A.size(), N = A[0].size();
+        vector<vector<int>> a(M, vector<int>(N)), b(M, vector<int>(N)), ans; 
+        for (int i = 0; i < M; ++i) {
+            dfs(A, i, 0, a);
+            dfs(A, i, N - 1, b);
+        }
+        for (int j = 0; j < N; ++j) {
+            dfs(A, 0, j, a);
+            dfs(A, M - 1, j, b);
+        }
+        for (int i = 0; i < M; ++i) {
+            for (int j = 0; j < N; ++j) {
+                if (a[i][j] && b[i][j]) ans.push_back({i, j});
+            }
+        }
+        return ans;
+    }
+};
 ```
 
-## 76. Delete and Earn
+## 80. Delete and Earn
 ```cpp
+int deleteAndEarn(vector<int>& nums) {
+    vector<int> dp(10002, 0);
+    vector<int> sum(10002, 0);
+    
+    for(auto a : nums) {
+        sum[a] += a;
+    }
+    
+    dp[0] = sum[0];
+    dp[1] = sum[1];
+    
+    for(int i = 2; i < 10001; i++) {
+        dp[i] = max(dp[i - 1], dp[i - 2] + sum[i]);
+    }
+    
+    return dp[10000];
+}
 ```
