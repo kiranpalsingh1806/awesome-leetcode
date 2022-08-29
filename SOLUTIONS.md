@@ -79,6 +79,11 @@
 - [78. Serialize and Deserialize Binary Tree](#78-serialize-and-deserialize-binary-tree)
 - [79. Pacific Atlantic Water Flow](#79-pacific-atlantic-water-flow)
 - [80. Delete and Earn](#80-delete-and-earn)
+- [81. Permutations II](#81-permutations-ii)
+- [82. Combination Sum II](#82-combination-sum-ii)
+- [83. Non Overlapping Intervals](#83-non-overlapping-intervals)
+- [84. Best Time To Buy and Sell Stocks With Cooldown](#84-best-time-to-buy-and-sell-stocks-with-cooldown)
+- [85. Maximum XOR of Two Numbers In An Array](#85-maximum-xor-of-two-numbers-in-an-array)
 
 ## 1. Longest Increasing Subsequence
 
@@ -2682,4 +2687,24 @@ int deleteAndEarn(vector<int>& nums) {
     
     return dp[10000];
 }
+```
+
+## 81. Permutations II
+```cpp
+```
+
+## 82. Combination Sum II
+```cpp
+```
+
+## 83. Non Overlapping Intervals
+```cpp
+```
+
+## 84. Best Time To Buy and Sell Stocks With Cooldown
+```cpp
+```
+
+## 85. Maximum XOR of Two Numbers In An Array
+```cpp
 ```

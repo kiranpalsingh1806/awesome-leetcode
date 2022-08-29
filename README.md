@@ -82,3 +82,8 @@
 |78|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-bst/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |79|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)|DFS, Grid|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |80|[Delete And Earn](https://leetcode.com/problems/delete-and-earn/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|81|[Permutations II](https://leetcode.com/problems/permutations-ii/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|82|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|83|[Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|84|[Best Time To Buy and Sell Stocks With Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|85|[Maximum XOR of Two Numbers In An Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
