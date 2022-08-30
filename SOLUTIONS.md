@@ -2691,20 +2691,159 @@ int deleteAndEarn(vector<int>& nums) {
 
 ## 81. Permutations II
 ```cpp
+class Solution {
+public:
+    vector<vector<int>> ans;
+    void permute(vector<int> nums, int start) {
+        if(start == nums.size() - 1) {
+            ans.push_back(nums);
+            return;
+        }
+        
+        for(int i = start; i < nums.size(); i++) {
+            if(i != start && nums[i] == nums[start]) continue;
+            swap(nums[i], nums[start]);
+            permute(nums, start + 1);
+        }
+    }
+    
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        permute(nums, 0);
+        return ans;
+    }
+};
 ```
 
 ## 82. Combination Sum II
 ```cpp
+class Solution {
+public:
+    vector<vector<int>> combinationSum2(vector<int>& A, int target) {
+        
+        int N = A.size();
+        sort(A.begin(), A.end());
+        vector<vector<int>> ans;
+        vector<int> temp;
+        
+        function<void(int, int)> dfs = [&](int start, int goal) {
+            if(goal == 0) {
+                ans.push_back(temp);
+                return;
+            }
+            
+            for(int i = start; i < N && goal - A[i] >= 0 ; i++) {
+                if(i != start && A[i] == A[i - 1]) continue;
+                temp.push_back(A[i]);
+                dfs(i + 1, goal - A[i]);
+                temp.pop_back();
+            }
+        };
+        
+        dfs(0, target);
+        
+        return ans;
+    }
+};
 ```
 
 ## 83. Non Overlapping Intervals
 ```cpp
+int eraseOverlapIntervals(vector<vector<int>>& intervals) {
+    sort(intervals.begin(), intervals.end(), [](auto &a, auto &b) {
+        return a[1] < b[1];
+    });
+    
+    int overlapCnt = 0;
+    int end = INT_MIN;
+    
+    for(auto &e : intervals) {
+        if(e[0] >= end) {
+            end = e[1];
+        } else {
+            overlapCnt++;
+        }
+    }
+    
+    return overlapCnt;
+}
 ```
 
 ## 84. Best Time To Buy and Sell Stocks With Cooldown
 ```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& A) {
+        if (A.empty()) return 0;
+        int N = A.size(), buy = INT_MIN;
+        vector<int> dp(N + 1, 0);
+        for (int i = 0; i < N; ++i) {
+            buy = max(buy, (i >= 1 ? dp[i - 1] : 0) - A[i]);
+            dp[i + 1] = max(dp[i], buy + A[i]);
+        }
+        return dp[N];
+    }
+};
 ```
 
 ## 85. Maximum XOR of Two Numbers In An Array
 ```cpp
+// Using Bitmasks
+class Solution {
+public:
+    int findMaximumXOR(vector<int>& A) {
+        unordered_set<int> s;
+        int mask = 0, ans = 0;
+        for (int i = 31; i >= 0; --i) {
+            mask |= 1 << i;
+            s.clear();
+            for (int n : A) s.insert(n & mask);
+            int next = ans | (1 << i);
+            for (int prefix : s) {
+                if (!s.count(next ^ prefix)) continue;
+                ans |= 1 << i;
+                break;
+            }
+        }
+        return ans;
+    }
+};
+
+
+// Using Trie
+struct TrieNode {
+    TrieNode *next[2] = {};
+};
+class Solution {
+    void add(TrieNode *node, int n) {
+        for (int i = 31; i >= 0; --i) {
+            int b = n >> i & 1;
+            if (node->next[b] == NULL) node->next[b] = new TrieNode();
+            node = node->next[b];
+        }
+    }
+    int maxXor(TrieNode *node, int n) {
+        int ans = 0;
+        for (int i = 31; i >= 0; --i) {
+            int b = n >> i & 1;
+            if (node->next[1 - b]) { // if we can go the opposite direction, do it.
+                node = node->next[1 - b];
+                ans |= 1 << i;
+            } else {
+                node = node->next[b];
+            }
+        }
+        return ans;
+    }
+public:
+    int findMaximumXOR(vector<int>& A) {
+        TrieNode root;
+        int ans = 0;
+        for (int n : A) {
+            add(&root, n);
+            ans = max(ans, maxXor(&root, n));
+        }
+        return ans;
+    }
+};
 ```
