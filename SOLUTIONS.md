@@ -84,6 +84,11 @@
 - [83. Non Overlapping Intervals](#83-non-overlapping-intervals)
 - [84. Best Time To Buy and Sell Stocks With Cooldown](#84-best-time-to-buy-and-sell-stocks-with-cooldown)
 - [85. Maximum XOR of Two Numbers In An Array](#85-maximum-xor-of-two-numbers-in-an-array)
+- [86. Implement Queue Using Stacks](#86-implement-queue-using-stacks)
+- [87. Minimum Size Subarray Sum](#87-minimum-size-subarray-sum)
+- [88. Number of Visible People In A Queue](#88-number-of-visible-people-in-a-queue)
+- [89. Describe The Painting](#89-describe-the-painting)
+- [90. Flood Fill](#90-flood-fill)
 
 ## 1. Longest Increasing Subsequence
 
@@ -2846,4 +2851,24 @@ public:
         return ans;
     }
 };
+```
+
+## 86. Implement Queue Using Stacks
+```cpp
+```
+
+## 87. Minimum Size Subarray Sum 
+```cpp
+```
+
+## 88. Number of Visible People In A Queue
+```cpp
+```
+
+## 89. Describe The Painting 
+```cpp
+```
+
+## 90. Flood Fill
+```cpp
 ```

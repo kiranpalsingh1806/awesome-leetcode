@@ -87,3 +87,8 @@
 |83|[Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |84|[Best Time To Buy and Sell Stocks With Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |85|[Maximum XOR of Two Numbers In An Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|86|[Implement Queue Using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)|Data Structure|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|87|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|Sliding Window|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|88|[Number of Visible People In A Queue](https://leetcode.com/problems/number-of-visible-people-in-a-queue/)|Mono-Deque, Binary Search|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|89|[Describe The Painting](https://leetcode.com/problems/describe-the-painting/)|Line Sweep|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|90|[Flood Fill](https://leetcode.com/problems/flood-fill/)|Grid, BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
