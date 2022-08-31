@@ -2855,20 +2855,157 @@ public:
 
 ## 86. Implement Queue Using Stacks
 ```cpp
+class MyQueue {
+public:
+    
+    stack<int> S1, S2;
+    
+    void push(int x) {
+        while(!S1.empty()) {
+            S2.push(S1.top());
+            S1.pop();
+        }
+        
+        S2.push(x);
+        
+        while(!S2.empty()) {
+            S1.push(S2.top());
+            S2.pop();
+        }
+    }
+    
+    int pop() {
+        int x = S1.top();
+        S1.pop();
+        
+        return x;
+    }
+    
+    int peek() {
+        return S1.top();
+    }
+    
+    bool empty() {
+        return S1.empty();
+    }
+};
 ```
 
 ## 87. Minimum Size Subarray Sum 
 ```cpp
+int minSubArrayLen(int target, vector<int>& nums) {   
+    int N = nums.size();
+    int i = 0, sum = 0, ans = INT_MAX;
+    
+    for(int j = 0; j < N; j++) {
+        sum += nums[j];
+        
+        while(sum >= target) {
+            if(sum >= target) {
+                ans = min(ans, j - i + 1);
+            }
+            sum -= nums[i++];
+        }  
+    }
+    
+    return ans == INT_MAX ? 0 : ans;
+}
 ```
 
 ## 88. Number of Visible People In A Queue
 ```cpp
+class Solution {
+public:
+    vector<int> canSeePersonsCount(vector<int>& A) {
+        vector<int> ans(A.size());
+        deque<int> q;
+        int N = A.size();
+        for (int i = N - 1; i >= 0; --i) {
+            int h = A[i];
+            auto it = lower_bound(begin(q), end(q), h);
+            if (it != end(q) && *it > h) ++ans[i];
+            ans[i] += it - begin(q);
+            while (q.size() && q.front() <= h) q.pop_front();
+            q.push_front(h);
+        }
+        return ans;
+    }
+};
 ```
 
 ## 89. Describe The Painting 
 ```cpp
+class Solution {
+public:
+    vector<vector<long long>> splitPainting(vector<vector<int>>& segments) {
+        long long line[200001] = {};
+        bool change[200001] = {};
+        
+        int maxEnd = -1;
+        
+        for(auto &e : segments) {
+            int start = e[0], end = e[1], value = e[2];
+            line[start] += value;
+            line[end] -= value;
+            change[start] = change[end] = true;
+            maxEnd = max(maxEnd, end);
+        }
+        
+        for(int i = 1; i <= maxEnd; i++) {
+            line[i] += line[i - 1];
+        }
+        
+        vector<vector<long long>> ans;
+        
+        for(int i = 0; i <= maxEnd;) {
+            int start = i;
+            while(i <= maxEnd && line[i] == line[start] && (i == start || !change[i])) i++;
+            
+            if(line[start]) {
+                ans.push_back({start, i, line[start]});
+            }
+        }
+        
+        return ans;
+    }
+};
 ```
 
 ## 90. Flood Fill
 ```cpp
+class Solution {
+public:
+    
+    int dirs[4][2] = {{0, 1}, {1, 0}, {-1, 0}, {0, -1}};
+    int M, N, startingColor;
+    
+    void dfs(vector<vector<int>> &image, int x, int y, int C) {
+        
+        image[x][y] = C;
+        
+        for(auto &dir : dirs) {
+            int a = x + dir[0];
+            int b = y + dir[1];
+            
+            if(a < 0 || b < 0 || a >= M || b >= N || image[a][b] != startingColor) continue;
+            
+            dfs(image, a, b, C);
+        }
+    }
+    
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
+        M = image.size();
+        N = image[0].size();
+        
+        startingColor = image[sr][sc];
+        
+        if(color == startingColor) {
+            return image;
+        }
+        
+        dfs(image,  sr, sc, color);
+        
+        return image;
+    }
+};
 ```
