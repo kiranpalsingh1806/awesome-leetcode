@@ -2914,23 +2914,26 @@ int minSubArrayLen(int target, vector<int>& nums) {
 
 ## 88. Number of Visible People In A Queue
 ```cpp
-class Solution {
-public:
-    vector<int> canSeePersonsCount(vector<int>& A) {
-        vector<int> ans(A.size());
-        deque<int> q;
-        int N = A.size();
-        for (int i = N - 1; i >= 0; --i) {
-            int h = A[i];
-            auto it = lower_bound(begin(q), end(q), h);
-            if (it != end(q) && *it > h) ++ans[i];
-            ans[i] += it - begin(q);
-            while (q.size() && q.front() <= h) q.pop_front();
-            q.push_front(h);
+vector<int> canSeePersonsCount(vector<int>& A) {
+    stack<int> S;
+    int N = A.size();
+    vector<int> ans(N, 0);
+    
+    for(int i = 0; i < N; i++) {
+        // Monotonically Increasing Sequence
+        while(S.size() && A[S.top()] <= A[i]) {
+            ans[S.top()]++;
+            S.pop();
         }
-        return ans;
-    }
-};
+        
+        if(S.size()) {
+            ans[S.top()]++;
+        }
+        
+        S.push(i);
+    }    
+    return ans;    
+}
 ```
 
 ## 89. Describe The Painting 
