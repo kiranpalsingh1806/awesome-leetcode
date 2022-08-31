@@ -89,6 +89,11 @@
 - [88. Number of Visible People In A Queue](#88-number-of-visible-people-in-a-queue)
 - [89. Describe The Painting](#89-describe-the-painting)
 - [90. Flood Fill](#90-flood-fill)
+- [91. Palindrome Partitioning](#91-palindrome-partitioning)
+- [92. Path With Maximum Gold](#92-path-with-maximum-gold)
+- [93. Counting Bits](#93-counting-bits)
+- [94. Word Break](#94-word-break)
+- [95. Find Median From Data Stream](#95-find-median-from-data-stream)
 
 ## 1. Longest Increasing Subsequence
 
@@ -3011,4 +3016,24 @@ public:
         return image;
     }
 };
+```
+
+## 91. Palindrome Partitioning
+```cpp
+```
+
+## 92. Path With Maximum Gold
+```cpp
+```
+
+## 93. Counting Bits
+```cpp
+```
+
+## 94. Word Break
+```cpp
+```
+
+## 95. Find Median From Data Stream
+```cpp
 ```

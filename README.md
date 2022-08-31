@@ -82,13 +82,18 @@
 |78|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-bst/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |79|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)|DFS, Grid|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |80|[Delete And Earn](https://leetcode.com/problems/delete-and-earn/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|81|[Permutations II](https://leetcode.com/problems/permutations-ii/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|82|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|83|[Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|84|[Best Time To Buy and Sell Stocks With Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|85|[Maximum XOR of Two Numbers In An Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|81|[Permutations II](https://leetcode.com/problems/permutations-ii/)|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|82|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|83|[Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|Intervals|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|84|[Best Time To Buy and Sell Stocks With Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|Recursion, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|85|[Maximum XOR of Two Numbers In An Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)|Bitmasks, Trie|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |86|[Implement Queue Using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)|Data Structure|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |87|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|Sliding Window|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |88|[Number of Visible People In A Queue](https://leetcode.com/problems/number-of-visible-people-in-a-queue/)|Mono-Deque, Binary Search|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |89|[Describe The Painting](https://leetcode.com/problems/describe-the-painting/)|Line Sweep|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |90|[Flood Fill](https://leetcode.com/problems/flood-fill/)|Grid, BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|91|[Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|Backtracking|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|92|[Path With Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/)|DFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|93|[Counting Bits](https://leetcode.com/problems/counting-bits/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|94|[Word Break](https://leetcode.com/problems/word-break/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|95|[Find Median From Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)|Heaps|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
