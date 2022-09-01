@@ -94,6 +94,11 @@
 - [93. Counting Bits](#93-counting-bits)
 - [94. Word Break](#94-word-break)
 - [95. Find Median From Data Stream](#95-find-median-from-data-stream)
+- [96. Single Threaded CPU](#96-single-threaded-cpu)
+- [97. Conntiguous Array](#97-conntiguous-array)
+- [98. Falling Squares](#98-falling-squares)
+- [99. Minimum XOR Sum of Two Arrays](#99-minimum-xor-sum-of-two-arrays)
+- [100. Maximum Profit In Job Scheduling](#100-maximum-profit-in-job-scheduling)
 
 ## 1. Longest Increasing Subsequence
 
@@ -3035,5 +3040,25 @@ public:
 ```
 
 ## 95. Find Median From Data Stream
+```cpp
+```
+
+## 96. Single Threaded CPU
+```cpp
+```
+
+## 97. Conntiguous Array
+```cpp
+```
+
+## 98. Falling Squares
+```cpp
+```
+
+## 99. Minimum XOR Sum of Two Arrays
+```cpp
+```
+
+## 100. Maximum Profit In Job Scheduling
 ```cpp
 ```

@@ -97,3 +97,9 @@
 |93|[Counting Bits](https://leetcode.com/problems/counting-bits/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |94|[Word Break](https://leetcode.com/problems/word-break/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |95|[Find Median From Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)|Heaps|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|96|[Single Threaded CPU](https://leetcode.com/problems/single-threaded-cpu/)|Greedy Scheduling|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|97|[Contiguous Array](https://leetcode.com/problems/contiguous-array/)|Prefix State Map|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|98|[Falling Squares](https://leetcode.com/problems/falling-squares/)|Segment Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|99|[Minimum XOR Sum of Two Arrays](https://leetcode.com/problems/minimum-xor-sum-of-two-arrays/)|Bitmasks, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|100|[Maximum Profit In Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/)|Binary Search, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
