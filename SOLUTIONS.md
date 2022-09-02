@@ -95,7 +95,7 @@
 - [94. Word Break](#94-word-break)
 - [95. Find Median From Data Stream](#95-find-median-from-data-stream)
 - [96. Single Threaded CPU](#96-single-threaded-cpu)
-- [97. Conntiguous Array](#97-conntiguous-array)
+- [97. Contiguous Array](#97-contiguous-array)
 - [98. Falling Squares](#98-falling-squares)
 - [99. Minimum XOR Sum of Two Arrays](#99-minimum-xor-sum-of-two-arrays)
 - [100. Maximum Profit In Job Scheduling](#100-maximum-profit-in-job-scheduling)
@@ -3025,40 +3025,295 @@ public:
 
 ## 91. Palindrome Partitioning
 ```cpp
+class Solution {
+public:
+    
+    bool isPalindrome(string &s, int i, int j) {
+        while(i < j && s[i] == s[j]) {
+            i++;
+            j--;
+        }
+        return i >= j;
+    }
+    
+    vector<vector<string>> ans;
+    vector<string> temp;
+    
+    void dfs(string &s, int start) {
+        if(start == s.size()) {
+            ans.push_back(temp);
+            return;
+        }
+        
+        for(int i = start; i < s.length(); i++) {
+            if(!isPalindrome(s, start, i)) continue;
+            
+            temp.push_back(s.substr(start, i - start + 1));
+            dfs(s, i + 1);
+            temp.pop_back();
+        }
+    }
+    
+    vector<vector<string>> partition(string s) {
+        dfs(s, 0);
+        return ans;
+    }
+};
 ```
 
 ## 92. Path With Maximum Gold
 ```cpp
+class Solution {
+public:
+    int M, N;
+    int dirs[4][2] = {{0, 1}, {1, 0}, {-1, 0}, {0, -1}};
+    int maxGold = 0;
+    
+    
+    void dfs(vector<vector<int>>& grid, int x, int y, int cnt) {
+        
+        // Store gold in current cell.
+        int gold = grid[x][y];
+        grid[x][y] = 0;
+        
+        cnt += gold;
+        maxGold = max(maxGold, cnt);
+        
+        for(auto &dir : dirs) {
+            int a = x + dir[0];
+            int b = y + dir[1];
+            
+            if(a < 0 || b < 0 || a >= M || b >= N || grid[a][b] == 0) continue;
+            
+            dfs(grid, a, b, cnt);
+        }
+        
+        grid[x][y] = gold;
+    }
+    
+    int getMaximumGold(vector<vector<int>>& grid) {
+        M = grid.size();
+        N = grid[0].size();
+        
+        for(int i = 0; i < M; i++) {
+            for(int j = 0; j < N; j++) {
+                if(grid[i][j] == 0) continue;
+                dfs(grid, i, j, 0);
+            }
+        }
+        
+        return maxGold;
+    }
+};
 ```
 
 ## 93. Counting Bits
 ```cpp
+class Solution {
+public:
+    vector<int> countBits(int N) {
+        vector<int> dp(N + 1);
+        
+        dp[0] = 0;
+        
+        for(int i = 1; i <= N; i++) {
+            dp[i] = dp[i / 2] + (i & 1);
+        }
+        
+        return dp;
+    }
+};
 ```
 
 ## 94. Word Break
 ```cpp
+class Solution {
+public:
+    bool wordBreak(string s, vector<string>& wordDict) {
+        
+        unordered_set<string> M(wordDict.begin(), wordDict.end());
+        
+        int N = s.size();
+        vector<bool> dp(N + 1);
+        dp[0] = true;
+        
+        for(int i = 1; i <= N; i++) {
+            for(int j = 0; j < i && !dp[i]; j++) {
+                dp[i] = dp[j] && M.count(s.substr(j, i - j));
+            }
+        }
+        
+        return dp[N];
+    }
+};
 ```
 
 ## 95. Find Median From Data Stream
 ```cpp
+class MedianFinder {
+public:
+    priority_queue<int, vector<int>, greater<int>> maxHeap;
+    priority_queue<int, vector<int>> minHeap;
+    
+    void addNum(int num) {
+        if(minHeap.empty()) {
+            minHeap.push(num);
+        } else if(num < minHeap.top()) {
+            maxHeap.push(minHeap.top());
+            minHeap.pop();
+            minHeap.push(num);
+        } else {
+            maxHeap.push(num);
+        }
+        
+        while(maxHeap.size() > minHeap.size()) {
+            minHeap.push(maxHeap.top());
+            maxHeap.pop();
+        }
+    }
+    
+    double findMedian() {
+        if(maxHeap.size() == minHeap.size()) {
+            return (double)(maxHeap.top() + minHeap.top()) / 2;
+        } else {
+            return (double)(minHeap.top());
+        }
+    }
+};
 ```
 
 ## 96. Single Threaded CPU
 ```cpp
+class Solution {
+    typedef pair<int, int> T; // processing time, index
+public:
+    vector<int> getOrder(vector<vector<int>>& A) {
+        priority_queue<T, vector<T>, greater<>> pq; // min heap of tasks, sorted first by processing time then by index.
+        long N = A.size(), time = 0, i = 0; // `time` is the current time, `i` is the read pointer
+        for (int i = 0; i < N; ++i) A[i].push_back(i); // append the index to each task
+        sort(begin(A), end(A)); // sort the input array so that we can take the tasks of small enqueueTime first
+        vector<int> ans;
+        while (i < N || pq.size()) { // stop the loop when we exhausted the input array and the tasks in the heap.
+            if (pq.empty()) {
+                time = max(time, (long)A[i][0]); // nothing in the heap? try updating the current time using the processing time of the next task in array
+            }
+            while (i < N && time >= A[i][0]) { // push all the tasks in the array whose enqueueTime <= currentTime into the heap
+                pq.emplace(A[i][1], A[i][2]);
+                ++i;
+            }
+            auto [pro, index] = pq.top();
+            pq.pop();
+            time += pro; // handle this task and increase the current time by the processingTime
+            ans.push_back(index);
+        }
+        return ans;
+    }
+};
 ```
 
-## 97. Conntiguous Array
+## 97. Contiguous Array
 ```cpp
+int findMaxLength(vector<int>& A) {
+    unordered_map<int, int> m{{0,-1}};
+    int ans = 0;
+    for (int i = 0, sum = 0; i < A.size(); ++i) {
+        sum += A[i] ? 1 : -1;
+        if (m.count(sum)) ans = max(ans, i - m[sum]);
+        else m[sum] = i;
+    }
+    return ans;
+}
 ```
 
 ## 98. Falling Squares
 ```cpp
+class Solution {
+    vector<int> tree;
+    int N = 0;
+    void updateAt(int i, int val) {
+        i += N;
+        tree[i] = val;
+        while (i > 0) {
+            i /= 2;
+            tree[i] = max(tree[2 * i], tree[2 * i + 1]);
+        }
+    }
+    void update(int begin, int end, int val) {
+        for (int i = begin; i < end; ++i) updateAt(i, val);
+    }
+    int maxRange(int i, int j) {
+        i += N;
+        j += N;
+        int ans = 0;
+        while (i <= j) {
+            if (i % 2) ans = max(ans, tree[i++]);
+            if (j % 2 == 0) ans = max(ans, tree[j--]);
+            i /= 2;
+            j /= 2;
+        }
+        return ans;
+    }
+public:
+    vector<int> fallingSquares(vector<vector<int>>& P) {
+        set<int> ps;
+        for (auto &p : P) {
+            ps.insert(p[0]);
+            ps.insert(p[0] + p[1] - 1);
+        }
+        unordered_map<int, int> m;
+        for (int n : ps) m[n] = N++;
+        tree.resize(2 * N);
+        vector<int> ans;
+        int top = 0;
+        for (auto &p : P) {
+            int a = m[p[0]], b = m[p[0] + p[1] - 1];
+            int tmp = p[1] + maxRange(a, b);
+            update(a, b + 1, tmp);
+            top = max(top, tmp);
+            ans.push_back(top);
+        }
+        return ans;
+    }
+};
 ```
 
 ## 99. Minimum XOR Sum of Two Arrays
 ```cpp
+class Solution {
+    int m[16384] = {[0 ... 16383] = INT_MAX}, N;
+    int dp(vector<int> &A, vector<int> &B, int i, int mask) {
+        if (i == N) return 0;
+        if (m[mask] != INT_MAX) return m[mask];
+        int ans = INT_MAX;
+        for (int j = 0; j < N; ++j) {
+            if (mask >> j & 1) continue;
+            ans = min(ans, (A[i] ^ B[j]) + dp(A, B, i + 1, mask | (1 << j)));
+        }
+        return m[mask] = ans;
+    }
+public:
+    int minimumXORSum(vector<int>& A, vector<int>& B) {
+        N = A.size();
+        return dp(A, B, 0, 0);
+    }
+};
 ```
 
 ## 100. Maximum Profit In Job Scheduling
 ```cpp
+class Solution {
+public:
+    int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
+        vector<array<int, 3>> jobs;
+        for (int i = 0; i < startTime.size(); ++i) jobs.push_back({ startTime[i], endTime[i], profit[i] });
+        sort(begin(jobs), end(jobs), greater<>()); // sort jobs in descending order of start time
+        map<int, int> dp{{INT_MAX, 0}}; // startTime to max profit
+        int ans = 0;
+        for (auto &[s, e, p] : jobs) {
+            dp[s] = max(ans, p + dp.lower_bound(e)->second);
+            ans = max(ans, dp[s]);
+        }
+        return ans;
+    }
+};
 ```
