@@ -3025,6 +3025,10 @@ public:
 ```
 
 ## 91. Palindrome Partitioning
+
+<details>
+<summary> View Code </summary>
+
 ```cpp
 class Solution {
 public:
@@ -3062,7 +3066,15 @@ public:
 };
 ```
 
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 ## 92. Path With Maximum Gold
+
+<details>
+<summary> View Code </summary>
+
 ```cpp
 class Solution {
 public:
@@ -3107,8 +3119,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 93. Counting Bits
+
+<details>
+<summary> View Code </summary>
+
 ```cpp
 class Solution {
 public:
@@ -3126,7 +3145,15 @@ public:
 };
 ```
 
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 ## 94. Word Break
+
+<details>
+<summary> View Code </summary>
+
 ```cpp
 class Solution {
 public:
@@ -3148,8 +3175,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 95. Find Median From Data Stream
+
+<details>
+<summary> View Code </summary>
+
 ```cpp
 class MedianFinder {
 public:
@@ -3182,37 +3216,51 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 96. Single Threaded CPU
+
+<details>
+<summary> View Code </summary>
+
 ```cpp
 class Solution {
-    typedef pair<int, int> T; // processing time, index
+    typedef pair<int, int> T;
 public:
     vector<int> getOrder(vector<vector<int>>& A) {
-        priority_queue<T, vector<T>, greater<>> pq; // min heap of tasks, sorted first by processing time then by index.
-        long N = A.size(), time = 0, i = 0; // `time` is the current time, `i` is the read pointer
-        for (int i = 0; i < N; ++i) A[i].push_back(i); // append the index to each task
-        sort(begin(A), end(A)); // sort the input array so that we can take the tasks of small enqueueTime first
+        priority_queue<T, vector<T>, greater<>> pq;
+        long N = A.size(), time = 0, i = 0;
+        for (int i = 0; i < N; ++i) A[i].push_back(i);
+        sort(begin(A), end(A));
         vector<int> ans;
-        while (i < N || pq.size()) { // stop the loop when we exhausted the input array and the tasks in the heap.
+        while (i < N || pq.size()) { 
             if (pq.empty()) {
-                time = max(time, (long)A[i][0]); // nothing in the heap? try updating the current time using the processing time of the next task in array
+                time = max(time, (long)A[i][0]);
             }
-            while (i < N && time >= A[i][0]) { // push all the tasks in the array whose enqueueTime <= currentTime into the heap
+            while (i < N && time >= A[i][0]) {
                 pq.emplace(A[i][1], A[i][2]);
                 ++i;
             }
             auto [pro, index] = pq.top();
             pq.pop();
-            time += pro; // handle this task and increase the current time by the processingTime
+            time += pro;
             ans.push_back(index);
         }
         return ans;
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 97. Contiguous Array
+
+<details>
+<summary> View Code </summary>
+
 ```cpp
 int findMaxLength(vector<int>& A) {
     unordered_map<int, int> m{{0,-1}};
@@ -3225,58 +3273,82 @@ int findMaxLength(vector<int>& A) {
     return ans;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 98. Falling Squares
+<details>
+<summary> View Code </summary>
+
 ```cpp
 class Solution {
-    vector<int> tree;
-    int N = 0;
-    void updateAt(int i, int val) {
-        i += N;
-        tree[i] = val;
-        while (i > 0) {
-            i /= 2;
-            tree[i] = max(tree[2 * i], tree[2 * i + 1]);
-        }
-    }
-    void update(int begin, int end, int val) {
-        for (int i = begin; i < end; ++i) updateAt(i, val);
-    }
-    int maxRange(int i, int j) {
-        i += N;
-        j += N;
-        int ans = 0;
-        while (i <= j) {
-            if (i % 2) ans = max(ans, tree[i++]);
-            if (j % 2 == 0) ans = max(ans, tree[j--]);
-            i /= 2;
-            j /= 2;
-        }
-        return ans;
-    }
 public:
-    vector<int> fallingSquares(vector<vector<int>>& P) {
-        set<int> ps;
-        for (auto &p : P) {
-            ps.insert(p[0]);
-            ps.insert(p[0] + p[1] - 1);
-        }
-        unordered_map<int, int> m;
-        for (int n : ps) m[n] = N++;
-        tree.resize(2 * N);
-        vector<int> ans;
-        int top = 0;
-        for (auto &p : P) {
-            int a = m[p[0]], b = m[p[0] + p[1] - 1];
-            int tmp = p[1] + maxRange(a, b);
-            update(a, b + 1, tmp);
-            top = max(top, tmp);
-            ans.push_back(top);
-        }
-        return ans;
+  int n;
+  vector<int> height, lazy;
+
+  void push_up(int i) {
+    height[i] = max(height[i*2], height[i*2+1]);
+  }
+
+  void push_down(int i) {
+    if (lazy[i]) {
+        lazy[i*2] = lazy[i*2+1] = lazy[i];
+        height[i*2] = height[i*2+1] = lazy[i];
+        lazy[i] = 0;
     }
+  }
+
+  void update(int i, int l, int r, int L, int R, int val) {
+    if (L <= l && r <= R) {
+      height[i] = val;
+      lazy[i] = val;
+      return;
+    }
+    push_down(i);
+    int mid = l + (r-l)/2;
+    if (L < mid) update(i*2, l, mid, L, R, val);
+    if (R > mid) update(i*2+1, mid, r, L, R, val);
+    push_up(i);
+  }
+
+  int query(int i, int l, int r, int L, int R) {
+    if (L <= l && r <= R) return height[i];
+    push_down(i);
+    int res = 0;;
+    int mid = l + (r-l)/2;
+    if (L < mid) res = max(res, query(i*2, l, mid, L, R));
+    if (R > mid) res = max(res, query(i*2+1, mid, r, L, R));
+    return res;
+  }
+
+  vector<int> fallingSquares(vector<pair<int, int>>& positions) {
+    vector<int> a;
+    for (auto& p : positions) {
+      a.push_back(p.first);
+      a.push_back(p.first+p.second);
+    }
+    sort(a.begin(), a.end());
+    n = unique(a.begin(), a.end()) - a.begin();
+    a.resize(n);
+    
+    height.resize(n<<2, 0);
+    lazy.resize(n<<2, 0);
+    vector<int> res;
+    for (auto& p : positions) {
+      int l = lower_bound(a.begin(), a.end(), p.first) - a.begin();
+      int r = lower_bound(a.begin(), a.end(), p.first+p.second) - a.begin();
+      int maxh = query(1, 0, n, l, r);
+      update(1, 0, n, l, r, maxh+p.second);
+      res.push_back(query(1, 0, n, 0, n));
+    }
+    return res;
+  }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 99. Minimum XOR Sum of Two Arrays
 
