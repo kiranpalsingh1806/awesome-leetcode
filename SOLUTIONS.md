@@ -100,6 +100,11 @@
   - [98. Falling Squares](#98-falling-squares)
   - [99. Minimum XOR Sum of Two Arrays](#99-minimum-xor-sum-of-two-arrays)
   - [100. Maximum Profit In Job Scheduling](#100-maximum-profit-in-job-scheduling)
+  - [101. Find Minimum Time To Finish All Jobs](#101-find-minimum-time-to-finish-all-jobs)
+  - [102. Course Schedule](#102-course-schedule)
+  - [103. Minimum Height Trees](#103-minimum-height-trees)
+  - [104. Russian Doll Envelopes](#104-russian-doll-envelopes)
+  - [105. Maximum AND Sum of Array](#105-maximum-and-sum-of-array)
 
 ## 1. Longest Increasing Subsequence
 
@@ -3411,6 +3416,66 @@ public:
 
 ```
 
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 101. Find Minimum Time To Finish All Jobs
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 102. Course Schedule
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 103. Minimum Height Trees
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 104. Russian Doll Envelopes
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 105. Maximum AND Sum of Array
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+
+```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
