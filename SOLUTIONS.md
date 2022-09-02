@@ -3357,21 +3357,28 @@ public:
 
 ```cpp
 class Solution {
-    int m[16384] = {[0 ... 16383] = INT_MAX}, N;
-    int dp(vector<int> &A, vector<int> &B, int i, int mask) {
-        if (i == N) return 0;
-        if (m[mask] != INT_MAX) return m[mask];
+    int dp[15][17000];
+    int recursion(vector<int> &nums1, vector<int>&nums2, int i, int mask) {
+        
+        if(i >= nums1.size()) return 0;
+        if(dp[i][mask] != -1) return dp[i][mask];
+        
         int ans = INT_MAX;
-        for (int j = 0; j < N; ++j) {
-            if (mask >> j & 1) continue;
-            ans = min(ans, (A[i] ^ B[j]) + dp(A, B, i + 1, mask | (1 << j)));
+
+        for(int j = 0; j < nums2.size(); j++) {
+            if(mask & (1 << j)) continue;
+            int val = nums1[i] ^ nums2[j];
+
+            ans = min(ans, recursion(nums1, nums2, i + 1, mask | (1 << j)) + val);
         }
-        return m[mask] = ans;
+
+        return dp[i][mask] = ans;
     }
+
 public:
-    int minimumXORSum(vector<int>& A, vector<int>& B) {
-        N = A.size();
-        return dp(A, B, 0, 0);
+    int minimumXORSum(vector<int>& nums1, vector<int>& nums2) {
+        memset(dp, -1, sizeof(dp));
+        return recursion(nums1, nums2, 0, 0);
     }
 };
 ```
@@ -3391,8 +3398,8 @@ public:
     int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
         vector<array<int, 3>> jobs;
         for (int i = 0; i < startTime.size(); ++i) jobs.push_back({ startTime[i], endTime[i], profit[i] });
-        sort(begin(jobs), end(jobs), greater<>()); // sort jobs in descending order of start time
-        map<int, int> dp{{INT_MAX, 0}}; // startTime to max profit
+        sort(begin(jobs), end(jobs), greater<>());
+        map<int, int> dp{{INT_MAX, 0}};
         int ans = 0;
         for (auto &[s, e, p] : jobs) {
             dp[s] = max(ans, p + dp.lower_bound(e)->second);
