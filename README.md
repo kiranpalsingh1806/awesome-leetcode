@@ -102,8 +102,8 @@
 |98|[Falling Squares](https://leetcode.com/problems/falling-squares/)|Segment Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |99|[Minimum XOR Sum of Two Arrays](https://leetcode.com/problems/minimum-xor-sum-of-two-arrays/)|Bitmasks, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |100|[Maximum Profit In Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/)|Binary Search, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|101|[Find Minimum Time To Finish All Jobs](https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|101|[Find Minimum Time To Finish All Jobs](https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/)|Bitmasks, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |102|[Course Schedule](https://leetcode.com/problems/course-schedule/)|Topological Sort|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |103|[Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)|Tree Ring Order Traversal|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |104|[Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)|LIS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|105|[Maximum AND Sum of Array](https://leetcode.com/problems/maximum-and-sum-of-array/)|Bitmasks DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|105|[Maximum AND Sum of Array](https://leetcode.com/problems/maximum-and-sum-of-array/)|Bitmasks, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
