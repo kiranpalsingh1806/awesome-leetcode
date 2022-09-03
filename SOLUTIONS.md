@@ -105,7 +105,11 @@
   - [103. Minimum Height Trees](#103-minimum-height-trees)
   - [104. Russian Doll Envelopes](#104-russian-doll-envelopes)
   - [105. Maximum AND Sum of Array](#105-maximum-and-sum-of-array)
-  - [106. Problem Name](#106-problem-name)
+  - [106. Maximum Number of Robots Within Budget](#106-maximum-number-of-robots-within-budget)
+  - [107. Find Longest Awesome Substring](#107-find-longest-awesome-substring)
+  - [108. Maximum Rows Covered By Columns](#108-maximum-rows-covered-by-columns)
+  - [109. Create Sorted Array Through Instructions](#109-create-sorted-array-through-instructions)
+  - [110. Maximum Students Taking Exam](#110-maximum-students-taking-exam)
 
 ## 1. Longest Increasing Subsequence
 
@@ -3576,7 +3580,64 @@ int maximumANDSum(vector<int>& A, int numSlots) {
 
 <br>[⬆ Back to top](#table-of-contents)
 
-## 106. Problem Name
+## 106. Maximum Number of Robots Within Budget
+
+<details>
+<summary> View Code - Sliding Window </summary>
+
+```cpp
+
+```
+</details>
+
+<details>
+<summary> View Code - Sparse Table and Binary Search </summary>
+
+```cpp
+
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 107. Find Longest Awesome Substring
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 108. Maximum Rows Covered By Columns
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 109. Create Sorted Array Through Instructions
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 110. Maximum Students Taking Exam
 
 <details>
 <summary> View Code </summary>

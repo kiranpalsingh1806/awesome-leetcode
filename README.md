@@ -107,3 +107,8 @@
 |103|[Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)|Tree Ring Order Traversal|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |104|[Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)|LIS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |105|[Maximum AND Sum of Array](https://leetcode.com/problems/maximum-and-sum-of-array/)|Bitmasks, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|106|[Maximum Number of Robots Within Budget](https://leetcode.com/problems/maximum-number-of-robots-within-budget/)|Sliding Window, Binary Search, Sparse Table|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|107|[Find Longest Awesome Substring](https://leetcode.com/problems/find-longest-awesome-substring/)|Prefix State Map|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|108|[Maximum Rows Covered By Columns](https://leetcode.com/problems/maximum-rows-covered-by-columns/)|Bitmasks|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|109|[Create Sorted Array Through Instructions](https://leetcode.com/problems/create-sorted-array-through-instructions/)|Binary Indexed Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|110|[Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/)|Bitmasks|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
