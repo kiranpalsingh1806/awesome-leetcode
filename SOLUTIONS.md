@@ -105,6 +105,7 @@
   - [103. Minimum Height Trees](#103-minimum-height-trees)
   - [104. Russian Doll Envelopes](#104-russian-doll-envelopes)
   - [105. Maximum AND Sum of Array](#105-maximum-and-sum-of-array)
+  - [106. Problem Name](#106-problem-name)
 
 ## 1. Longest Increasing Subsequence
 
@@ -3426,7 +3427,29 @@ public:
 <summary> View Code </summary>
 
 ```cpp
-
+int dp[13][1 << 12], sum[1 << 12];
+class Solution {
+public:
+    int minimumTimeRequired(vector<int>& A, int k) {
+        int N = A.size();
+        memset(dp, 0x3f, sizeof(dp));
+        memset(sum, 0, sizeof(sum));
+        for (int i = 0; i <= k; ++i) dp[i][0] = 0;
+        for (int mask = 0; mask < (1 << N); ++mask) {
+            for (int i = 0; i < N; ++i) {
+                if (mask & (1 << i)) sum[mask] += A[i];
+            }
+        }
+        for (int i = 0; i < k; ++i) {
+            for (int mask = 0; mask < (1 << N); ++mask) {
+                for (int sub = mask; sub; sub = (sub - 1) & mask) {
+                    dp[i + 1][mask] = min(dp[i + 1][mask], max(dp[i][mask ^ sub], sum[sub]));
+                }
+            }
+        }
+        return dp[k][(1 << N) - 1];
+    }
+};
 ```
 </details>
 
@@ -3438,7 +3461,27 @@ public:
 <summary> View Code </summary>
 
 ```cpp
-
+bool canFinish(int n, vector<vector<int>>& E) {
+    vector<vector<int>> G(n);
+    vector<int> indegree(n);
+    for (auto &e : E) {
+        G[e[1]].push_back(e[0]);
+        ++indegree[e[0]];
+    }
+    queue<int> q;
+    for (int i = 0; i < n; ++i) {
+        if (indegree[i] == 0) q.push(i);
+    }
+    while (q.size()) {
+        int u = q.front();
+        q.pop();
+        --n;
+        for (int v : G[u]) {
+            if (--indegree[v] == 0) q.push(v);
+        }
+    }
+    return n == 0;
+}
 ```
 </details>
 
@@ -3450,7 +3493,38 @@ public:
 <summary> View Code </summary>
 
 ```cpp
-
+vector<int> findMinHeightTrees(int n, vector<vector<int>>& E) {
+    if (n == 1) return { 0 };
+    vector<int> degree(n), ans;
+    vector<vector<int>> G(n);
+    for (auto &e : E) {
+        int u = e[0], v = e[1];
+        degree[u]++;
+        degree[v]++;
+        G[u].push_back(v);
+        G[v].push_back(u);
+    }
+    queue<int> q;
+    for (int i = 0; i < n; ++i) {
+        if (degree[i] == 1) q.push(i);
+    }
+    while (n > 2) {
+        int cnt = q.size();
+        n -= cnt;
+        while (cnt--) {
+            int u = q.front();
+            q.pop();
+            for (int v : G[u]) {
+                if (--degree[v] == 1) q.push(v);
+            }
+        }
+    }
+    while (q.size()) {
+        ans.push_back(q.front());
+        q.pop();
+    }
+    return ans;
+}
 ```
 </details>
 
@@ -3462,13 +3536,47 @@ public:
 <summary> View Code </summary>
 
 ```cpp
-
+int maxEnvelopes(vector<vector<int>>& A) {
+    sort(begin(A), end(A), [](auto &a, auto &b) { return a[0] != b[0] ? a[0] < b[0] : a[1] > b[1]; });
+    vector<int> dp;
+    for (auto &v : A) {
+        auto it = lower_bound(begin(dp), end(dp), v[1]);
+        if (it == end(dp)) dp.push_back(v[1]);
+        else *it = v[1];
+    }
+    return dp.size();
+}
 ```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
 ## 105. Maximum AND Sum of Array
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+int maximumANDSum(vector<int>& A, int numSlots) {
+    A.resize(2 * numSlots); // append 0s to make sure the length of `A` is `2 * numSlots`
+    int N = A.size();
+    vector<int> dp(1 << N);
+    for (int m = 1; m < 1 << N; ++m) {
+        int cnt = __builtin_popcount(m), slot = (cnt + 1) / 2; 
+        for (int i = 0; i < N; ++i) {
+            if (m >> i & 1) { // we assign A[i] to `slot`-th slot
+                dp[m] = max(dp[m], dp[m ^ (1 << i)] + (slot & A[i]));
+            }
+        }
+    }
+    return dp[(1 << N) - 1];
+}
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 106. Problem Name
 
 <details>
 <summary> View Code </summary>
