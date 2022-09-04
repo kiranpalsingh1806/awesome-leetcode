@@ -4303,6 +4303,10 @@ int maximumRobots(vector<int>& times, vector<int>& costs, long long budget) {
     return N - i;
 }
 ```
+
+`Why does returning N - i works ?`   
+That's really the ingenious part of this implementation. The key is in the `if` statement. We are not using `while` loop which is what people typically do. By using `if`, it is guaranteed that the distance between i and j will not decrease once it reaches certain value. As a result, `N - i` will be the largest value one has seen in the loop.
+
 </details>
 
 <details>
@@ -4392,6 +4396,35 @@ We use a map `m` to store the mapping from the bitmask to the index of the first
 For the current `mask`, we have two options:
 * all the digits in the window appeared even number times. The maximum length of such window is `i - m[mask]`.
 * Only a single digit in the window appeared odd number times. Assume it's digit `0 <= j < 9`, the maximum length of such window is `i - m[mask ^ (1 << j)]`
+
+For example - consider this number - `3242415`
+
+* Mask at i = 0 is `00001000`
+* Mask at i = 1 is `00001100`
+* Mask at i = 2 is `00011100`
+* Mask at i = 3 is `00011000`
+* Mask at i = 4 is `00001000`
+* Mask at i = 5 is `00001010`
+* Mask at i = 6 is `00101010`
+
+In this case, if you see the mask at index `i = 0` and `i = 4` are same, hence we will store it in answer as `4 - 0 + 1`  as `5`.
+
+For checking single digits if it is appeared odd number of times.
+
+In our case, mask at `i = 0` is `0000001000`
+We will try to check if any of the digits is odd from 0 to 9, by doing  `mask ^ (1 << j)`
+
+Mask at `j = 0` is `0000001001`
+Mask at `j = 1` is `0000001010`
+Mask at `j = 2` is `0000001100`
+Mask at `j = 3` is `0000000000`
+Mask at `j = 4` is `0000011000`
+Mask at `j = 5` is `0000101000`
+Mask at `j = 6` is `0001001000`
+Mask at `j = 7` is `0010001000`
+Mask at `j = 8` is `0100001000`
+Mask at `j = 9` is `1000001000`
+
 </details>
 
 <details>
