@@ -4283,7 +4283,25 @@ int maximumANDSum(vector<int>& A, int numSlots) {
 <summary> View Code - Sliding Window </summary>
 
 ```cpp
-
+int maximumRobots(vector<int>& times, vector<int>& costs, long long budget) {  
+    long long N = times.size(), ans = 0, i = 0, sum = 0;
+    multiset<int> S;
+    
+    for(int j = 0; j < N; j++) {
+        
+        sum += costs[j];
+        S.insert(times[j]);
+        
+        // *S.rbegin() will return the largest element present in multiset.
+        
+        if(*S.rbegin() + (sum * (j - i + 1)) > budget) {
+            sum -= costs[i];
+            S.erase(S.find(times[i++]));
+        }
+    }
+    
+    return N - i;
+}
 ```
 </details>
 
@@ -4291,7 +4309,73 @@ int maximumANDSum(vector<int>& A, int numSlots) {
 <summary> View Code - Sparse Table and Binary Search </summary>
 
 ```cpp
-
+#define ll long long
+struct sparse_table {
+    ll level, n;
+    vector<vector<ll>> table;
+    vector<ll> lg;
+    
+    sparse_table(vector<int> &a) {
+        n = a.size();
+        level = ceil(log2(n));
+        table.resize(n, vector<ll> (level + 1));
+        lg.resize(n + 1);
+        build(a);
+    }
+    
+    void build(vector<int> &a) {
+        lg[1] = 0;
+        for(int i = 2; i < n + 1; ++i)
+            lg[i] = lg[i / 2] + 1;
+            
+        for(int i = 0; i < n; ++i) 
+            table[i][0] = a[i];
+        
+        for(int j = 1; j <= level; ++j) {
+            for(int i = 0; i + (1LL << j) <= n; ++i) {
+                table[i][j] = max(table[i][j - 1], table[i + (1LL << (j - 1))][j - 1]);
+            }
+        }
+    }
+    
+    ll query(ll l, ll r) {
+        l--, r--;
+        ll j = lg[r - l + 1];
+    
+        return max(table[l][j], table[r - (1LL << j) + 1][j]);
+    }
+};
+class Solution {
+public:
+    int maximumRobots(vector<int>& ct, vector<int>& rt, long long budget) {
+        ll n = ct.size();
+        sparse_table rmq(ct); // for getting maximum in a range [l, r] in O(1)
+        
+        vector<ll> pre(n + 1, 0);
+        for(int i = 0; i < n; ++i) pre[i + 1] =  pre[i] + rt[i]; // precalculating prefix sums on running costs
+        
+        ll res = 0;
+        for(int i = 0; i < n; ++i) {
+            int lo = i, hi = n - 1, ind = -1;
+            while(lo <= hi) {
+                int mid = lo + (hi - lo) / 2;
+                ll mx = rmq.query(i + 1, mid + 1); // maximum in the current range
+                ll sum = pre[mid + 1] - pre[i]; // range sum 
+                
+                if(mx + (mid - i + 1) * sum <= budget) { // if the current range cost is less than or equal to budget
+                    ind = mid;
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
+                }
+            }
+            if(ind != -1) {
+                res = max(res, 1LL * (ind - i + 1));
+            }
+        }
+        return res;
+    }
+};
 ```
 </details>
 
@@ -4300,10 +4384,37 @@ int maximumANDSum(vector<int>& A, int numSlots) {
 ## 107. Find Longest Awesome Substring
 
 <details>
-<summary> View Code </summary>
+<summary> Approach </summary>
+Encode the parity of each digit using bit mask. For example, if we've seen `001233444`, we encode it as `10110` because there are odd numbers of `1, 2, 4` and even numbers of `0, 3`.
+
+We use a map `m` to store the mapping from the bitmask to the index of the first occurrence of that bitmask.
+
+For the current `mask`, we have two options:
+* all the digits in the window appeared even number times. The maximum length of such window is `i - m[mask]`.
+* Only a single digit in the window appeared odd number times. Assume it's digit `0 <= j < 9`, the maximum length of such window is `i - m[mask ^ (1 << j)]`
+</details>
+
+<details>
+<summary> Solution - Bitmasks and Prefix State Map </summary>
 
 ```cpp
-
+class Solution {
+public:
+    int longestAwesome(string s) {
+        unordered_map<int, int> m{{0,-1}}; // mask -> index of first occurrence
+        int ans = 0;
+        for (int i = 0, mask = 0; i < s.size(); ++i) {
+            mask ^= 1 << (s[i] - '0');
+            if (m.count(mask)) ans = max(ans, i - m[mask]);
+            else m[mask] = i;
+            for (int j = 0; j < 10; ++j) {
+                int prev = mask ^ (1 << j);
+                if (m.count(prev)) ans = max(ans, i - m[prev]);
+            }
+        }
+        return ans;
+    }
+};
 ```
 </details>
 
@@ -4313,10 +4424,31 @@ int maximumANDSum(vector<int>& A, int numSlots) {
 ## 108. Maximum Rows Covered By Columns
 
 <details>
-<summary> View Code </summary>
+<summary> Solution - Bitmasks </summary>
 
 ```cpp
-
+int maximumRows(vector<vector<int>>& a, int cols) {
+        int n = (int) a.size();
+        int m = (int) a[0].size();
+        int ans = -1;
+        for (int mask = 0; mask < (1 << m); mask++) {
+            if (__builtin_popcount(mask) != cols) {
+                continue;
+            }
+            int t = (1 << n) - 1;
+            for (int i = 0; i < m; i++) {
+                if (~mask & (1 << i)) {
+                    for (int j = 0; j < n; j++) {
+                        if (a[j][i]) {
+                            t &= ~(1 << j);
+                        }
+                    }
+                }
+            }
+            ans = max(ans, __builtin_popcount(t));
+        }
+        return ans;
+    }
 ```
 </details>
 
@@ -4325,10 +4457,107 @@ int maximumANDSum(vector<int>& A, int numSlots) {
 ## 109. Create Sorted Array Through Instructions
 
 <details>
-<summary> View Code </summary>
+<summary> Solution - Binary Indexed Tree (Fenwick Tree) </summary>
 
 ```cpp
+int c[100001];
+int createSortedArray(vector<int>& A) {
+    memset(c, 0, sizeof(c));
+    int res = 0, n = A.size(), mod = 1e9 + 7;
+    for (int i = 0; i < n; ++i) {
+        res = (res + min(get(A[i] - 1), i - get(A[i]))) % mod;
+        update(A[i]);
+    }
+    return res;
+}
 
+void update(int x) {
+    while (x < 100001) {
+        c[x]++;
+        x += x & -x;
+    }
+}
+
+int get(int x) {
+    int res = 0;
+    while (x > 0) {
+        res += c[x];
+        x -= x & -x;
+    }
+    return res;
+}
+```
+</details>
+
+<details>
+<summary> Solution - Segment Tree </summary>
+
+```cpp
+//  Segment Tree Array
+int tree[400040];
+
+int get_mid(int a, int b) {
+    return a + (b - a)/2;
+}
+
+// Fn to get sum between range s to e
+int query(int index, int s, int e, int qs, int qe) {
+    // 1. Base Case - Complete Overlapp
+    if(s >= qs and e <= qe)
+        return tree[index];
+    
+    // 2. Base Case - No overlapp
+    if(e < qs or s > qe)
+        return 0;
+    
+    // 3. Partial Overlapp
+    int mid = get_mid(s, e);
+    
+    int leftAns = query(2*index + 1, s, mid, qs, qe);
+    int rightAns = query(2*index + 2, mid + 1, e, qs, qe);
+    
+    return leftAns + rightAns;
+}
+
+void update(int index, int s, int e, int pos) {
+    
+    // 1. Base Case - Reached the node where update is required
+    if(s == e) {
+        tree[index]++;
+        return;
+    } 
+    
+    // 2. Intermidiate Node
+    int mid = get_mid(s, e);
+        
+    if(pos <= mid) 
+        update(2*index + 1, s, mid, pos);
+    else
+        update(2*index + 2, mid + 1, e, pos);
+
+    tree[index] = tree[2*index + 1] + tree[2*index + 2];
+}
+
+int createSortedArray(vector<int>& instructions) {
+    
+    int cost = 0;
+    const int MAXN = 1e5 + 1;
+    const int MOD = 1e9 + 7;
+    
+    for(auto x : instructions) {
+        // Get number of elements that are less than current element
+        int less_count = query(0, 0, MAXN, 0, x - 1); 
+        
+        // Get number of elements which are greater than current element
+        int greater_count = query(0, 0, MAXN, x + 1, MAXN); 
+        
+        update(0, 0, MAXN, x);
+        
+        cost = (cost + min(less_count, greater_count))%MOD;
+    }
+    
+    return cost; 
+}
 ```
 </details>
 
@@ -4337,10 +4566,63 @@ int maximumANDSum(vector<int>& A, int numSlots) {
 ## 110. Maximum Students Taking Exam
 
 <details>
-<summary> View Code </summary>
+<summary> Approach </summary>
+
+We can do the dp row by row, we start from row 1 until row n. 
+`dp[i][mask]` represents that, we are now at row i and the state of this row is mask.
+Now, state conversion is: We consider every possible state of the last row, and check if the state conversion is legal (that is, there will be no cheating). Hence we have:
+
+`dp[i][mask] = max(dp[i][mask], dp[i-1][premask] + __builtin_popcount(mask));`
+where mask and premask are both legal, and these two rows together will have no cheating.
+
+</details>
+
+<details>
+<summary> Solution - Bitmasks </summary>
 
 ```cpp
-
+class Solution {
+public:
+    int n,m;
+    int ans = 0;
+    int dp[9][(1<<8)+2];  //dp[i][mask]: we are in row i(i is from [1,9]), state is mask
+    int avail[9];  //avail[i] is the mask representing available seats in row i
+        
+    int maxStudents(vector<vector<char>>& seats) {
+        n = seats.size(); m = seats[0].size();
+        memset(dp, -1, sizeof(dp));
+        for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (seats[i-1][j] == '.') {
+                    avail[i] |= (1<<j);
+                }
+            }
+        }
+        
+        for (int mask = 0; mask < (1<<m); mask++) {
+            dp[0][mask] = 0;  //initialize all illegal states with 0
+        }
+        
+        for (int i = 1; i <= n; i++) {  //now we are at row i
+            for (int premask = 0; premask < (1<<m); premask++) {
+                if (dp[i-1][premask] == -1) continue;
+                for (int mask = 0; mask < (1<<m); mask++) {
+                    if ((mask & avail[i]) != mask) continue;
+                    if (mask&(mask>>1)) continue;  //if there is adjacent 1
+                    
+                    /*checking this row and last row*/
+                    if (mask&(premask<<1) || mask&(premask>>1)) continue;
+                    dp[i][mask] = max(dp[i][mask], dp[i-1][premask] + __builtin_popcount(mask));
+                }
+            }
+        }
+        
+        for (int mask = 0; mask < (1<<m); mask++) {
+            ans = max(ans, dp[n][mask]);
+        }
+        return ans;
+    }
+};
 ```
 </details>
 
