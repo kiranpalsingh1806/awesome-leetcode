@@ -575,14 +575,6 @@ public:
 <summary> View Code </summary>
 
 ```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
-
-```cpp
 struct TrieNode {
     TrieNode *next[26] = {};
     bool word = false;
@@ -630,19 +622,16 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
 
 ## 12. Sort The Matrix Diagonally
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -679,19 +668,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 13. Minimum Window Substring
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -739,18 +724,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 14. Increasing Triplet Subsequence
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
 
 
 ```cpp
@@ -779,18 +761,14 @@ public:
 };
 ```
 
-## 15. Target Sum
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 15. Target Sum
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Solution {
@@ -850,19 +828,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 16. Check If There Is A Valid Partition For The Array
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -902,19 +876,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 17. Longest Consecutive Sequence
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 // Union Find that also return the vector of size of components.
@@ -971,19 +941,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 18. Valid Sudoku
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1008,18 +974,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 19. My Calendar I
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
 
 
 ```cpp
@@ -1055,19 +1018,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 20. Sliding Window Maximum
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1103,19 +1061,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 21. Best Time To Buy and Sell Stock
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1136,19 +1090,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 22. Maximum Subarray
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int maxSubArray(vector<int>& nums) {
@@ -1165,6 +1115,10 @@ int maxSubArray(vector<int>& nums) {
     return global;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 23. Cracking The Safe
 
@@ -1172,18 +1126,8 @@ int maxSubArray(vector<int>& nums) {
 <summary> View Code </summary>
 
 ```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
-
-```cpp
 class Solution {
 public:
-    
-    
     string crackSafe(int n, int k) {
         
         if(n == 1 && k == 1) return "0";
@@ -1215,19 +1159,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 24. Find If Path Exists In Graph
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1271,19 +1211,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 25. Next Greater Node In Linked List
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1334,18 +1269,14 @@ public:
 };
 ```
 
-## 26. Repeated Substring Pattern
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 26. Repeated Substring Pattern
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Solution {
@@ -1368,19 +1299,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 27. Search Suggestion System
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 struct TrieNode {
@@ -1432,19 +1359,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 28. Merge K Sorted Lists
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1467,19 +1390,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 29. Daily Temperatures
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1496,19 +1415,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 30. Merge Intervals
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1530,19 +1444,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 31. Word Ladder
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
@@ -1574,19 +1483,15 @@ int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
     return 0;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 32. 3Sum
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 vector<vector<int>> threeSum(vector<int>& A) {
@@ -1626,19 +1531,15 @@ vector<vector<int>> threeSum(vector<int>& A) {
     return ans;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 33. Flatten Binary Tree To Linked List
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 void flatten(TreeNode* root) {
@@ -1663,19 +1564,15 @@ void flatten(TreeNode* root) {
     }
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 34. Sum of Subarray Minimums
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int sumSubarrayMins(vector<int>& A) {
@@ -1696,19 +1593,15 @@ int sumSubarrayMins(vector<int>& A) {
     return ans;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 35. Median of Two Sorted Arrays
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
@@ -1727,19 +1620,15 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
     }
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 36. LRU Cache
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class LRUCache {
@@ -1778,19 +1667,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 37. Gas Station
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
@@ -1805,19 +1690,15 @@ int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
     return len == N ? start : -1;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 38. Max Points On A Line
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1852,19 +1733,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 39. Largest Rectangle In Histogram
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1901,19 +1778,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 40. Regular Expression Matching
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1938,19 +1811,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 41. Minimum Deletions To Make Character Frequencies Unique
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -1972,19 +1841,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 42. Jump Game II
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2005,19 +1870,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 43. Count Good Nodes In Binary Tree
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2045,18 +1906,14 @@ public:
 };
 ```
 
-## 44. Unique Paths
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 44. Unique Paths
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Solution {
@@ -2075,19 +1932,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 45. Coin Change
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2118,19 +1971,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 46. Is Graph Bipartite ?
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2153,19 +2002,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 47. Frequency of Most Frequent Elements
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2194,19 +2039,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 48. Group Anagrams
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2233,19 +2073,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 49. Satisfiability of Equality Equations
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class UnionFind {
@@ -2310,19 +2145,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 50. Range Sum BST
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2349,18 +2180,15 @@ public:
 };
 ```
 
-## 51. Number of Islands
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+
+## 51. Number of Islands
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Solution {
@@ -2405,19 +2233,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 52. Wildcard Matching
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2461,19 +2284,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 53. Min Stack
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class MinStack {
@@ -2507,19 +2325,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 54. Permutations
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2549,18 +2363,14 @@ public:
 };
 ```
 
-## 55. Combinations
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 55. Combinations
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Solution {
@@ -2589,19 +2399,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 56. Diameter of Binary Tree
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2627,19 +2433,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 57. Peak Index In Mountain Array
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int peakIndexInMountainArray(vector<int>& arr) {
@@ -2660,19 +2461,14 @@ int peakIndexInMountainArray(vector<int>& arr) {
     return R;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 58. Maximum Depth of Binary Tree
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int maxDepth(TreeNode* root) {
@@ -2684,18 +2480,15 @@ int maxDepth(TreeNode* root) {
 }
 ```
 
-## 59. Find Minimum In Rotated Sorted Array
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+
+## 59. Find Minimum In Rotated Sorted Array
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 int findMin(vector<int>& nums) {
@@ -2716,19 +2509,15 @@ int findMin(vector<int>& nums) {
     return nums[R];
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 60. Binary Tree Zigzag Level Order Traversal
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -2778,19 +2567,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 61. Longest Substring Without Repeating Characters
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int lengthOfLongestSubstring(string s) {
@@ -2813,19 +2597,15 @@ int lengthOfLongestSubstring(string s) {
     return length;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 62. Combination Sum
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 vector<vector<int>> combinationSum(vector<int>& A, int target) {
@@ -2847,18 +2627,14 @@ vector<vector<int>> combinationSum(vector<int>& A, int target) {
 }
 ```
 
-## 63. N-Queens
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 63. N-Queens
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Solution {
@@ -2904,19 +2680,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 64. Subsets
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 vector<vector<int>> subsets(vector<int>& A) {
@@ -2936,19 +2708,14 @@ vector<vector<int>> subsets(vector<int>& A) {
     return ans;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 65. Pascal's Triangle
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 vector<vector<int>> generate(int numRows) {
@@ -2960,19 +2727,15 @@ vector<vector<int>> generate(int numRows) {
     return ans;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 66. House Robber II
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3000,19 +2763,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 67. Partition Equal Subset Sum
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3042,19 +2801,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 68. Number of Submatrices That Sum To Target
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3082,18 +2836,15 @@ public:
 };
 ```
 
-## 69. Shortest Path in Binary Matrix
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+
+## 69. Shortest Path in Binary Matrix
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Solution {
@@ -3121,19 +2872,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 70.Validate Binary Search Tree
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3151,19 +2898,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 71. Reverse Nodes in k-Group
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3190,19 +2932,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 72. Trapping Rain Water
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3217,19 +2954,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 73. Find Missing Positive
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int firstMissingPositive(vector<int>& A) {
@@ -3263,19 +2995,14 @@ int firstMissingPositive(vector<int>& nums) {
     return N + 1;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 74. Edit Distance
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3312,19 +3039,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 75. Climbing Stairs
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int climbStairs(int n) {
@@ -3337,19 +3059,14 @@ int climbStairs(int n) {
     return cur;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 76. Shifting Letters II
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 // Solution 1 - Line Sweep
@@ -3444,19 +3161,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 77. Build A Matrix With Conditions
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 vector<vector<int>> buildMatrix(int k, vector<vector<int>>& rowConditions, vector<vector<int>>& colConditions) {
@@ -3491,18 +3204,15 @@ vector<int> topologicalSort(vector<vector<int>> &A, int k) {
 }
 ```
 
-## 78. Serialize and Deserialize Binary Tree
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+
+## 78. Serialize and Deserialize Binary Tree
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Codec {
@@ -3551,19 +3261,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 79. Pacific Atlantic Water Flow
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3599,19 +3304,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 80. Delete and Earn
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int deleteAndEarn(vector<int>& nums) {
@@ -3632,19 +3333,14 @@ int deleteAndEarn(vector<int>& nums) {
     return dp[10000];
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 81. Permutations II
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3670,19 +3366,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 82. Combination Sum II
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3714,19 +3405,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 83. Non Overlapping Intervals
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int eraseOverlapIntervals(vector<vector<int>>& intervals) {
@@ -3748,19 +3434,14 @@ int eraseOverlapIntervals(vector<vector<int>>& intervals) {
     return overlapCnt;
 }
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 84. Best Time To Buy and Sell Stocks With Cooldown
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 class Solution {
@@ -3777,19 +3458,14 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 85. Maximum XOR of Two Numbers In An Array
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 // Using Bitmasks
@@ -3852,18 +3528,14 @@ public:
 };
 ```
 
-## 86. Implement Queue Using Stacks
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 86. Implement Queue Using Stacks
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class MyQueue {
@@ -3901,19 +3573,15 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ## 87. Minimum Size Subarray Sum 
 
 <details>
 <summary> View Code </summary>
-
-```cpp
-
-```
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 
 ```cpp
 int minSubArrayLen(int target, vector<int>& nums) {   
@@ -3935,18 +3603,14 @@ int minSubArrayLen(int target, vector<int>& nums) {
 }
 ```
 
-## 88. Number of Visible People In A Queue
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 88. Number of Visible People In A Queue
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 vector<int> canSeePersonsCount(vector<int>& A) {
@@ -3971,18 +3635,14 @@ vector<int> canSeePersonsCount(vector<int>& A) {
 }
 ```
 
-## 89. Describe The Painting 
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 89. Describe The Painting 
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Solution {
@@ -4021,18 +3681,14 @@ public:
 };
 ```
 
-## 90. Flood Fill
-
-<details>
-<summary> View Code </summary>
-
-```cpp
-
-```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 90. Flood Fill
+
+<details>
+<summary> View Code </summary>
 
 ```cpp
 class Solution {
@@ -4071,6 +3727,9 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
 
 ## 91. Palindrome Partitioning
 
