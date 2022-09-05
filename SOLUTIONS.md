@@ -3465,10 +3465,21 @@ public:
 ## 85. Maximum XOR of Two Numbers In An Array
 
 <details>
-<summary> View Code </summary>
+<summary> Approach </summary>
+
+This algorithm's idea is:
+to iteratively determine what would be each bit of the final result from left to right. And it narrows down the candidate group iteration by iteration. e.g. assume input are `a,b,c,d,...z`, `26` integers in total. In first iteration, if you found that `a, d, e, h, u` differs on the MSB(most significant bit), so you are sure your final result's MSB is set. Now in second iteration, you try to see if among `a, d, e, h, u` there are at least two numbers make the 2nd MSB differs, if yes, then definitely, the 2nd MSB will be set in the final result. And maybe at this point the candidate group shinks from `a,d,e,h,u` to `a, e, h`. Implicitly, every iteration, you are narrowing down the candidate group, but you don't need to track how the group is shrinking, you only cares about the final result.
+
+* The mask will grow like  `100..000 , 110..000, 111..000,  then 1111...111` for each iteration, we only care about the left parts.
+* We only care about the left parts, for example, if `i = 2`, then we have `{1100, 1000, 0100, 0000}` from `{1110, 1011, 0111, 0010}`.
+* If `i = 1`and before this iteration, the maxResult we have now is `1100`, my wish is the maxResult will grow to `1110`, so I will try to find a candidate which can give me the greedyTry.
+* This is the most tricky part, coming from a fact that if `a ^ b = c`, then `a ^ c = b`, now we have the `c`, which is greedyTry, and we have the `a`, which is leftPartOfNum. If we hope the formula `a ^ b = c` to be valid, then we need the `b`,  and to get `b`, we need `a ^ c`, if `a ^ c` exisited in our set, then we're good to go.
+</details>
+
+<details>
+<summary> Solution - Bitmasks </summary>
 
 ```cpp
-// Using Bitmasks
 class Solution {
 public:
     int findMaximumXOR(vector<int>& A) {
@@ -3489,8 +3500,13 @@ public:
     }
 };
 
+```
+</details>
 
-// Using Trie
+<details>
+<summary> Solution - Trie </summary>
+
+```cpp
 struct TrieNode {
     TrieNode *next[2] = {};
 };
