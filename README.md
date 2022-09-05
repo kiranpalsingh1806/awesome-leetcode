@@ -112,3 +112,5 @@
 |108|[Maximum Rows Covered By Columns](https://leetcode.com/problems/maximum-rows-covered-by-columns/)|Bitmasks|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |109|[Create Sorted Array Through Instructions](https://leetcode.com/problems/create-sorted-array-through-instructions/)|Binary Indexed Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |110|[Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/)|Bitmasks|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|111|[Number of Ways To Reach A Position After Exactly K Steps](https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/)|Recursion, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|112|[Find The Longest Substring Containing Vowels In Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/)|Prefix State Map|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|

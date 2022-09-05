@@ -110,6 +110,8 @@
   - [108. Maximum Rows Covered By Columns](#108-maximum-rows-covered-by-columns)
   - [109. Create Sorted Array Through Instructions](#109-create-sorted-array-through-instructions)
   - [110. Maximum Students Taking Exam](#110-maximum-students-taking-exam)
+  - [111. Number of Ways To Reach A Position After Exactly K Steps](#111-number-of-ways-to-reach-a-position-after-exactly-k-steps)
+  - [112. Find The Longest Substring Containing Vowels In Even Counts](#112-find-the-longest-substring-containing-vowels-in-even-counts)
 
 ## 1. Longest Increasing Subsequence
 
@@ -4673,6 +4675,122 @@ public:
     }
 };
 ```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 111. Number of Ways To Reach A Position After Exactly K Steps
+
+<details>
+<summary> Solution - Recursion + DP </summary>
+
+```cpp
+class Solution {
+public:
+    vector<vector<long long>> dp;
+    const int MOD = 1e9 + 7;
+
+    int recur(int s, int e, int step, int current, int k) {
+
+        if(dp[step][current + 2000] != -1e9) {
+            return (dp[step][current + 2000] % MOD);
+        }
+
+        if(step == k) {
+            if(current == e) {
+                return 1;
+            }
+            return 0;
+        }
+
+        return dp[step][current + 2000] = ((recur(s, e, step + 1, current + 1, k) % MOD) + (recur(s, e, step + 1, current - 1, k) % MOD)) % MOD; 
+    }
+
+    int numberOfWays(int startPos, int endPos, int k) {
+        dp.assign(5000, vector<long long>(5000, -1e9));
+        return recur(startPos, endPos, 0, startPos, k) % MOD;
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 112. Find The Longest Substring Containing Vowels In Even Counts
+
+<details>
+<summary> Approach </summary>
+
+At the first glance it's like a sliding window problem. For a find maximum sliding window problem, the initial state should be valid, then keep extending the 2nd pointer until the state becomes invalid (now the maximum is found), then move the first pointer to get back the valid state again.
+
+In this problem, the initial state is valid. When extending the 2nd pointer, the state might jump back and forth between invalid and valid before reaching the longest valid end position. So we shouldn't use sliding window to solve this problem.
+
+Try to get the intuition by simplying the problem -- what if we only consider `a` as vowel?
+
+```
+    4    9   13  17
+    v    v   v   v
+xxxxaxxxxaxxxaxxxaxxx
+    ~
+         -1
+             4
+                 -1        
+```
+
+
+Consider the above input.
+
+For `i = 0 ~ 3`, `0` `a` has been visited, substring `s[0..i]` is valid.
+
+For `i = 4 ~ 8`, `1` `a` has been visited, substring `s[5..i]` is valid.
+
+For `i = 9 ~ 12`, `2` `a`s have been visited, substring `s[0..i]` is valid.
+
+For `i = 13 ~ 16`, `3` `a`s have been visited, substring `s[5..i]` is valid.
+
+For `i = 17 ~ (N - 1)`, `4` `a`s have been visited, substring `s[0..i]` is valid.
+
+So we can see there can be a greedy solution:
+
+* If we've visited **even** number of `a`, substring `s[0..i]` is valid which has length `i + 1`.
+* If we've visited **odd** number of `a`, substring `s[(k+1)..i]` is valid where `k` is the first index of the first occurrence of `a`. The length is `i - k`.
+
+We can regard **even** and **odd** are two different states, then the above two cases can be unified into one:
+
+* If we are in state `x` at index `i`, find the index of the first occurrence of the same state `x`, say `k`, then `i - k` is the length of the longest valid string ending at `i`.
+
+Note that we need to regard `-1` as the index of the first occurrence of **even** state.
+
+Now we consider the 5 vowels. Each vowel has two different states, **even** and **odd**. So in total there are `2^5` different states. We can use bitmask to encode the state.
+
+For example, if the state of `aeiou` are even, even, odd, odd, even respectively, we can encode the state as `00110`.
+
+Let `index` be a map from state `x` to the index of the first occurrence of state `x`.
+
+For each index `i`, we get the corresponding state `mask` of `s[i]` first, then:
+* If we've seen this state, then try to update the answer using `i - index[mask]`.
+* Otherwise, `index[mask] = i`.
+
+</details>
+
+
+<details>
+<summary> Solution - Prefix State Map </summary>
+
+```cpp
+int findTheLongestSubstring(string s) {
+        int h = 0, ans = 0;
+        unordered_map<int, int> m{{'a',0},{'e',1},{'i',2},{'o',3},{'u',4}}, index{{0,-1}};
+        for (int i = 0; i < s.size(); ++i) {
+            if (m.count(s[i])) h ^= 1 << m[s[i]];
+            if (index.count(h)) ans = max(ans, i - index[h]);
+            else index[h] = i;
+        }
+        return ans;
+    }
+```
+
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
