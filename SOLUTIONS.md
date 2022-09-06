@@ -112,6 +112,10 @@
   - [110. Maximum Students Taking Exam](#110-maximum-students-taking-exam)
   - [111. Number of Ways To Reach A Position After Exactly K Steps](#111-number-of-ways-to-reach-a-position-after-exactly-k-steps)
   - [112. Find The Longest Substring Containing Vowels In Even Counts](#112-find-the-longest-substring-containing-vowels-in-even-counts)
+  - [113. Maximum Earnings From Taxi](#113-maximum-earnings-from-taxi)
+  - [114. Vertical Order Traversal Of A Binary Tree](#114-vertical-order-traversal-of-a-binary-tree)
+  - [115. Invert Binary Tree](#115-invert-binary-tree)
+  - [116. Problem](#116-problem)
 
 ## 1. Longest Increasing Subsequence
 
@@ -4790,6 +4794,42 @@ int findTheLongestSubstring(string s) {
         return ans;
     }
 ```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 113. Maximum Earnings From Taxi 
+
+<details>
+<summary> Solution </summary>
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 114. Vertical Order Traversal Of A Binary Tree 
+
+<details>
+<summary> Solution </summary>
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 115. Invert Binary Tree 
+
+<details>
+<summary> Solution </summary>
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 116. Problem 
+
+<details>
+<summary> Solution </summary>
 
 </details>
 
