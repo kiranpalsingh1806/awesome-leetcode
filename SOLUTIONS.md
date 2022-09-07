@@ -4804,6 +4804,24 @@ int findTheLongestSubstring(string s) {
 <details>
 <summary> Solution </summary>
 
+```cpp
+long long maxTaxiEarnings(int n, vector<vector<int>>& A) {
+    sort(A.begin(), A.end(), [](auto &a, auto &b) { return a[0] > b[0]; });
+    
+    map<int, long long> dp;
+    dp[INT_MAX] = 0;
+    
+    long long ans = 0;
+    
+    for(auto &r : A) {
+        int s = r[0], e = r[1], p = r[2];
+        dp[s] = max(ans, e - s + p + dp.lower_bound(e)->second);
+        ans = max(ans, dp[s]);
+    }
+    
+    return ans;
+}
+```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
@@ -4812,6 +4830,40 @@ int findTheLongestSubstring(string s) {
 
 <details>
 <summary> Solution </summary>
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> answer;
+    map<int, map<int, multiset<int>>> m;
+    
+    void dfs(TreeNode* root, int x, int y) {
+        if(!root) {
+            return;
+        }
+        
+        m[x][y].insert(root->val);
+        
+        dfs(root->left, x - 1, y + 1);
+        dfs(root->right, x + 1, y + 1);
+    }
+    
+    vector<vector<int>> verticalTraversal(TreeNode* root) {
+        dfs(root, 0, 0);
+        
+        for(auto &[mm, mm1]: m) {
+            answer.emplace_back();
+            for(auto &[mm2, vals] : mm1) {
+                for(int n : vals) {
+                    answer.back().push_back(n);
+                }     
+            }
+        }
+        
+        return answer;
+    }
+};
+```
 
 </details>
 
@@ -4822,6 +4874,21 @@ int findTheLongestSubstring(string s) {
 <details>
 <summary> Solution </summary>
 
+```cpp
+TreeNode* invertTree(TreeNode* root) {
+    if(!root) {
+        return NULL;
+    }
+    
+    swap(root->left, root->right);
+    
+    invertTree(root->left);
+    invertTree(root->right);
+    
+    return root;
+}
+```
+
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
@@ -4830,6 +4897,9 @@ int findTheLongestSubstring(string s) {
 
 <details>
 <summary> Solution </summary>
+
+```cpp
+```
 
 </details>
 
