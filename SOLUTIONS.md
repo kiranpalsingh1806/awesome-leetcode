@@ -4932,22 +4932,83 @@ int countPrimes(int n) {
 <summary> Solution </summary>
 
 ```cpp
-string shortestSuperstring(vector<string>& A) {
-    string dp[1 << 12] = {};
-    int N = A.size();
-    for (int mask = 0; mask < (1 << N); ++mask) { // try to extend from the current subset to the next subset
-        for (int i = 0; i < N; ++i) { // try extending using A[i]
-            if (mask >> i & 1) continue; // If A[i] already used, we can't extend with it
-            int next = (mask | (1 << i)), len = min(A[i].size(), dp[mask].size()); // `next` represents the next subset. Try to get the overlap length between `dp[mask]` and `A[i]`
-            while (len >= 1 && dp[mask].substr(dp[mask].size() - len) != A[i].substr(0, len)) --len;
-            auto s = dp[mask] + A[i].substr(len);
-            if (dp[next].empty() || s.size() < dp[next].size()) { // Try updating the optimal solution of the next subset -- `dp[next]`.
-                dp[next] = s;
+class Solution {
+public:
+    string shortestSuperstring(vector<string>& A) {
+        int n = A.size();
+        
+        vector<vector<int>> overlaps(n, vector<int>(n));
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                int m = min(A[i].size(), A[j].size());
+                for (int k = m; k >= 0; --k) {
+                    if (A[i].substr(A[i].size() - k) == A[j].substr(0, k)) {
+                        overlaps[i][j] = k;
+                        break;
+                    }
+                }
             }
         }
+  
+        // dp[mask][i] = most overlap with mask, ending with ith element
+        vector<vector<int>> dp(1<<n, vector<int>(n, 0));
+        vector<vector<int>> parent(1<<n, vector<int>(n, -1));
+        
+        for (int mask = 0; mask < (1<<n); ++mask) {
+            for (int bit = 0; bit < n; ++bit) {
+                if (((mask>>bit)&1) > 0) {
+                    int pmask = mask^(1<<bit);
+                    if (pmask == 0) continue;
+                    for (int i = 0; i < n; ++i) {
+                        if (((pmask>>i)&1) > 0) {
+                            int val = dp[pmask][i] + overlaps[i][bit];
+                            if (val > dp[mask][bit]) {
+                                dp[mask][bit] = val;
+                                parent[mask][bit] = i;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        vector<int> perm;
+        vector<bool> seen(n);
+        int mask = (1<<n) - 1;
+        
+        int p = 0;
+        for (int i = 0; i < n; ++i) {
+            if (dp[(1<<n) - 1][i] > dp[(1<<n) - 1][p]) {
+                p = i;
+            }
+        }
+        
+        while (p != -1) {
+            perm.push_back(p);
+            seen[p] = true;
+            int p2 = parent[mask][p];
+            mask ^= (1<<p);
+            p = p2;
+        }
+        
+        reverse(perm.begin(), perm.end());
+        
+        for (int i = 0; i < n; ++i) {
+            if (!seen[i]) {
+                perm.push_back(i);
+            }
+        }
+        
+        string ans = A[perm[0]];
+        for (int i = 1; i < n; ++i) {
+            int overlap = overlaps[perm[i - 1]][perm[i]];
+            ans += A[perm[i]].substr(overlap);
+        }
+        
+        return ans;
+        
     }
-    return dp[(1 << N) - 1];
-}
+};
 ```
 
 </details>
