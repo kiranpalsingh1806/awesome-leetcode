@@ -117,3 +117,6 @@
 |113|[Maximum Earnings From Taxi](https://leetcode.com/problems/maximum-earnings-from-taxi/)|DP, Binary Search|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |114|[Vertical Order Traversal Of A Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |115|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|116|[Count Primes](https://leetcode.com/problems/count-primes/)|Sieve of Eratosthenes|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|117|[Find The Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/)|Bitmasks, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|118|[Sum Root To Leaf Nodes](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|

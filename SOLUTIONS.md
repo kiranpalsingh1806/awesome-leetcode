@@ -115,7 +115,11 @@
   - [113. Maximum Earnings From Taxi](#113-maximum-earnings-from-taxi)
   - [114. Vertical Order Traversal Of A Binary Tree](#114-vertical-order-traversal-of-a-binary-tree)
   - [115. Invert Binary Tree](#115-invert-binary-tree)
-  - [116. Problem](#116-problem)
+  - [116. Count Primes](#116-count-primes)
+  - [117. Find The Shortest Superstring](#117-find-the-shortest-superstring)
+  - [118. Sum Root To Leaf Nodes](#118-sum-root-to-leaf-nodes)
+  - [119. Problem Name](#119-problem-name)
+  - [120. Problem Name](#120-problem-name)
 
 ## 1. Longest Increasing Subsequence
 
@@ -4893,7 +4897,56 @@ TreeNode* invertTree(TreeNode* root) {
 
 <br>[⬆ Back to top](#table-of-contents)
 
-## 116. Problem 
+## 116. Count Primes 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 117. Find The Shortest Superstring 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 118. Sum Root To Leaf Nodes 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 119. Problem Name 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 120. Problem Name 
 
 <details>
 <summary> Solution </summary>
