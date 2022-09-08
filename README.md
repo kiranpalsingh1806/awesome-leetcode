@@ -120,3 +120,6 @@
 |116|[Count Primes](https://leetcode.com/problems/count-primes/)|Sieve of Eratosthenes|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |117|[Find The Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/)|Bitmasks, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |118|[Sum Root To Leaf Nodes](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|119|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|120|[Count Number of Maximum Bitwise Or Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)|Bitmasks|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|121|[Jump Game III](https://leetcode.com/problems/jump-game-iii/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
