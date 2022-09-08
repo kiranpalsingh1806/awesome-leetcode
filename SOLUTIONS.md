@@ -4903,6 +4903,23 @@ TreeNode* invertTree(TreeNode* root) {
 <summary> Solution </summary>
 
 ```cpp
+int countPrimes(int n) {
+    vector<bool> primes(n + 1, true);
+    int cntPrimes = 0;
+    
+    for(int i = 2; i < n; i++) {
+        if(!primes[i]) {
+            continue;
+        }
+        
+        cntPrimes++;
+        for(int j = i; j < n; j += i) {
+            primes[j] = false;
+        }
+    }
+    
+    return cntPrimes;
+}
 ```
 
 </details>
@@ -4915,6 +4932,22 @@ TreeNode* invertTree(TreeNode* root) {
 <summary> Solution </summary>
 
 ```cpp
+string shortestSuperstring(vector<string>& A) {
+    string dp[1 << 12] = {};
+    int N = A.size();
+    for (int mask = 0; mask < (1 << N); ++mask) { // try to extend from the current subset to the next subset
+        for (int i = 0; i < N; ++i) { // try extending using A[i]
+            if (mask >> i & 1) continue; // If A[i] already used, we can't extend with it
+            int next = (mask | (1 << i)), len = min(A[i].size(), dp[mask].size()); // `next` represents the next subset. Try to get the overlap length between `dp[mask]` and `A[i]`
+            while (len >= 1 && dp[mask].substr(dp[mask].size() - len) != A[i].substr(0, len)) --len;
+            auto s = dp[mask] + A[i].substr(len);
+            if (dp[next].empty() || s.size() < dp[next].size()) { // Try updating the optimal solution of the next subset -- `dp[next]`.
+                dp[next] = s;
+            }
+        }
+    }
+    return dp[(1 << N) - 1];
+}
 ```
 
 </details>
@@ -4927,6 +4960,25 @@ TreeNode* invertTree(TreeNode* root) {
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+public:
+    int ans = 0;
+    
+    void dfs(TreeNode* root, int sum) {
+        if(!root) return;
+        sum = sum * 10 + (root->val);
+        
+        if(!root->left && !root->right) ans += sum;
+        
+        dfs(root->left, sum);
+        dfs(root->right, sum);
+    }
+    
+    int sumNumbers(TreeNode* root) {
+        dfs(root, 0);
+        return ans;
+    }
+};
 ```
 
 </details>
