@@ -118,8 +118,13 @@
   - [116. Count Primes](#116-count-primes)
   - [117. Find The Shortest Superstring](#117-find-the-shortest-superstring)
   - [118. Sum Root To Leaf Nodes](#118-sum-root-to-leaf-nodes)
-  - [119. Problem Name](#119-problem-name)
-  - [120. Problem Name](#120-problem-name)
+  - [119. Longest Common Subsequence](#119-longest-common-subsequence)
+  - [120. Count Number of Maximum Bitwise Or Subsets](#120-count-number-of-maximum-bitwise-or-subsets)
+  - [121. Jump Game III](#121-jump-game-iii)
+  - [122. Problem Name](#122-problem-name)
+  - [123. Problem Name](#123-problem-name)
+  - [124. Problem Name](#124-problem-name)
+  - [125. Problem Name](#125-problem-name)
 
 ## 1. Longest Increasing Subsequence
 
@@ -778,7 +783,7 @@ public:
 ## 15. Target Sum
 
 <details>
-<summary> View Code </summary>
+<summary> Solution - Recursion (TLE) </summary>
 
 ```cpp
 class Solution {
@@ -811,30 +816,35 @@ public:
         return recur(nums, 0, target, 0);
     }
 };
+```
+</details>
 
+<details>
+<summary> Solution - DP </summary>
+
+```cpp
 class Solution {
 public:
-    
-    int recursion(vector<int>& nums, int i, int target, int n, vector<vector<int>> &dp) {
-        if(i == n) {
-            if(target == 0) return 1;
-            return 0;
+    int recursion(vector<int>& nums, int sum, int target, int i, vector<vector<int>> &dp) {
+        
+        if(i == nums.size()) {
+            return sum == target;
         }
         
-        if(dp[i][target + 1000] != -1) return dp[i][target + 1000];
+        if(dp[i][sum + 1000] != -1) return dp[i][sum + 1000];
         
-        int include = recursion(nums, i + 1, target + nums[i], n, dp);
-        int notInclude = recursion(nums, i + 1, target - nums[i], n, dp);
         
-        dp[i][target + 1000] = include + notInclude;
-        return dp[i][target + 1000];
-    }
+        int include = recursion(nums, sum + nums[i], target, i + 1, dp);
+        int notInclude = recursion(nums, sum - nums[i], target, i + 1, dp);
+        
+        dp[i][sum + 1000] = include + notInclude;
+        
+        return dp[i][sum + 1000];
+    }   
     
     int findTargetSumWays(vector<int>& nums, int target) {
-        
         vector<vector<int>> dp(nums.size() + 1, vector<int>(3000, -1));
-        
-        return recursion(nums, 0, target, nums.size(), dp);
+        return recursion(nums, 0, target, 0, dp);
     }
 };
 ```
@@ -5047,7 +5057,86 @@ public:
 <br>[⬆ Back to top](#table-of-contents)
 
 
-## 119. Problem Name 
+## 119. Longest Common Subsequence
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+int longestCommonSubsequence(string s, string t) {
+    int M = s.size(), N = t.size();
+    vector<vector<int>> dp(M + 1, vector<int>(N + 1, 0));
+    
+    for(int i = 1; i <= M; i++) {
+        for(int j = 1; j <= N; j++) {
+            if (s[i - 1] == t[j - 1]) {
+                dp[i][j] = 1 + dp[i - 1][j - 1];
+            } else {
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+    }
+    
+    return dp[M][N];
+}
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 120. Count Number of Maximum Bitwise Or Subsets
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+int countMaxOrSubsets(vector<int>& nums) {    
+    int N = nums.size(), maxOr = 0;
+    for(auto a : nums) maxOr |= a;
+    
+    int subsetCnt = 0;
+    
+    for(int mask = 0; mask < (1 << N); mask++) {
+        int subsetOr = 0;
+        for(int i = 0; i < N; i++) {
+            if(mask >> i & 1) {
+                subsetOr |= (nums[i]);
+            }
+        }
+        
+        if(subsetOr == maxOr) subsetCnt++;
+    }
+    
+    return subsetCnt++;
+}
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 121. Jump Game III
+
+<details>
+<summary> Solution - DP </summary>
+
+```cpp
+bool canReach(vector<int>& A, int start) {
+    if(start < 0 || start >= A.size() || A[start] < 0) return false;
+    
+    if(A[start] == 0) return true; 
+    A[start] *= -1;
+    
+    return canReach(A, start + A[start]) || canReach(A, start - A[start]);
+}
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 122. Problem Name 
 
 <details>
 <summary> Solution </summary>
@@ -5059,7 +5148,34 @@ public:
 
 <br>[⬆ Back to top](#table-of-contents)
 
-## 120. Problem Name 
+
+## 123. Problem Name 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 124. Problem Name 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 125. Problem Name 
 
 <details>
 <summary> Solution </summary>
