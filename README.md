@@ -123,6 +123,10 @@
 |119|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |120|[Count Number of Maximum Bitwise Or Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)|Bitmasks|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |121|[Jump Game III](https://leetcode.com/problems/jump-game-iii/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|122|[Operations On Tree](https://leetcode.com/problems/operations-on-tree/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|123|[Minimum Operations To Convert Number](https://leetcode.com/problems/minimum-operations-to-convert-number/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|124|[Egg Drop With 2 Eggs And N Floors](https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|122|[Operations On Tree](https://leetcode.com/problems/operations-on-tree/)|Trees|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|123|[Minimum Operations To Convert Number](https://leetcode.com/problems/minimum-operations-to-convert-number/)|BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|124|[Egg Drop With 2 Eggs And N Floors](https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/)|DP, Maths|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|125|[Time Needed To Inform All Employees](https://leetcode.com/problems/time-needed-to-inform-all-employees/)|BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|126|[Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)|Design|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|127|[Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)|DFS, BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|128|[Flip String To Monotone Increasing](https://leetcode.com/problems/flip-string-to-monotone-increasing/)|String|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|

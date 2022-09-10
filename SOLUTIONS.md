@@ -124,7 +124,11 @@
   - [122. Operations on Tree](#122-operations-on-tree)
   - [123. Minimum Operations To Convert Number](#123-minimum-operations-to-convert-number)
   - [124. Egg Drop With 2 Eggs and N Floors](#124-egg-drop-with-2-eggs-and-n-floors)
-  - [125. Problem Name](#125-problem-name)
+  - [125. Time Needed To Inform All Employees](#125-time-needed-to-inform-all-employees)
+  - [126. Time Based Key-Value Store](#126-time-based-key-value-store)
+  - [127. Shortest Bridge](#127-shortest-bridge)
+  - [128. Flip String To Monotone Increasing](#128-flip-string-to-monotone-increasing)
+  - [129. Problem Name](#129-problem-name)
 
 ## 1. Longest Increasing Subsequence
 
@@ -5142,6 +5146,57 @@ bool canReach(vector<int>& A, int start) {
 <summary> Solution </summary>
 
 ```cpp
+class LockingTree {
+    vector<int> locked, parent;
+    vector<vector<int>> child;
+    int N;
+    bool upwardValid(int i) {
+        if (i == -1) return true;
+        if (locked[i]) return false;
+        return upwardValid(parent[i]);
+    }
+    bool downwardValid(int i) {
+        if (locked[i]) return true;
+        for (int ch : child[i]) {
+            if (downwardValid(ch)) return true;
+        }
+        return false;
+    }
+    void downwardUnlock(int i) {
+        locked[i] = 0;
+        for (int ch : child[i]) {
+            downwardUnlock(ch);
+        }
+    }
+public:
+    LockingTree(vector<int>& parent) : parent(parent) {
+        N = parent.size();
+        locked.assign(N, 0);
+        child.assign(N, vector<int>());
+        for (int i = 1; i < N; ++i) {
+            child[parent[i]].push_back(i);
+        }
+    }
+    
+    bool lock(int num, int user) {
+        if (locked[num] != 0) return false;
+        locked[num] = user;
+        return true;
+    }
+    
+    bool unlock(int num, int user) {
+        if (locked[num] != user) return false;
+        locked[num] = 0;
+        return true;
+    }
+    
+    bool upgrade(int num, int user) {
+        if (!upwardValid(num) || !downwardValid(num)) return false;
+        downwardUnlock(num);
+        locked[num] = user;
+        return true;
+    }
+};
 ```
 
 </details>
@@ -5155,6 +5210,34 @@ bool canReach(vector<int>& A, int start) {
 <summary> Solution </summary>
 
 ```cpp
+int minimumOperations(vector<int>& nums, int start, int goal) {
+    queue<int> q;
+    q.push(start);
+    
+    bool seen[1001] = {};
+    int step = 0;
+    
+    seen[start] = true;
+    
+    while(q.size()) {
+        int cnt = q.size();
+        while(cnt--) {
+            int n = q.front();
+            q.pop();
+            for(auto a : nums) {
+                for(int next : {n + a, n - a, n ^ a}) {
+                    if(next == goal) return step + 1;
+                    if(next < 0 || next > 1000 || seen[next]) continue;
+                    seen[next] = true;
+                    q.push(next);
+                }
+            }
+        }
+        step++;
+    }
+    
+    return -1;
+}
 ```
 
 </details>
@@ -5168,14 +5251,82 @@ bool canReach(vector<int>& A, int start) {
 <summary> Solution </summary>
 
 ```cpp
+int twoEggDrop(int n) {
+    vector<int> dp(n + 1, INT_MAX);
+    dp[0] = 0;
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= i; ++j) {
+            dp[i] = min(dp[i], 1 + max(j - 1, dp[i - j]));
+        }
+    }
+    return dp[n];
+}
+```
+
+</details>
+
+<details>
+<summary> Math Solution </summary>
+
+```cpp
+int twoEggDrop(int n) {
+    return ceil((-1 + sqrt(1 + 8 * n)) / 2); 
+}
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 125. Time Needed To Inform All Employees
+
+<details>
+<summary> Solution </summary>
+
+```cpp
 ```
 
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
+## 126. Time Based Key-Value Store
 
-## 125. Problem Name 
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 127. Shortest Bridge
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 128. Flip String To Monotone Increasing 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 129. Problem Name 
 
 <details>
 <summary> Solution </summary>
