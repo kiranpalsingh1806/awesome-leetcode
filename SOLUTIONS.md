@@ -121,9 +121,9 @@
   - [119. Longest Common Subsequence](#119-longest-common-subsequence)
   - [120. Count Number of Maximum Bitwise Or Subsets](#120-count-number-of-maximum-bitwise-or-subsets)
   - [121. Jump Game III](#121-jump-game-iii)
-  - [122. Problem Name](#122-problem-name)
-  - [123. Problem Name](#123-problem-name)
-  - [124. Problem Name](#124-problem-name)
+  - [122. Operations on Tree](#122-operations-on-tree)
+  - [123. Minimum Operations To Convert Number](#123-minimum-operations-to-convert-number)
+  - [124. Egg Drop With 2 Eggs and N Floors](#124-egg-drop-with-2-eggs-and-n-floors)
   - [125. Problem Name](#125-problem-name)
 
 ## 1. Longest Increasing Subsequence
@@ -5136,7 +5136,7 @@ bool canReach(vector<int>& A, int start) {
 
 <br>[⬆ Back to top](#table-of-contents)
 
-## 122. Problem Name 
+## 122. Operations on Tree 
 
 <details>
 <summary> Solution </summary>
@@ -5149,7 +5149,7 @@ bool canReach(vector<int>& A, int start) {
 <br>[⬆ Back to top](#table-of-contents)
 
 
-## 123. Problem Name 
+## 123. Minimum Operations To Convert Number
 
 <details>
 <summary> Solution </summary>
@@ -5162,7 +5162,7 @@ bool canReach(vector<int>& A, int start) {
 <br>[⬆ Back to top](#table-of-contents)
 
 
-## 124. Problem Name 
+## 124. Egg Drop With 2 Eggs and N Floors
 
 <details>
 <summary> Solution </summary>
