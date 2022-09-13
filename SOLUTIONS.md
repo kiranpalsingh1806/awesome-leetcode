@@ -128,7 +128,14 @@
   - [126. Time Based Key-Value Store](#126-time-based-key-value-store)
   - [127. Shortest Bridge](#127-shortest-bridge)
   - [128. Flip String To Monotone Increasing](#128-flip-string-to-monotone-increasing)
-  - [129. Problem Name](#129-problem-name)
+  - [129. Longest Increasing Subsequence - II](#129-longest-increasing-subsequence---ii)
+  - [130. Solving Questions With Brainpower](#130-solving-questions-with-brainpower)
+  - [131. Detonate The Maximum Bombs](#131-detonate-the-maximum-bombs)
+  - [132. Fair Distribution of Cookies](#132-fair-distribution-of-cookies)
+  - [133. Minimum Cost To Reach Destination In Time](#133-minimum-cost-to-reach-destination-in-time)
+  - [134. Longest Substring of One Repeating Character](#134-longest-substring-of-one-repeating-character)
+  - [135. Predict The Winner](#135-predict-the-winner)
+  - [136. Problem Name](#136-problem-name)
 
 ## 1. Longest Increasing Subsequence
 
@@ -5284,6 +5291,40 @@ int twoEggDrop(int n) {
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+public:
+    int numOfMinutes(int n, int head, vector<int>& manager, vector<int>& time) {
+        
+        queue<pair<int, int>> q;
+        q.push({head, time[head]});
+        
+        unordered_map<int, vector<int>> G;
+        
+        int N = manager.size();
+        for(int i = 0; i < N; i++) {
+            if(manager[i] == -1) continue;
+            G[manager[i]].push_back(i);
+        }
+        
+        int ans = 0;
+        
+        while (q.size()) {
+            int cnt = q.size();
+            while (cnt--) {
+                auto u = q.front();
+                q.pop();
+                
+                ans = max(ans, u.second);
+                
+                for(int v : G[u.first]) {
+                    q.push({v, time[v] + u.second});
+                }
+            }
+        }
+        
+        return ans;
+    }
+};
 ```
 
 </details>
@@ -5296,6 +5337,26 @@ int twoEggDrop(int n) {
 <summary> Solution </summary>
 
 ```cpp
+class TimeMap {
+public:
+    unordered_map<string, map<int, string, greater<>>> M;
+    
+    void set(string key, string value, int timestamp) {
+        M[key][timestamp] = value;
+    }
+    
+    string get(string key, int timestamp) {
+        if(M.count(key) == 0) return "";
+        auto it = M[key].lower_bound(timestamp);
+        
+        if(it == M[key].end()) {
+            return "";
+        } else {
+            return it->second;
+        }
+    }
+};
+
 ```
 
 </details>
@@ -5308,6 +5369,56 @@ int twoEggDrop(int n) {
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+    int M, N, dirs[4][2] = {{0,1},{0,-1},{1,0},{-1,0}};
+    queue<pair<int, int>> qa, qb;
+    void dfs(vector<vector<int>> &A, int x, int y, int color) {
+        A[x][y] = color;
+        if (color == 2) qa.emplace(x, y);
+        else qb.emplace(x, y);
+        for (auto &[dx, dy] : dirs) {
+            int a = x + dx, b = y + dy;
+            if (a < 0 || b < 0 || a >= M || b >= N || A[a][b] != 1) continue;
+            dfs(A, a, b, color);
+        }
+    }
+    void bfs(vector<vector<int>> &A, queue<pair<int, int>> &q, vector<vector<int>> &dist) {
+        int step = 1;
+        while (q.size()) {
+            int cnt = q.size();
+            while (cnt--) {
+                auto [x, y] = q.front();
+                q.pop();
+                for (auto &[dx, dy] : dirs) {
+                    int a = x + dx, b = y + dy;
+                    if (a < 0 || b < 0 || a >= M || b >= N || A[a][b] != 0 || dist[a][b] != INT_MAX) continue;
+                    dist[a][b] = step;
+                    q.emplace(a, b);
+                }
+            }
+            ++step;
+        }
+    }
+public:
+    int shortestBridge(vector<vector<int>>& A) {
+        M = A.size(), N = A[0].size();
+        int color = 2, ans = INT_MAX;
+        vector<vector<int>> da(M, vector<int>(N, INT_MAX)), db(M, vector<int>(N, INT_MAX));
+        for (int i = 0; i < M; ++i) {
+            for (int j = 0; j < N; ++j) {
+                if (A[i][j] == 1) dfs(A, i, j, color++);
+            }
+        }
+        bfs(A, qa, da);
+        bfs(A, qb, db);
+        for (int i = 0; i < M; ++i) {
+            for (int j = 0; j < N; ++j) {
+                if (A[i][j] == 0 && da[i][j] != INT_MAX && db[i][j] != INT_MAX) ans = min(ans, da[i][j] + db[i][j] - 1);
+            }
+        }
+        return ans;
+    }
+};
 ```
 
 </details>
@@ -5320,13 +5431,337 @@ int twoEggDrop(int n) {
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+public:
+    int minFlipsMonoIncr(string s) {
+        int rightZeros = 0, leftOnes = 0;
+        for (char c : s) rightZeros += c == '0';
+        int ans = rightZeros;
+        for (char c : s) { // we make the current character the last `0`
+            if (c == '1') leftOnes++;
+            else rightZeros--;
+            ans = min(ans, rightZeros + leftOnes);
+        }
+        return ans;
+    }
+};
 ```
 
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
-## 129. Problem Name 
+## 129. Longest Increasing Subsequence - II
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+public:
+    vector<int> seg;
+    //Segment tree to return maximum in a range
+    void upd(int ind, int val, int x, int lx, int rx) {
+        if(lx == rx) {
+            seg[x] = val;
+            return;
+        }
+        int mid = lx + (rx - lx) / 2;
+        if(ind <= mid)
+            upd(ind, val, 2 * x + 1, lx, mid);
+        else 
+            upd(ind, val, 2 * x + 2, mid + 1, rx);
+        seg[x] = max(seg[2 * x + 1], seg[2 * x + 2]);
+    }
+    int query(int l, int r, int x, int lx, int rx) {
+        if(lx > r or rx < l) return 0;
+        if(lx >= l and rx <= r) return seg[x];
+        int mid = lx + (rx - lx) / 2;
+        return max(query(l, r, 2 * x + 1, lx, mid), query(l, r, 2 * x + 2, mid + 1, rx));
+    }
+    
+    int lengthOfLIS(vector<int>& nums, int k) {
+        int x = 1;
+        while(x <= 200000) x *= 2;
+        seg.resize(2 * x, 0);
+        
+        int res = 1;
+        for(int i = 0; i < nums.size(); ++i) {
+            int left = max(1, nums[i] - k), right = nums[i] - 1;
+            int q = query(left, right, 0, 0, x - 1); // check for the element in the range of [nums[i] - k, nums[i] - 1] with the maximum value
+            res = max(res, q + 1);
+            upd(nums[i], q + 1, 0, 0, x - 1); //update current value
+        }
+        return res;
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 130. Solving Questions With Brainpower
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+long long mostPoints(vector<vector<int>>& A) {
+    int N = A.size();
+    vector<long> dp(N + 2);
+    for (int i = 0; i < N; ++i) {
+        dp[i + 1] = max(dp[i + 1], dp[i]);
+        int next = min(i + A[i][1] + 2, N + 1);
+        dp[next] = max(dp[next], dp[i + 1] + A[i][0]);
+    }
+    return dp[N + 1];
+}
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 131. Detonate The Maximum Bombs
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+public:
+    int maximumDetonation(vector<vector<int>>& A) {
+        int N = A.size();
+        vector<vector<int>> G(N);
+        auto cover = [&](int i, int j) {
+            return pow((long)A[i][0] - A[j][0], 2) + pow((long)A[i][1] - A[j][1], 2) <= pow((long)A[i][2], 2);
+        };
+        for (int i = 0; i < N; ++i) {
+            for (int j = i + 1; j < N; ++j) {
+                if (cover(i, j)) G[i].push_back(j);
+                if (cover(j, i)) G[j].push_back(i);
+            }
+        }
+        vector<bool> seen(N);
+        function<int(int)> dfs = [&](int u) {
+            seen[u] = true;
+            int ans = 1;
+            for (int v : G[u]) {
+                if (seen[v]) continue;
+                ans += dfs(v);
+            }
+            return ans;
+        };
+        int ans = 0;
+        for (int i = 0; i < N; ++i) {
+            seen.assign(N, false);
+            ans = max(ans, dfs(i));
+        }
+        return ans;
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 132. Fair Distribution of Cookies
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+public:
+    int distributeCookies(vector<int>& A, int K) {
+        int N = A.size();
+        vector<vector<int>> dp(K + 1, vector<int>(1 << N, INT_MAX));
+        vector<int> sum(1 << N);
+        for (int m = 1; m < (1 << N); ++m) {
+            int s = 0;
+            for (int i = 0; i < N; ++i) {
+                if (m >> i & 1) s += A[i];
+            }
+            sum[m] = s;
+            dp[1][m] = s;
+        }
+        for (int k = 2; k <= K; ++k) {
+            for (int m = 1; m < (1 << N); ++m) {
+                for (int s = m; s; s = (s - 1) & m) {
+                    dp[k][m] = min(dp[k][m], max(dp[k - 1][m - s], sum[s]));
+                }
+            }
+        }
+        return dp[K][(1 << N) - 1];
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 133. Minimum Cost To Reach Destination In Time
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+    typedef array<int, 3> Node; // node, time, cost
+public:
+    int minCost(int maxTime, vector<vector<int>>& E, vector<int>& F) {
+        int N = F.size();
+        vector<unordered_map<int, int>> G(N);
+        vector<int> minTime(N, maxTime + 1);
+        for (auto &e : E) {
+            int u = e[0], v = e[1], t = e[2];
+            if (G[u].count(v)) { // For duplicated edges, we just need to keep track of the edge with smallest time.
+                G[u][v] = G[v][u] = min(G[u][v], t);
+            } else {
+                G[u][v] = G[v][u] = t;
+            }
+        }
+        auto cmp = [](auto &a, auto &b) { return a[2] > b[2]; }; // min-heap: Heap top is the node with the smallest cost to reach
+        priority_queue<Node, vector<Node>, decltype(cmp)> pq(cmp);
+        pq.push({0, 0, F[0]});
+        minTime[0] = 0;
+        while (pq.size()) {
+            auto [u, time, c] = pq.top();
+            pq.pop();
+            if (u == N - 1) return c;
+            for (auto &[v, t] : G[u]) {
+                int nt = time + t, nc = c + F[v];
+                if (nt < minTime[v]) {
+                    minTime[v] = nt;
+                    pq.push({v, nt, nc});
+                }
+            }
+        }
+        return -1;
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 134. Longest Substring of One Repeating Character
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class sgtree{
+public:
+    vector<int> nums, left, right;
+    vector<char> lc, rc;
+    int n;
+    sgtree(string &s){
+        n = s.size();
+        nums = vector<int>(4*n+5, 0);
+        left = vector<int>(4*n+5, -1);
+        right = vector<int>(4*n+5, -1);
+        lc = vector<char>(4*n+5, '*');
+        rc = vector<char>(4*n+5, '*');
+        build(0, s, 0, n-1);
+    }
+    void build(int in, string &s,int l,int h){
+        if(l > h) return;
+        if(l == h){
+            lc[in] = rc[in] = s[l];
+            left[in] = l,right[in] = l; nums[in] = 1;
+            return;
+        }
+        int m = (l + h) / 2;
+        build(2*in+1,s,l,m); 
+        build(2*in+2,s,m+1,h); 
+        merge(in,l,m,h);
+    }
+    void merge(int in,int l,int m,int h){
+        int lt = in*2+1, rt = in*2+2, max_ = 0;
+        lc[in] = lc[lt]; rc[in] = rc[rt];
+        left[in] = left[lt];
+        right[in] = right[rt]; 
+        if(rc[lt]==lc[rt]){ 
+            if(left[lt]==m) left[in] = left[rt];
+        }
+        if(lc[rt]==rc[lt]){ 
+            if(right[rt]==m+1) right[in] = right[lt]; 
+        }
+        if(rc[lt]==lc[rt]) max_ = left[rt]-right[lt]+1;
+        
+        max_ = max(max_,left[in]-l+1);
+        max_ = max(max_,h-right[in]+1);
+        nums[in] = max(max_,max(nums[lt],nums[rt]));
+    }
+    int update(int in,int l,int h,int j,char ch){
+        if(l>h) return 0;
+        if(l==h){
+            lc[in] = rc[in] = ch;
+            left[in] = l,right[in] = l; nums[in] = 1;
+            return 1;
+        }
+        int m = (l+h)/2;
+        if(j>=l && j<=m) update(2*in+1,l,m,j,ch);
+        else update(2*in+2,m+1,h,j,ch); 
+        merge(in,l,m,h);
+        return nums[in];
+    }
+};
+class Solution {
+public:
+    vector<int> longestRepeating(string s, string q, vector<int>& in) {
+        sgtree node(s);
+        vector<int> re(q.size(),0);
+        for(int i = 0; i<q.size();++i){
+            re[i] = node.update(0,0,s.size()-1,in[i],q[i]);
+        }
+        return re;
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 135. Predict The Winner
+
+
+<details>
+<summary> Recursion </summary>
+
+```cpp
+```
+
+</details>
+
+<details>
+<summary> DP </summary>
+
+```cpp
+bool PredictTheWinner(vector<int>& nums) {
+    int N = nums.size();
+    unordered_map<int, unordered_map<int, int>> dp;
+    for (int i = 0; i < N; ++i) dp[i][1] = nums[i];
+    for (int len = 2; len <= N; ++len) {
+        for (int i = 0; i <= N - len; ++i) {
+            dp[i][len] = max(nums[i] - dp[i + 1][len - 1], nums[i + len - 1] - dp[i][len - 1]);
+        }
+    }
+    return dp[0][N] >= 0;
+}
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 136. Problem Name 
 
 <details>
 <summary> Solution </summary>

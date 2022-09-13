@@ -130,3 +130,10 @@
 |126|[Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)|Design|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |127|[Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)|DFS, BFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |128|[Flip String To Monotone Increasing](https://leetcode.com/problems/flip-string-to-monotone-increasing/)|String|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|129|[Longest Increasing Subsequence - II](https://leetcode.com/problems/longest-increasing-subsequence-ii/)|Segment Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|130|[Solving Questions With Brainpower](https://leetcode.com/problems/solving-questions-with-brainpower/)|DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|131|[Detonate The Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/)|DFS|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|132|[Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/)|Bitmasks, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|133|[Minimum Cost To Reach Destination In Time](https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/)|Dijkstra|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|134|[Longest Substring Of One Repeating Character](https://leetcode.com/problems/longest-substring-of-one-repeating-character/)|Segment Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|135|[Predict The Winner](https://leetcode.com/problems/predict-the-winner/)|Recursion, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
