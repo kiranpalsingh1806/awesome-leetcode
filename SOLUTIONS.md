@@ -135,7 +135,10 @@
   - [133. Minimum Cost To Reach Destination In Time](#133-minimum-cost-to-reach-destination-in-time)
   - [134. Longest Substring of One Repeating Character](#134-longest-substring-of-one-repeating-character)
   - [135. Predict The Winner](#135-predict-the-winner)
-  - [136. Problem Name](#136-problem-name)
+  - [136. Path With Minimum Effor](#136-path-with-minimum-effor)
+  - [137. Cheapest Flights Within K Stops](#137-cheapest-flights-within-k-stops)
+  - [138. Minimum Cost To Make at Least One Valid Path in Grid](#138-minimum-cost-to-make-at-least-one-valid-path-in-grid)
+  - [139. Problem Name](#139-problem-name)
 
 ## 1. Longest Increasing Subsequence
 
@@ -5761,7 +5764,43 @@ bool PredictTheWinner(vector<int>& nums) {
 
 <br>[⬆ Back to top](#table-of-contents)
 
-## 136. Problem Name 
+## 136. Path With Minimum Effor 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 137. Cheapest Flights Within K Stops
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 138. Minimum Cost To Make at Least One Valid Path in Grid
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 139. Problem Name 
 
 <details>
 <summary> Solution </summary>
