@@ -137,3 +137,6 @@
 |133|[Minimum Cost To Reach Destination In Time](https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/)|Dijkstra|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |134|[Longest Substring Of One Repeating Character](https://leetcode.com/problems/longest-substring-of-one-repeating-character/)|Segment Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |135|[Predict The Winner](https://leetcode.com/problems/predict-the-winner/)|Recursion, DP|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|136|[Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)|Dijkstra|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|137|[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|Bellman Ford, Dijkstra|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|138|[Minimum Cost To Make at Least One Valid Path In a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)|BFS + DP, Dijkstra|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
