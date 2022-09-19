@@ -135,7 +135,7 @@
   - [133. Minimum Cost To Reach Destination In Time](#133-minimum-cost-to-reach-destination-in-time)
   - [134. Longest Substring of One Repeating Character](#134-longest-substring-of-one-repeating-character)
   - [135. Predict The Winner](#135-predict-the-winner)
-  - [136. Path With Minimum Effor](#136-path-with-minimum-effor)
+  - [136. Path With Minimum Effort](#136-path-with-minimum-effort)
   - [137. Cheapest Flights Within K Stops](#137-cheapest-flights-within-k-stops)
   - [138. Minimum Cost To Make at Least One Valid Path in Grid](#138-minimum-cost-to-make-at-least-one-valid-path-in-grid)
   - [139. Problem Name](#139-problem-name)
@@ -5764,12 +5764,56 @@ bool PredictTheWinner(vector<int>& nums) {
 
 <br>[⬆ Back to top](#table-of-contents)
 
-## 136. Path With Minimum Effor 
+## 136. Path With Minimum Effort
 
 <details>
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+public:
+    
+    int M, N;
+    int dirs[4][2] = { {0, 1}, {1, 0}, {-1, 0}, {0, -1}};
+    
+    int minimumEffortPath(vector<vector<int>>& A) {
+        
+        M = A.size();
+        N = A[0].size();
+        
+        vector<vector<int>> minCost(M, vector<int>(N, INT_MAX));
+        
+        priority_queue<array<int, 3>, vector<array<int, 3>>, greater<>> pq;
+        
+        pq.push({0, 0, 0});
+        minCost[0][0] = 0;
+        
+        while (pq.size()) {
+            auto [e, x, y] = pq.top();
+            pq.pop();
+            
+            if(e > minCost[x][y]) continue;
+            if(x == M - 1 && y == N - 1) return minCost[x][y];
+            
+            
+            for (auto &dir : dirs) {
+                int a = x + dir[0];
+                int b = y + dir[1];
+                
+                if (a < 0 || b < 0 || a >= M || b >= N) continue;
+                
+                int effort = max(e, abs(A[a][b] - A[x][y]));
+                
+                if(effort >= minCost[a][b]) continue;
+                
+                minCost[a][b] = effort;
+                pq.push({effort, a, b});
+            }
+        }
+        
+        return -1;
+    }
+};
 ```
 
 </details>
@@ -5782,6 +5826,49 @@ bool PredictTheWinner(vector<int>& nums) {
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+public:
+    typedef array<int, 3> Item; // Cost, CityID, Stops Left
+    
+    int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
+        
+        // Creation of Adjacent List
+        vector<vector<pair<int, int>>> G(n);
+        for(auto &e : flights) {
+            int u = e[0], v = e[1], w = e[2];
+            G[u].push_back({v, w});
+        }
+        
+        
+        k++;
+        priority_queue<Item, vector<Item>, greater<>> pq;
+        pq.push({0, src, k});
+        
+        vector<vector<int>> dist(k + 1, vector<int>(n, INT_MAX));
+        
+        for(int i = 0; i <= k; i++) {
+            dist[i][src] = 0;
+        }
+        
+        while (pq.size()) {
+            auto [c, u, stop] = pq.top();
+            pq.pop();
+            
+            if (c > dist[stop][u]) continue;
+            if (u == dst) return c;
+            if (stop == 0) continue;
+            
+            for (auto &[v, w] : G[u]) {
+                if (dist[stop - 1][v] > c + w) {
+                    dist[stop - 1][v] = c + w;
+                    pq.push({dist[stop - 1][v], v, stop - 1});
+                }
+            }
+        }
+        
+        return -1;
+    }
+};
 ```
 
 </details>
@@ -5794,6 +5881,47 @@ bool PredictTheWinner(vector<int>& nums) {
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+public:
+    int dirs[4][2] = { {0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+    
+    int minCost(vector<vector<int>>& grid) {
+        
+        int M = grid.size();
+        int N = grid[0].size();
+        
+        int dist[100][100] = {};
+        memset(dist, 0x3f, sizeof(dist));
+        
+        priority_queue<array<int, 3>, vector<array<int, 3>>, greater<>> pq;
+        pq.push({ 0, 0, 0 });
+        dist[0][0] = 0;
+        
+        while (pq.size()) {
+            
+            auto [cost, x, y] = pq.top();
+            pq.pop();
+            
+            if (cost > dist[x][y]) continue;
+            if (x == M - 1 && y == N - 1) return cost;
+            
+            for (int i = 0; i < 4; i++) {
+                int a = x + dirs[i][0];
+                int b = y + dirs[i][1];
+                
+                int newCost = cost + (grid[x][y] - 1 != i);
+                
+                if (a < 0 || b < 0 || a >= M || b >= N) continue;
+                if (dist[a][b] > newCost) {
+                    dist[a][b] = newCost;
+                    pq.push({ newCost, a, b});
+                }
+            }
+        }
+        
+        return 0;
+    }
+};
 ```
 
 </details>
