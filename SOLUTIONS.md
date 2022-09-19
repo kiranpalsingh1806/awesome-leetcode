@@ -5778,11 +5778,9 @@ public:
     
     int minimumEffortPath(vector<vector<int>>& A) {
         
-        M = A.size();
-        N = A[0].size();
+        M = A.size(), N = A[0].size();
         
         vector<vector<int>> minCost(M, vector<int>(N, INT_MAX));
-        
         priority_queue<array<int, 3>, vector<array<int, 3>>, greater<>> pq;
         
         pq.push({0, 0, 0});
@@ -5795,22 +5793,17 @@ public:
             if(e > minCost[x][y]) continue;
             if(x == M - 1 && y == N - 1) return minCost[x][y];
             
-            
             for (auto &dir : dirs) {
                 int a = x + dir[0];
                 int b = y + dir[1];
                 
                 if (a < 0 || b < 0 || a >= M || b >= N) continue;
-                
                 int effort = max(e, abs(A[a][b] - A[x][y]));
-                
                 if(effort >= minCost[a][b]) continue;
-                
                 minCost[a][b] = effort;
                 pq.push({effort, a, b});
             }
         }
-        
         return -1;
     }
 };
@@ -5838,7 +5831,6 @@ public:
             int u = e[0], v = e[1], w = e[2];
             G[u].push_back({v, w});
         }
-        
         
         k++;
         priority_queue<Item, vector<Item>, greater<>> pq;
