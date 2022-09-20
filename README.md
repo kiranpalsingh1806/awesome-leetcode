@@ -140,3 +140,8 @@
 |136|[Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)|Dijkstra|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |137|[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|Bellman Ford, Dijkstra|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |138|[Minimum Cost To Make at Least One Valid Path In a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)|BFS + DP, Dijkstra|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|139|[Frog Jump](https://leetcode.com/problems/frog-jump/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|140|[Find Eventual Safe State](https://leetcode.com/problems/find-eventual-safe-states/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|141|[Number of Ways To Arrive At Destination](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|142|[Sort List](https://leetcode.com/problems/sort-list/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|143|[Frog Position After T Seconds](https://leetcode.com/problems/frog-position-after-t-seconds/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|

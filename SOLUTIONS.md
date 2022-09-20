@@ -138,7 +138,14 @@
   - [136. Path With Minimum Effort](#136-path-with-minimum-effort)
   - [137. Cheapest Flights Within K Stops](#137-cheapest-flights-within-k-stops)
   - [138. Minimum Cost To Make at Least One Valid Path in Grid](#138-minimum-cost-to-make-at-least-one-valid-path-in-grid)
-  - [139. Problem Name](#139-problem-name)
+  - [139. Frog Jump](#139-frog-jump)
+  - [140. Find Eventual Safe State](#140-find-eventual-safe-state)
+  - [141. No of Ways To Arrive At Destination](#141-no-of-ways-to-arrive-at-destination)
+  - [142. Sort List](#142-sort-list)
+  - [143. Frog Position After T Seconds](#143-frog-position-after-t-seconds)
+  - [144. Problem Name](#144-problem-name)
+  - [145. Problem Name](#145-problem-name)
+  - [146. Problem Name](#146-problem-name)
 
 ## 1. Longest Increasing Subsequence
 
@@ -5920,7 +5927,248 @@ public:
 
 <br>[⬆ Back to top](#table-of-contents)
 
-## 139. Problem Name 
+## 139. Frog Jump
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+    vector<unordered_set<int>> memo;
+private:
+    bool dfs(vector<int> &A, int i, int k) {
+        if (i == A.size() - 1) return true;
+        if (memo[i].count(k)) return false; 
+        int j = i + 1;
+        for (int d = -1; d <= 1; ++d) {
+            int move = k + d;
+            if (move <= 0) continue;
+            while (j < A.size() && A[j] - A[i] < move) ++j;
+            if (j >= A.size()) return false;
+            if (A[j] - A[i] == move && dfs(A, j, move)) return true;
+        }
+        memo[i].insert(k);
+        return false;
+    }
+public:
+    bool canCross(vector<int>& A) {
+        memo.assign(A.size(), {});
+        return dfs(A, 0, 0);
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 140. Find Eventual Safe State 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+vector<int> eventualSafeNodes(vector<vector<int>>& G) {
+    int N = G.size();
+    vector<vector<int>> R(N);
+    vector<int> outdegree(N), safe(N), ans;
+    queue<int> q;
+    for (int i = 0; i < N; ++i) {
+        for (int v : G[i]) {
+            R[v].push_back(i);
+        }
+        outdegree[i] = G[i].size();
+        if (outdegree[i] == 0) q.push(i);
+    }
+    while (q.size()) {
+        int u = q.front();
+        q.pop();
+        safe[u] = 1;
+        for (int v : R[u]) {
+            if (--outdegree[v] == 0) q.push(v);
+        }
+    }
+    for (int i = 0; i < N; ++i) {
+        if (safe[i]) ans.push_back(i);
+    }
+    return ans;
+}
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 141. No of Ways To Arrive At Destination 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+    typedef pair<long, long> ipair;
+public:
+    int countPaths(int n, vector<vector<int>>& E) {
+        vector<vector<pair<int, int>>> G(n);
+        for (auto &e : E) {
+            int u = e[0], v = e[1], t = e[2];
+            G[u].emplace_back(v, t);
+            G[v].emplace_back(u, t);
+        }
+        long mod = 1e9 + 7;
+        vector<long> dist(n, LONG_MAX), cnt(n);
+        priority_queue<ipair, vector<ipair>, greater<>> pq; // time, city
+        dist[0] = 0;
+        cnt[0] = 1;
+        pq.emplace(0, 0);
+        while (pq.size()) {
+            auto [cost, u] = pq.top();
+            pq.pop();
+            if (cost > dist[u]) continue;
+            for (auto &[v, time] : G[u]) {
+                long c = cost + time;
+                if (c < dist[v]) {
+                    dist[v] = c;
+                    cnt[v] = cnt[u];
+                    pq.emplace(c, v);
+                } else if (c == dist[v]) cnt[v] = (cnt[v] + cnt[u]) % mod;
+            }
+        }
+        return cnt[n - 1];
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 142. Sort List
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+    ListNode* splitList(ListNode *head) {
+        ListNode dummy, *p = &dummy, *q = &dummy;
+        dummy.next = head;
+        while (q && q->next) {
+            q = q->next->next;
+            p = p->next;
+        }
+        auto next = p->next;
+        p->next = NULL;
+        return next;
+    }
+    ListNode *mergeList(ListNode *a, ListNode *b) {
+        ListNode head, *tail = &head;
+        while (a && b) {
+            ListNode *node;
+            if (a->val <= b->val) {
+                node = a;
+                a = a->next;
+            } else {
+                node = b;
+                b = b->next;
+            }
+            tail->next = node;
+            tail = node;
+        }
+        if (a) tail->next = a;
+        if (b) tail->next = b;
+        return head.next;
+    }
+public:
+    ListNode* sortList(ListNode* head) {
+        if (!head || !head->next) return head;
+        auto b = splitList(head);
+        return mergeList(sortList(head), sortList(b));
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 143. Frog Position After T Seconds
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+    unordered_map<int, vector<int>> g, nei;
+    bool dfs(int start, int target, vector<int>&path) {
+        path.push_back(start);
+        if (start == target) return true;
+        for (int n : g[start]) {
+            if (dfs(n, target, path)) return true;
+        }
+        path.pop_back();
+        return false;
+    }
+    void buildTree(int start, int p) {
+        for (int n : nei[start]) {
+            if (n == p) continue;
+            g[start].push_back(n);
+            buildTree(n, start);
+        }
+    }
+public:
+    double frogPosition(int n, vector<vector<int>>& edges, int t, int target) {
+        for (auto & e : edges) {
+            nei[e[0]].push_back(e[1]);
+            nei[e[1]].push_back(e[0]);
+        }
+        buildTree(1, -1);
+        vector<int> path;
+        dfs(1, target, path);
+        if (t + 1 < path.size() || (t + 1 > path.size() && g[path.back()].size())) return 0;
+        int cnt = 1;
+        for (int i = 0; i < path.size() - 1; ++i) cnt *= g[path[i]].size();
+        return 1. / cnt;
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 144. Problem Name 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 145. Problem Name 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 146. Problem Name 
 
 <details>
 <summary> Solution </summary>
