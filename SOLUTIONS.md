@@ -143,9 +143,10 @@
   - [141. No of Ways To Arrive At Destination](#141-no-of-ways-to-arrive-at-destination)
   - [142. Sort List](#142-sort-list)
   - [143. Frog Position After T Seconds](#143-frog-position-after-t-seconds)
-  - [144. Problem Name](#144-problem-name)
-  - [145. Problem Name](#145-problem-name)
-  - [146. Problem Name](#146-problem-name)
+  - [144. Longest Zigzag Path in Binary Tree](#144-longest-zigzag-path-in-binary-tree)
+  - [145. Balance A Binary Seach Tree](#145-balance-a-binary-seach-tree)
+  - [146. Linked List in Binary Tree](#146-linked-list-in-binary-tree)
+  - [147. Problem Name](#147-problem-name)
 
 ## 1. Longest Increasing Subsequence
 
@@ -6144,7 +6145,7 @@ public:
 <br>[⬆ Back to top](#table-of-contents)
 
 
-## 144. Problem Name 
+## 144. Longest Zigzag Path in Binary Tree 
 
 <details>
 <summary> Solution </summary>
@@ -6157,7 +6158,7 @@ public:
 <br>[⬆ Back to top](#table-of-contents)
 
 
-## 145. Problem Name 
+## 145. Balance A Binary Seach Tree 
 
 <details>
 <summary> Solution </summary>
@@ -6170,7 +6171,19 @@ public:
 <br>[⬆ Back to top](#table-of-contents)
 
 
-## 146. Problem Name 
+## 146. Linked List in Binary Tree
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+## 147. Problem Name 
 
 <details>
 <summary> Solution </summary>
