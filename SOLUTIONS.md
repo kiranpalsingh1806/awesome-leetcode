@@ -6103,36 +6103,38 @@ public:
 
 ```cpp
 class Solution {
-    unordered_map<int, vector<int>> g, nei;
-    bool dfs(int start, int target, vector<int>&path) {
-        path.push_back(start);
-        if (start == target) return true;
-        for (int n : g[start]) {
-            if (dfs(n, target, path)) return true;
-        }
-        path.pop_back();
-        return false;
-    }
-    void buildTree(int start, int p) {
-        for (int n : nei[start]) {
-            if (n == p) continue;
-            g[start].push_back(n);
-            buildTree(n, start);
-        }
-    }
 public:
+    vector<vector<int> > G;
+    vector<bool> seen;
+    int target;
+
     double frogPosition(int n, vector<vector<int>>& edges, int t, int target) {
-        for (auto & e : edges) {
-            nei[e[0]].push_back(e[1]);
-            nei[e[1]].push_back(e[0]);
+        if (n == 1) return 1.0;
+        this->target = target;
+        G.resize(n + 1, vector<int>());
+        for (auto e : edges) {
+            int u = e[0], v = e[1];
+            G[u].push_back(v);
+            G[v].push_back(u);
         }
-        buildTree(1, -1);
-        vector<int> path;
-        dfs(1, target, path);
-        if (t + 1 < path.size() || (t + 1 > path.size() && g[path.back()].size())) return 0;
-        int cnt = 1;
-        for (int i = 0; i < path.size() - 1; ++i) cnt *= g[path[i]].size();
-        return 1. / cnt;
+        seen = vector<bool>(n + 1, false);
+
+        return dfs(1, t);
+    }
+
+    double dfs(int i, int t) {
+        // When time finishes and adjacent list is of size 1.
+        if (i != 1 && G[i].size() == 1 || t == 0) {
+            return i == target;
+        }
+        seen[i] = true;
+        double res = 0;
+        for (auto j : G[i]) {
+            if (! seen[j]) {
+                res += dfs(j, t - 1);
+            }
+        }
+        return res / (G[i].size() - (i != 1));
     }
 };
 ```
