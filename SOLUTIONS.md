@@ -143,7 +143,7 @@
   - [141. No of Ways To Arrive At Destination](#141-no-of-ways-to-arrive-at-destination)
   - [142. Sort List](#142-sort-list)
   - [143. Frog Position After T Seconds](#143-frog-position-after-t-seconds)
-  - [144. Longest Zigzag Path in Binary Tree](#144-longest-zigzag-path-in-binary-tree)
+  - [144. Longest Zigzag Path In A Binary Tree](#144-longest-zigzag-path-in-a-binary-tree)
   - [145. Balance A Binary Seach Tree](#145-balance-a-binary-seach-tree)
   - [146. Linked List in Binary Tree](#146-linked-list-in-binary-tree)
   - [147. Problem Name](#147-problem-name)
@@ -6145,12 +6145,34 @@ public:
 <br>[⬆ Back to top](#table-of-contents)
 
 
-## 144. Longest Zigzag Path in Binary Tree 
+## 144. Longest Zigzag Path In A Binary Tree 
 
 <details>
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+    int A = 0;
+    pair<int, int> postorder(TreeNode* root)  {
+        if (!root || (!root->left && !root->right)) return { 0, 0 };
+        pair<int, int> ans;
+        if (root->left) {
+            auto left = postorder(root->left);
+            ans.first = 1 + left.second;
+        }
+        if (root->right) {
+            auto right = postorder(root->right);
+            ans.second = 1 + right.first;
+        }
+        A = max({ A, ans.first, ans.second });
+        return ans;
+    }
+public:
+    int longestZigZag(TreeNode* root) {
+        postorder(root);
+        return A;
+    }
+};
 ```
 
 </details>
@@ -6164,6 +6186,28 @@ public:
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+    vector<int> v;
+    void inorder(TreeNode *root) {
+        if (!root) return;
+        inorder(root->left);
+        v.push_back(root->val);
+        inorder(root->right);
+    }
+    TreeNode *build(int start, int end) {
+        if (start >= end) return NULL;
+        int mid = (start + end) / 2;
+        auto node = new TreeNode(v[mid]);
+        node->left = build(start, mid);
+        node->right = build(mid + 1, end);
+        return node;
+    }
+public:
+    TreeNode* balanceBST(TreeNode* root) {
+        inorder(root);
+        return build(0, v.size());
+    }
+};
 ```
 
 </details>
@@ -6177,6 +6221,21 @@ public:
 <summary> Solution </summary>
 
 ```cpp
+class Solution {
+    bool match(ListNode *head, TreeNode *root) {
+        if (!head) return true;
+        if (!root) return false;
+        if (head->val != root->val) return false;
+        return match(head->next, root->left) || match(head->next, root->right);
+    }
+public:
+    bool isSubPath(ListNode* head, TreeNode* root) {
+        if (!head) return true;
+        if (!root) return false;
+        if (match(head, root)) return true;
+        return isSubPath(head, root->left) || isSubPath(head, root->right);
+    }
+};
 ```
 
 </details>
