@@ -149,7 +149,7 @@
 |145|[Balance A Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |146|[Linked List In Binary Tree](https://leetcode.com/problems/linked-list-in-binary-tree/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |147|[Find Substring With Given Hash Value](https://leetcode.com/problems/find-substring-with-given-hash-value/)|Rolling Hash|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|148|[Distince Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/)|Rolling Hash|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|148|[Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/)|Rolling Hash|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |149|[Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/)|Rolling Hash|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |150|[Distribute Coins In Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |151|[Range Sum Query Mutable](https://leetcode.com/problems/range-sum-query-mutable/)|Segment Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
