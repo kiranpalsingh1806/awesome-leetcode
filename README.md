@@ -153,3 +153,9 @@
 |149|[Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/)|Rolling Hash|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |150|[Distribute Coins In Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/)|Binary Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |151|[Range Sum Query Mutable](https://leetcode.com/problems/range-sum-query-mutable/)|Segment Tree|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|152|[Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|153|[Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|154|[Maximum Product of The Length of Two Palindromic Substrings](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-substrings/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|155|[Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|156|[K Divisible Elements Subarray](https://leetcode.com/problems/k-divisible-elements-subarrays/)||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|157|[]()||[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|

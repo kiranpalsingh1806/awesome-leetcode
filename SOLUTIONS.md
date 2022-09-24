@@ -151,7 +151,12 @@
   - [149. Longest Duplicate Substring](#149-longest-duplicate-substring)
   - [150. Distribute Coins In Binary Tree](#150-distribute-coins-in-binary-tree)
   - [151. Range Sum Query - Mutable](#151-range-sum-query---mutable)
-  - [152. Problem Name](#152-problem-name)
+  - [152. Shortest Palindrome](#152-shortest-palindrome)
+  - [153. Maximum Number of Events That Can Be Attended](#153-maximum-number-of-events-that-can-be-attended)
+  - [154. Maximum Product of The Length of Two Palindromic Substrings](#154-maximum-product-of-the-length-of-two-palindromic-substrings)
+  - [155. Repeated DNA Sequences](#155-repeated-dna-sequences)
+  - [156. K Divisible Elements Subarray](#156-k-divisible-elements-subarray)
+  - [157. Problem Name](#157-problem-name)
 
 ## 1. Longest Increasing Subsequence
 
@@ -6494,7 +6499,7 @@ struct segtree {
         long long s2 = sum(l, r, 2 * x + 2, m, rx);
         return s1 + s2;
     }
-    
+
     
     long long sum(int l, int r) {
         return sum(l, r, 0, 0, size);
@@ -6529,7 +6534,208 @@ private:
 
 <br>[⬆ Back to top](#table-of-contents)
 
-## 152. Problem Name 
+## 152. Shortest Palindrome
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+public:
+    string shortestPalindrome(string s) {
+        unsigned d = 16777619, h = 0, rh = 0, p = 1, maxLen = 0;
+        for (int i = 0; i < s.size(); ++i) {
+            h = h * d + s[i] - 'a';
+            rh += (s[i] - 'a') * p;
+            p *= d;
+            if (h == rh) maxLen = i + 1;
+        }
+        return string(rbegin(s), rbegin(s) + s.size() - maxLen) + s;
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 153. Maximum Number of Events That Can Be Attended 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+public:
+    int maxEvents(vector<vector<int>>& A) {
+        sort(A.begin(), A.end());
+        priority_queue<int, vector<int>, greater<>> pq;
+        int N = A.size(), i = 0, day = A[0][0], ans = 0;
+        while (i < N || pq.size()) {
+            if (pq.empty()) day = A[i][0]; // If no active event is available and there are still more events to pick, jump to the start date of the next event.
+            while (i < N && A[i][0] == day) pq.push(A[i++][1]); // add events that start at `day` as active events, push their end time into queue
+            pq.pop(); // pick the event with the earliest start time
+            ++ans;
+            ++day;
+            while (pq.size() && pq.top() < day) pq.pop(); // ignore the events that are no longer active
+        }
+        return ans;
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 154. Maximum Product of The Length of Two Palindromic Substrings
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+// Ref: https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-substrings/discuss/1389958/Manacher-and-Queue
+class Solution {
+public:
+    long long maxProduct(string s) {
+        int N = s.size(), j = 0;
+        vector<int> r(N, 1);
+        for (int i = 1; i < N; ++i) {
+            int cur = j + r[j] > i ? min(r[2 * j - i], j + r[j] - i) : 1;
+            while (i - cur >= 0 && i + cur < N && s[i - cur] == s[i + cur]) ++cur;
+            if (i + cur > j + r[j]) j = i;
+            r[i] = cur;
+        }
+        vector<int> right(N, 1); // right[i] is the length of the longest palinedome in [i, n)
+        queue<array<int, 2>> q, q1; // index, range
+        for (int i = N - 1; i >= 0; --i) {
+            while (q.size() && q.front()[0] - q.front()[1] >= i) q.pop(); // if the queue front's range can't cover `i`, pop it.
+            q.push({i, r[i]});
+            right[i] = 1 + (q.front()[0] - i) * 2; // now queue front is the rightmost range that can cover `i`. It must be the center of the longest palindrom in `[i, n)`.
+        }
+        int left = 0; // left is the length of the longest palindrome in [0, i]. 
+        long long ans = 1;
+        for (int i = 0; i < N - 1; ++i) {
+            while (q1.size() && q1.front()[0] + q1.front()[1] <= i) q1.pop();
+            q1.push({i, r[i]});
+            left = max(left, 1 + (i - q1.front()[0]) * 2);
+            ans = max(ans, (long long)left * right[i + 1]);
+        }
+        return ans;
+    }
+};
+
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 155. Repeated DNA Sequences 
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+class Solution {
+public:
+    vector<string> findRepeatedDnaSequences(string s) {
+        int n = s.size();
+        
+        unordered_map<long long,int> st;
+        vector<string> ans;
+        
+        if(n <= 10) return ans;
+        
+        long long p = 5;
+        long long cmp = 0;
+        int mod = 1e9+7;
+        long long pr = 1;
+        
+        for(int i=n-1;i>=0;i--){
+            cmp = ((cmp*p)%mod + (s[i]-'A'+1))%mod;
+            
+            if(i+10 >= n){
+                pr = (pr*p)%mod;
+            }else{
+                cmp = (cmp - ((s[i+10]-'A'+1)*pr)%mod + mod)%mod;
+            }
+            
+            if(st.find(cmp) != st.end() && st[cmp] == 1){
+                ans.push_back(s.substr(i,10));
+                st[cmp]++;
+            }else{
+                st[cmp]++;
+            }
+        }
+        return ans;
+    }
+};
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 156. K Divisible Elements Subarray
+
+<details>
+<summary> Solution </summary>
+
+```cpp
+using ULL = unsigned long long;
+class Solution {
+public:
+    int countDistinct(vector<int>& nums, int k, int p) { 
+        // Rolling hash
+        int base = 211;
+        std::unordered_set<ULL>set;
+        for(int i=0;i<(int)nums.size();i++){
+            ULL hash = 0;
+            int num_of_divisible = 0;
+            for(int j =i;j<(int)nums.size();j++){
+                hash = hash * base + nums[j];
+                num_of_divisible += (nums[j] % p ==0);
+                if(num_of_divisible<=k)
+                    set.insert(hash);
+                else break;
+            }
+        }
+        return (int)set.size();
+    }
+};
+
+struct Trie {
+    unordered_map<int, Trie*> ch;
+    int cnt = 0;
+    int insert(vector<int>& nums, int i, int k, int p) {
+        if (i == nums.size() || k - (nums[i] % p == 0) < 0)
+            return 0;
+        if (ch[nums[i]] == nullptr)
+            ch[nums[i]] = new Trie();
+        return (++ch[nums[i]]->cnt == 1) + 
+            ch[nums[i]]->insert(nums, i + 1, k - (nums[i] % p == 0), p);
+    }
+};
+int countDistinct(vector<int>& nums, int k, int p) {
+    int res = 0;
+    Trie t;
+    for (int i = 0; i < nums.size(); ++i)
+        res += t.insert(nums, i, k, p);
+    return res;
+}
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+## 157. Problem Name 
 
 <details>
 <summary> Solution </summary>
