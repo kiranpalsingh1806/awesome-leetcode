@@ -6566,23 +6566,27 @@ public:
 <summary> Solution </summary>
 
 ```cpp
-class Solution {
-public:
-    int maxEvents(vector<vector<int>>& A) {
-        sort(A.begin(), A.end());
-        priority_queue<int, vector<int>, greater<>> pq;
-        int N = A.size(), i = 0, day = A[0][0], ans = 0;
-        while (i < N || pq.size()) {
-            if (pq.empty()) day = A[i][0]; // If no active event is available and there are still more events to pick, jump to the start date of the next event.
-            while (i < N && A[i][0] == day) pq.push(A[i++][1]); // add events that start at `day` as active events, push their end time into queue
-            pq.pop(); // pick the event with the earliest start time
-            ++ans;
-            ++day;
-            while (pq.size() && pq.top() < day) pq.pop(); // ignore the events that are no longer active
-        }
-        return ans;
+int maxEvents(vector<vector<int>>& events) {
+    sort(events.begin(), events.end());
+    int i = 0, N = events.size(), eventAttended = 0;
+    int day = events[0][0];
+    
+    priority_queue<int, vector<int>, greater<>> pq;
+    
+    while (i < N || pq.size()) {
+        if (pq.empty()) day = events[i][0];
+        
+        while (i < N && events[i][0] == day) pq.push(events[i++][1]);
+        
+        pq.pop();
+        eventAttended++;
+        day++;
+        
+        while (pq.size() && pq.top() < day) pq.pop();
     }
-};
+    
+    return eventAttended;
+}
 ```
 
 </details>
@@ -6640,40 +6644,30 @@ public:
 <summary> Solution </summary>
 
 ```cpp
-class Solution {
-public:
-    vector<string> findRepeatedDnaSequences(string s) {
-        int n = s.size();
+vector<string> findRepeatedDnaSequences(string s) {
+    int N = s.size();
+    unordered_map<long long,int> hash;
+    vector<string> ans;
+    
+    if (N <= 10) return ans;
+    long long p = 5, h = 0, M = 1e9 + 7, d = 1;
+    
+    for (int i = N - 1; i >= 0; i--) {
+        h = (h * p) % M + (s[i] - 'A' + 1) % M;
         
-        unordered_map<long long,int> st;
-        vector<string> ans;
-        
-        if(n <= 10) return ans;
-        
-        long long p = 5;
-        long long cmp = 0;
-        int mod = 1e9+7;
-        long long pr = 1;
-        
-        for(int i=n-1;i>=0;i--){
-            cmp = ((cmp*p)%mod + (s[i]-'A'+1))%mod;
-            
-            if(i+10 >= n){
-                pr = (pr*p)%mod;
-            }else{
-                cmp = (cmp - ((s[i+10]-'A'+1)*pr)%mod + mod)%mod;
-            }
-            
-            if(st.find(cmp) != st.end() && st[cmp] == 1){
-                ans.push_back(s.substr(i,10));
-                st[cmp]++;
-            }else{
-                st[cmp]++;
-            }
+        if (i + 10 >= N) {
+            d = (d * p)  % M;
+        } else {
+            h = (h - ((s[i + 10] - 'A' + 1) * d) % M + M) % M;
         }
-        return ans;
+        
+        if (hash.find(h) != hash.end() && hash[h] == 1) {
+            ans.push_back(s.substr(i, 10));
+        }
+        hash[h]++;
     }
-};
+    return ans;
+}
 ```
 
 </details>
@@ -6687,25 +6681,31 @@ public:
 <summary> Solution </summary>
 
 ```cpp
-using ULL = unsigned long long;
+
 class Solution {
 public:
     int countDistinct(vector<int>& nums, int k, int p) { 
-        // Rolling hash
-        int base = 211;
-        std::unordered_set<ULL>set;
-        for(int i=0;i<(int)nums.size();i++){
-            ULL hash = 0;
-            int num_of_divisible = 0;
-            for(int j =i;j<(int)nums.size();j++){
+        
+        int base = 211, N = nums.size();
+        unordered_set<unsigned long long>S;
+        
+        for (int i = 0; i < N; i++) {
+            unsigned long long hash = 0;
+            int countDivisible = 0;
+            
+            for (int j = i; j < N; j++) {
                 hash = hash * base + nums[j];
-                num_of_divisible += (nums[j] % p ==0);
-                if(num_of_divisible<=k)
-                    set.insert(hash);
-                else break;
+                countDivisible += (nums[j] % p == 0);
+                
+                if (countDivisible <= k) {
+                    S.insert(hash);
+                } else {
+                    break;
+                }
             }
         }
-        return (int)set.size();
+        
+        return (int)(S.size());
     }
 };
 
