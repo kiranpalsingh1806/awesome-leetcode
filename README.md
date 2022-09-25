@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&vCenter=true&width=600&height=200&lines=Awesome+LeetCode)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&vCenter=true&width=1100&height=200&lines=Awesome+Leetcode)](https://git.io/typing-svg)
 
 #  Data Structures and Algorithms
 - [Data Structures and Algorithms](#data-structures-and-algorithms)
