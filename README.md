@@ -1,4 +1,4 @@
-# Data Structures and Algorithms
+#  Data Structures and Algorithms
 - [Data Structures and Algorithms](#data-structures-and-algorithms)
   - [1. Backtracking](#1-backtracking)
   - [2. Bellman Ford](#2-bellman-ford)
@@ -23,21 +23,22 @@
   - [21. Line Sweep](#21-line-sweep)
   - [22. Linked List](#22-linked-list)
   - [23. LIS](#23-lis)
-  - [24. Matrix](#24-matrix)
-  - [25. Merge Sort](#25-merge-sort)
-  - [26. Prefix State Map](#26-prefix-state-map)
-  - [27. Prefix Sum](#27-prefix-sum)
-  - [28. Queries](#28-queries)
-  - [29. Rolling Hash](#29-rolling-hash)
-  - [30. Segment Tree](#30-segment-tree)
-  - [31. Sliding Window](#31-sliding-window)
-  - [32. Stack](#32-stack)
-  - [33. Stringstream](#33-stringstream)
-  - [34. Topological Sort](#34-topological-sort)
-  - [35. Trie](#35-trie)
-  - [36. Two Dimensional Plane](#36-two-dimensional-plane)
-  - [37. Two Pointer](#37-two-pointer)
-  - [38. Union Find](#38-union-find)
+  - [24. Manacher](#24-manacher)
+  - [25. Matrix](#25-matrix)
+  - [26. Merge Sort](#26-merge-sort)
+  - [27. Prefix State Map](#27-prefix-state-map)
+  - [28. Prefix Sum](#28-prefix-sum)
+  - [29. Queries](#29-queries)
+  - [30. Rolling Hash](#30-rolling-hash)
+  - [31. Segment Tree](#31-segment-tree)
+  - [32. Sliding Window](#32-sliding-window)
+  - [33. Stack](#33-stack)
+  - [34. Stringstream](#34-stringstream)
+  - [35. Topological Sort](#35-topological-sort)
+  - [36. Trie](#36-trie)
+  - [37. Two Dimensional Plane](#37-two-dimensional-plane)
+  - [38. Two Pointer](#38-two-pointer)
+  - [39. Union Find](#39-union-find)
 
 
 ## 1. Backtracking
@@ -185,91 +186,97 @@
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 24. Matrix
+## 24. Manacher
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 25. Merge Sort
+## 25. Matrix
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 26. Prefix State Map
+## 26. Merge Sort
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 27. Prefix Sum
+## 27. Prefix State Map
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 28. Queries
+## 28. Prefix Sum
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 29. Rolling Hash
+## 29. Queries
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 30. Segment Tree
+## 30. Rolling Hash
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 31. Sliding Window
+## 31. Segment Tree
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 32. Stack
+## 32. Sliding Window
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 33. Stringstream
+## 33. Stack
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 34. Topological Sort
+## 34. Stringstream
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 35. Trie
+## 35. Topological Sort
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 36. Two Dimensional Plane
+## 36. Trie
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 37. Two Pointer
+## 37. Two Dimensional Plane
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 38. Union Find
+## 38. Two Pointer
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 39. Union Find
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
