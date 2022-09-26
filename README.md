@@ -234,7 +234,11 @@
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)|Medium|[Solution](/solutions/segment-tree.md)|
+[Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)|Medium|[Solution](/solutions/segment-tree.md)|
+[Longest Increasing Subseqence - II](https://leetcode.com/problems/longest-increasing-subsequence-ii/)|Medium|[Solution](/solutions/segment-tree.md)|
+[Shifting Letters - II](https://leetcode.com/problems/shifting-letters-ii/)|Medium|[Solution](/solutions/segment-tree.md)|
+[Falling Squares](https://leetcode.com/problems/falling-squares/)|Hard|[Solution](/solutions/segment-tree.md)|
 
 ## 32. Sliding Window
 
