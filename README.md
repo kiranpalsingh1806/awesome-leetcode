@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Data Structures and Algorithms</h1>
+<h1>Awesome Leetcode</h1>
 
 <a href="https://github.com/kiranpalsingh1806/awesome-leetcode"><img src="https://sloc.xyz/github/kiranpalsingh1806/awesome-leetcode" alt="LOC"/></a>
 <a href="https://github.com/kiranpalsingh1806/awesome-leetcode"><img src="https://visitor-badge.laobi.icu/badge?page_id=kiranpalsingh1806.awesome-leetcode" alt="visitor count"/></a>
@@ -8,6 +8,8 @@
 <a href="https://github.com/kiranpalsingh1806/awesome-leetcode/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/kiranpalsingh1806/awesome-leetcode?color=2b9348"></a>
 
 <b><i>If you appreciate my work, please</i></b> 🌟 <b><i>this repository. It motivates me. 🚀🚀</i></b>
+
+<img src="https://socialify.git.ci/kiranpalsingh1806/awesome-leetcode/image?description=1&descriptionEditable=An%20Open-Source%20repository%20that%20contains%20all%20the%20Data%20Structures%20and%20Algorithms%20concepts%20and%20their%20implementation%20in%20several%20ways.&font=Raleway&forks=1&language=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Light" alt="Awesome-Leetcode" width="100%" height="320" align="center" />
 
 </div>
 
