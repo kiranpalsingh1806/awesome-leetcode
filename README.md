@@ -1,6 +1,17 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&vCenter=true&width=1100&height=200&lines=Awesome+Leetcode)](https://git.io/typing-svg)
+<div align="center">
+<h1>Data Structures and Algorithms</h1>
 
-A curated list of topicwise data structures and algorithms problems on Leetcode alogn with solutions.
+<a href="https://github.com/kiranpalsingh1806/awesome-leetcode"><img src="https://sloc.xyz/github/kiranpalsingh1806/awesome-leetcode" alt="LOC"/></a>
+<a href="https://github.com/kiranpalsingh1806/awesome-leetcode"><img src="https://visitor-badge.laobi.icu/badge?page_id=kiranpalsingh1806.awesome-leetcode" alt="visitor count"/></a>
+<a href="https://github.com/kiranpalsingh1806/awesome-leetcode/stargazers"><img src="https://img.shields.io/github/stars/kiranpalsingh1806/awesome-leetcode" alt="Stars Badge"/></a>
+<a href="https://github.com/kiranpalsingh1806/awesome-leetcode/network/members"><img src="https://img.shields.io/github/forks/kiranpalsingh1806/awesome-leetcode" alt="Forks Badge"/></a>
+<a href="https://github.com/kiranpalsingh1806/awesome-leetcode/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/kiranpalsingh1806/awesome-leetcode?color=2b9348"></a>
+
+<b><i>If you appreciate my work, please</i></b> 🌟 <b><i>this repository. It motivates me. 🚀🚀</i></b>
+
+</div>
+
+A curated list of topicwise data structures and algorithms problems on Leetcode along with solutions.
 
 <!-- #  Data Structures and Algorithms -->
 - [1. Backtracking](#1-backtracking)
