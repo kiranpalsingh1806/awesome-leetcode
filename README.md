@@ -62,6 +62,18 @@ A curated list of topicwise data structures and algorithms problems on Leetcode 
 [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 [Combination Sum](https://leetcode.com/problems/combination-sum/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 [Permutations](https://leetcode.com/problems/permutations/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Permutations II](https://leetcode.com/problems/permutations-ii/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[N Queens](https://leetcode.com/problems/n-queens/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Combinations](https://leetcode.com/problems/combinations/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Subsets](https://leetcode.com/problems/subsets/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Word Search](https://leetcode.com/problems/word-search/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Subsets II](https://leetcode.com/problems/subsets-ii/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Combination Sum III  ](https://leetcode.com/problems/combination-sum-iii/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 2. Bellman Ford
 
@@ -186,7 +198,8 @@ A curated list of topicwise data structures and algorithms problems on Leetcode 
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Single Threaded CPU](https://leetcode.com/problems/single-threaded-cpu/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 22. Heaps
 
@@ -359,7 +372,10 @@ A curated list of topicwise data structures and algorithms problems on Leetcode 
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Max Points On A Line](https://leetcode.com/problems/max-points-on-a-line/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Queries On Number of Points Inside A Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Detonate The Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 49. Two Pointer
 
