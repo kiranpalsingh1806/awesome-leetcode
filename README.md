@@ -1,46 +1,58 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&center=true&vCenter=true&width=1100&height=200&lines=Awesome+Leetcode)](https://git.io/typing-svg)
 
-#  Data Structures and Algorithms
-- [Data Structures and Algorithms](#data-structures-and-algorithms)
-  - [1. Backtracking](#1-backtracking)
-  - [2. Bellman Ford](#2-bellman-ford)
-  - [3. BFS](#3-bfs)
-  - [4. Binary Search](#4-binary-search)
-  - [5. Binary Trees](#5-binary-trees)
-  - [6. Bitmasks](#6-bitmasks)
-  - [7. Count Pairs In Array](#7-count-pairs-in-array)
-  - [8. Custom Comparator](#8-custom-comparator)
-  - [9. Design](#9-design)
-  - [10. DFS](#10-dfs)
-  - [11. Dijkstra](#11-dijkstra)
-  - [12. Dynamic Programming](#12-dynamic-programming)
-  - [13. Fenwick Tree](#13-fenwick-tree)
-  - [14. Games](#14-games)
-  - [15. GCD](#15-gcd)
-  - [16. Greedy Scheduling](#16-greedy-scheduling)
-  - [17. Heaps](#17-heaps)
-  - [18. Intervals](#18-intervals)
-  - [19. KMP](#19-kmp)
-  - [20. Kruskal](#20-kruskal)
-  - [21. Line Sweep](#21-line-sweep)
-  - [22. Linked List](#22-linked-list)
-  - [23. LIS](#23-lis)
-  - [24. Manacher](#24-manacher)
-  - [25. Matrix](#25-matrix)
-  - [26. Merge Sort](#26-merge-sort)
-  - [27. Prefix State Map](#27-prefix-state-map)
-  - [28. Prefix Sum](#28-prefix-sum)
-  - [29. Queries](#29-queries)
-  - [30. Rolling Hash](#30-rolling-hash)
-  - [31. Segment Tree](#31-segment-tree)
-  - [32. Sliding Window](#32-sliding-window)
-  - [33. Stack](#33-stack)
-  - [34. Stringstream](#34-stringstream)
-  - [35. Topological Sort](#35-topological-sort)
-  - [36. Trie](#36-trie)
-  - [37. Two Dimensional Plane](#37-two-dimensional-plane)
-  - [38. Two Pointer](#38-two-pointer)
-  - [39. Union Find](#39-union-find)
+A curated list of topicwise data structures and algorithms problems on Leetcode alogn with solutions.
+
+<!-- #  Data Structures and Algorithms -->
+- [1. Backtracking](#1-backtracking)
+- [2. Bellman Ford](#2-bellman-ford)
+- [3. BFS](#3-bfs)
+- [4. Binary Search](#4-binary-search)
+- [5. Binary Trees](#5-binary-trees)
+- [6. Bit Manipulation](#6-bit-manipulation)
+- [7. Bitmasks](#7-bitmasks)
+- [8. Bucket Sort](#8-bucket-sort)
+- [9. Count Pairs In Array](#9-count-pairs-in-array)
+- [10. Custom Comparator](#10-custom-comparator)
+- [11. Design](#11-design)
+- [12. DFS](#12-dfs)
+- [13. Dijkstra](#13-dijkstra)
+- [14. Divide And Conquer](#14-divide-and-conquer)
+- [15. Dynamic Programming](#15-dynamic-programming)
+- [16. Euler Circuit](#16-euler-circuit)
+- [17. Fenwick Tree](#17-fenwick-tree)
+- [18. Games](#18-games)
+- [19. GCD](#19-gcd)
+- [20. Geometry](#20-geometry)
+- [21. Greedy Scheduling](#21-greedy-scheduling)
+- [22. Heaps](#22-heaps)
+- [23. Intervals](#23-intervals)
+- [24. KMP](#24-kmp)
+- [25. Kruskal Algorithm](#25-kruskal-algorithm)
+- [26. Line Sweep](#26-line-sweep)
+- [27. Linked List](#27-linked-list)
+- [28. LIS](#28-lis)
+- [29. Manacher](#29-manacher)
+- [30. Matrix](#30-matrix)
+- [31. Merge Sort](#31-merge-sort)
+- [32. Minimum Spanning Trees](#32-minimum-spanning-trees)
+- [33. Prefix State Map](#33-prefix-state-map)
+- [34. Prefix Sum](#34-prefix-sum)
+- [35. Prim Algorithm](#35-prim-algorithm)
+- [36. Queries](#36-queries)
+- [37. Quick Select](#37-quick-select)
+- [38. Recursion](#38-recursion)
+- [39. Rolling Hash](#39-rolling-hash)
+- [40. Segment Tree](#40-segment-tree)
+- [41. Sieve of Eratosthenes](#41-sieve-of-eratosthenes)
+- [42. Sliding Window](#42-sliding-window)
+- [43. Stack](#43-stack)
+- [44. Stringstream](#44-stringstream)
+- [45. String Matching](#45-string-matching)
+- [46. Topological Sort](#46-topological-sort)
+- [47. Trie](#47-trie)
+- [48. Two Dimensional Plane](#48-two-dimensional-plane)
+- [49. Two Pointer](#49-two-pointer)
+- [50. Union Find](#50-union-find)
 
 
 ## 1. Backtracking
@@ -79,158 +91,219 @@
 [Sum Root To Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 [Construct Binary Tree From Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 6. Bitmasks
+## 6. Bit Manipulation
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 7. Bitmasks
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 [Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 [Count Number of Maximum Bitwise OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 7. Count Pairs In Array
+## 8. Bucket Sort
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 8. Custom Comparator
+## 9. Count Pairs In Array
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 9. Design
+## 10. Custom Comparator
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 10. DFS
+## 11. Design
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 11. Dijkstra
+## 12. DFS
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 12. Dynamic Programming
+## 13. Dijkstra
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 13. Fenwick Tree
+## 14. Divide And Conquer
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 14. Games
+## 15. Dynamic Programming
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 15. GCD
+## 16. Euler Circuit
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 16. Greedy Scheduling
+## 17. Fenwick Tree
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 17. Heaps
+## 18. Games
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 18. Intervals
+## 19. GCD
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 19. KMP
+## 20. Geometry
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 20. Kruskal
+## 21. Greedy Scheduling
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 21. Line Sweep
+## 22. Heaps
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 22. Linked List
+## 23. Intervals
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 23. LIS
+## 24. KMP
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 24. Manacher
+## 25. Kruskal Algorithm
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 25. Matrix
+## 26. Line Sweep
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 26. Merge Sort
+## 27. Linked List
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 27. Prefix State Map
+## 28. LIS
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 28. Prefix Sum
+## 29. Manacher
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 29. Queries
+## 30. Matrix
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 30. Rolling Hash
+## 31. Merge Sort
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 31. Segment Tree
+## 32. Minimum Spanning Trees
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 33. Prefix State Map
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 34. Prefix Sum
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 35. Prim Algorithm
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 36. Queries
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 37. Quick Select
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 38. Recursion
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 39. Rolling Hash
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[K Divisible Elements Subarrays](https://leetcode.com/problems/k-divisible-elements-subarrays/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Sum of Scores of Built Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Find Substring With Given Hash Value](https://leetcode.com/problems/find-substring-with-given-hash-value/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 40. Segment Tree
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
@@ -240,50 +313,84 @@
 [Shifting Letters - II](https://leetcode.com/problems/shifting-letters-ii/)|Medium|[Solution](/solutions/segment-tree.md)|
 [Falling Squares](https://leetcode.com/problems/falling-squares/)|Hard|[Solution](/solutions/segment-tree.md)|
 
-## 32. Sliding Window
+## 41. Sieve of Eratosthenes
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 33. Stack
+## 42. Sliding Window
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 34. Stringstream
+## 43. Stack
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 35. Topological Sort
+## 44. Stringstream
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 36. Trie
+## 45. String Matching
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 37. Two Dimensional Plane
+## 46. Topological Sort
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 38. Two Pointer
+## 47. Trie
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 39. Union Find
+## 48. Two Dimensional Plane
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 49. Two Pointer
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[Two Sum](https://leetcode.com/problems/two-sum/)|Easy|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Remove Duplicates From Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|Easy|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|Easy|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Container With Most Water](https://leetcode.com/problems/container-with-most-water/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[3Sum](https://leetcode.com/problems/3sum/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[3Sum Closest](https://leetcode.com/problems/3sum-closest/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Sort Colors](https://leetcode.com/problems/sort-colors/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Linked List Cycle-II](https://leetcode.com/problems/linked-list-cycle-ii/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Reorder List](https://leetcode.com/problems/reorder-list/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Sort List](https://leetcode.com/problems/sort-list/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+
+## 50. Union Find
+
+|Problem|Difficulty|Solution|
+|------|--------|------|
+[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Number of Islands](https://leetcode.com/problems/number-of-islands/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Number of Provinces](https://leetcode.com/problems/number-of-provinces/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Redundant Connections](https://leetcode.com/problems/redundant-connection/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Max Area of Island](https://leetcode.com/problems/max-area-of-island/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Is Graph Bipartite ?](https://leetcode.com/problems/is-graph-bipartite/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Satifiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Smallest String With Swaps](https://leetcode.com/problems/smallest-string-with-swaps/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Number of Good Paths](https://leetcode.com/problems/number-of-good-paths/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
