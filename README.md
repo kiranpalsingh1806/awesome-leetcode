@@ -93,6 +93,7 @@
 |Problem|Difficulty|Solution|
 |------|--------|------|
 [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Network Delay Time](https://leetcode.com/problems/network-delay-time/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 
 ## 3. BFS
@@ -139,13 +140,15 @@
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Count Nice Pairs In An Array](https://leetcode.com/problems/count-nice-pairs-in-an-array/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 10. Custom Comparator
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Sort The People](https://leetcode.com/problems/sort-the-people/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 11. Design
 
