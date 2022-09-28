@@ -9,7 +9,6 @@
 ```cpp
 struct segtree {
     int size;
-    // used to store even sum
     vector<int> sums;
 
     void init(int n) {
@@ -20,7 +19,6 @@ struct segtree {
 
     void set(int i, int v, int x, int lx, int rx) {
         if (rx - lx == 1){
-            // set sums[x] to v only if v is even
             sums[x] = v % 2 == 0 ? v : 0;
             return;
         }
@@ -35,11 +33,8 @@ struct segtree {
     }
 
     int sum(int l, int r, int x, int lx, int rx) {
-        // no intersection
         if (lx >= r || l >= rx) return 0;
-        // inside
         if (lx >= l && rx <= r) return sums[x];
-        // go to both left and right side
         int m = (lx + rx) / 2;
         int s1 = sum(l, r, 2 * x + 1, lx, m);
         int s2 = sum(l, r, 2 * x + 2, m, rx);
@@ -55,19 +50,13 @@ class Solution {
 public:
     vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& queries) {
         int n = nums.size();
-        // init segment tree
         segtree st;
         st.init(n);
-        // set each number in segment tree
         for (int i = 0; i < n; i++) st.set(i, nums[i]);
         vector<int> ans;
         for (auto q : queries) {
             int val = q[0], idx = q[1];
-            // update segment tree
             st.set(idx, nums[idx] += val);
-            // query segement tree
-			// or we can just add st.sums[0] 
-			// since the root value represents the even sum for the whole array
             ans.push_back(st.sum(0, n));
         }
         return ans;
@@ -107,9 +96,7 @@ struct segtree {
     }
     
     long long sum(int l, int r, int x, int lx, int rx) {
-        // no intersection
         if (lx >= r || l >= rx) return 0;
-        // inside
         if (lx >= l && rx <= r) return sums[x];
         int m = (lx + rx) / 2;
         long long s1 = sum(l, r, 2 * x + 1, lx, m);
@@ -315,5 +302,83 @@ public:
 	    }
 	    return res;
 	}
+};
+```
+
+```cpp
+struct segtree {
+    vector<long long> a;
+    int size;
+    
+    void init(int n) {
+        size = 1;
+        while (size < n) size *= 2;
+        a.assign(size * 2, 0LL);
+    }
+    
+    void set(int i, int v, int x, int lx, int rx) {
+        if (rx - lx == 1) {
+            a[x] = v;
+            return;
+        }
+        int m = (lx + rx) / 2;
+        if (i < m) set(i, v, 2 * x + 1, lx, m);
+        else set(i, v, 2 * x + 2, m, rx);
+        a[x] = max(a[2 * x + 1], a[2 * x + 2]);
+    }
+    
+    void set(int i, int v) {
+        set(i, v, 0, 0, size);
+    }
+    
+    long long op(int l, int r, int x, int lx, int rx) {
+        if (lx >= r || l >= rx) return 0;
+        if (lx >= l && rx <= r) return a[x];
+        int m = (lx + rx) / 2;
+        return max(op(l, r, 2 * x + 1, lx, m), op(l, r, 2 * x + 2, m, rx));
+    }
+    
+    long long op(int l, int r) {
+        return op(l, r, 0, 0, size);
+    }
+};
+
+class Solution {
+public:
+    
+    vector<int> fallingSquares(vector<vector<int>>& positions) {
+        
+        int N;
+        
+        vector<int> a;
+	    for (auto& p : positions) {
+	      a.push_back(p[0]);
+	      a.push_back(p[0] + p[1]);
+	    }
+
+	    sort(a.begin(), a.end());
+	    N = unique(a.begin(), a.end()) - a.begin();
+	    a.resize(N);
+        
+        
+        segtree st;
+        st.init(2 * N + 1);
+	    // tree.resize(2 * N + 1);
+
+	    vector<int> res;
+
+	    for (auto& p : positions) {
+	      int l = lower_bound(a.begin(), a.end(), p[0]) - a.begin();
+	      int r = lower_bound(a.begin(), a.end(), p[0] + p[1]) - a.begin();
+	      int maxh = st.op(l, r);
+            
+          for (int i = l; i < r; i++) {
+              st.set(i, maxh + p[1]);
+          }; 
+            
+	      res.push_back(st.op(0, N + 1));
+	    }
+	    return res;
+    }
 };
 ```
