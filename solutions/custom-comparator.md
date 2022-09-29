@@ -15,12 +15,12 @@ vector<int> sortArrayByParity(vector<int>& nums) {
 ## Sort The People
 
 ```cpp
-vector<string> sortPeople(vector<string>& names, vector<int>& heights) { 
+vector<string> sortPeople(vector<string>& names, vector<int>& heights) {    
     int N = names.size();
     vector<int> idx(N, 0);
     iota(idx.begin(), idx.end(), 0);
     
-    sort(idx.begin(), idx.end(), [&](auto &i, auto &j) {
+    sort(idx.begin(), idx.end(), [&](int i, int j) {
         return heights[i] > heights[j]; 
     });
     
