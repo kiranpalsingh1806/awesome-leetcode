@@ -92,8 +92,8 @@
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
-[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-[Network Delay Time](https://leetcode.com/problems/network-delay-time/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|Medium|[Solution](/solutions/bellman-ford.md)|
+[Network Delay Time](https://leetcode.com/problems/network-delay-time/)|Medium|[Solution](/solutions/bellman-ford.md)|
 
 
 ## 3. BFS
@@ -147,8 +147,8 @@
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
-[Sort The People](https://leetcode.com/problems/sort-the-people/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-[Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+[Sort The People](https://leetcode.com/problems/sort-the-people/)|Medium|[Solution](/solutions/custom-comparator.md)|
+[Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|Medium|[Solution](/solutions/custom-comparator.md)|
 
 ## 11. Design
 
