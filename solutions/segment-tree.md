@@ -1,10 +1,13 @@
-- [Sum of Even Numbers After Queries](#sum-of-even-numbers-after-queries)
-- [Range Sum Query Mutable](#range-sum-query-mutable)
-- [Longest Increasing Subsequence - II](#longest-increasing-subsequence---ii)
-- [Shifting Letters - II](#shifting-letters---ii)
-- [Falling Squares](#falling-squares)
+# Segment Tree
 
-# Sum of Even Numbers After Queries
+- [Segment Tree](#segment-tree)
+  - [Sum of Even Numbers After Queries](#sum-of-even-numbers-after-queries)
+  - [Range Sum Query Mutable](#range-sum-query-mutable)
+  - [Longest Increasing Subsequence - II](#longest-increasing-subsequence---ii)
+  - [Shifting Letters - II](#shifting-letters---ii)
+  - [Falling Squares](#falling-squares)
+
+## Sum of Even Numbers After Queries
 
 ```cpp
 struct segtree {
@@ -64,7 +67,7 @@ public:
 };
 ```
 
-# Range Sum Query Mutable
+## Range Sum Query Mutable
 
 ```cpp
 struct segtree {
@@ -134,7 +137,7 @@ private:
 };
 ```
 
-# Longest Increasing Subsequence - II
+## Longest Increasing Subsequence - II
 
 ```cpp
 struct segtree {
@@ -191,7 +194,7 @@ public:
 };
 ```
 
-# Shifting Letters - II
+## Shifting Letters - II
 
 ```cpp
 class Solution {
@@ -247,7 +250,7 @@ public:
 };
 ```
 
-# Falling Squares
+## Falling Squares
 
 ```cpp
 class Solution {
