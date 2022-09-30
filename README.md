@@ -101,14 +101,14 @@
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
 |1|[Average of Levels In Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|Easy|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|1|[Number of Islands](https://leetcode.com/problems/number-of-islands/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|2|[Number of Islands](https://leetcode.com/problems/number-of-islands/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 4. Binary Search
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
 |1|[Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|1|[Find First and Last Position of Element In Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|2|[Find First and Last Position of Element In Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 5. Binary Trees
 
