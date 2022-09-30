@@ -68,7 +68,7 @@
   - [50. Union Find](#50-union-find)
 
 
-## 1. Backtracking
+## 1. Backtracking 
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
