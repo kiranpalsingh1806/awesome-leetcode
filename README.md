@@ -185,9 +185,20 @@
 
 ## 15. Dynamic Programming
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|Easy|[Solution](/solutions/dp.md)|
+|2|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|Easy|[Solution](/solutions/dp.md)|
+|3|[Best Time To Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|Easy|[Solution](/solutions/dp.md)|
+|4|[Jump Game](https://leetcode.com/problems/jump-game/)|Medium|[Solution](/solutions/dp.md)|
+|5|[Unique Paths](https://leetcode.com/problems/unique-paths/)|Medium|[Solution](/solutions/dp.md)|
+|6|[Decode Ways](https://leetcode.com/problems/decode-ways/)|Medium|[Solution](/solutions/dp.md)|
+|7|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)|Medium|[Solution](/solutions/dp.md)|
+|8|[House Robber](https://leetcode.com/problems/house-robber/)|Medium|[Solution](/solutions/dp.md)|
+|9|[Word Break](https://leetcode.com/problems/word-break/)|Medium|[Solution](/solutions/dp.md)|
+|10|[Coin Change](https://leetcode.com/problems/coin-change/)|Medium|[Solution](/solutions/dp.md)|
+
+
 
 ## 16. Euler Circuit
 
@@ -246,9 +257,10 @@
 
 ## 25. Kruskal Algorithm
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)|Medium|[Solution](/solutions/kruskal.md)|
+|2|[Find Critical And Pseudo Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/)|Medium|[Solution](/solutions/kruskal.md)|
 
 ## 26. Line Sweep
 
