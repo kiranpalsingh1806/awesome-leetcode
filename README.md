@@ -114,8 +114,22 @@
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
-|1|[Sum Root To Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|2|[Construct Binary Tree From Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|1|[](https://leetcode.com/problems/sum-of-left-leaves/)|Easy|[Solution](/solutions/binary-trees.md)|
+|2|[](https://leetcode.com/problems/construct-string-from-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
+|3|[](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
+|4|[](https://leetcode.com/problems/balanced-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
+|5|[](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
+|6|[Sum Root To Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|Medium|[Solution](/solutions/binary-trees.md)|
+|7|[](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|Medium|[Solution](/solutions/binary-trees.md)|
+|8|[](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
+|9|[](https://leetcode.com/problems/serialize-and-deserialize-bst/)|Medium|[Solution](/solutions/binary-trees.md)|
+|10|[](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)|Medium|[Solution](/solutions/binary-trees.md)|
+|11|[](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)|Medium|[Solution](/solutions/binary-trees.md)|
+|12|[](https://leetcode.com/problems/binary-tree-pruning/)|Medium|[Solution](/solutions/binary-trees.md)|
+|13|[](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
+|14|[](https://leetcode.com/problems/distribute-coins-in-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
+|15|[](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)|Hard|[Solution](/solutions/binary-trees.md)|
+
 
 ## 6. Bit Manipulation
 
@@ -149,6 +163,7 @@
 |-|------|--------|------|
 |1|[Sort The People](https://leetcode.com/problems/sort-the-people/)|Medium|[Solution](/solutions/custom-comparator.md)|
 |2|[Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|Medium|[Solution](/solutions/custom-comparator.md)|
+|3|[Bitwise XOR of All Pairings](https://leetcode.com/problems/bitwise-xor-of-all-pairings/)|Medium|[Solution](/solutions/custom-comparator.md)|
 
 ## 11. Design and Implementation
 
@@ -167,15 +182,35 @@
 
 ## 12. DFS
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Flood Fill](https://leetcode.com/problems/flood-fill/)|Easy|[Solution](/solutions/dfs.md)|
+|2|[Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/)|Medium|[Solution](/solutions/dfs.md)|
+|3|[Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)|Medium|[Solution](/solutions/dfs.md)|
+|4|[Out of Boundary Paths](https://leetcode.com/problems/out-of-boundary-paths/)|Medium|[Solution](/solutions/dfs.md)|
+|5|[Number of Provinces](https://leetcode.com/problems/number-of-provinces/)|Medium|[Solution](/solutions/dfs.md)|
+|6|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)|Medium|[Solution](/solutions/dfs.md)|
+|7|[Interleaving String](https://leetcode.com/problems/interleaving-string/)|Medium|[Solution](/solutions/dfs.md)|
+|8|[Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)|Medium|[Solution](/solutions/dfs.md)|
+|9|[Throne Inheritance](https://leetcode.com/problems/throne-inheritance/)|Medium|[Solution](/solutions/dfs.md)|
+|10|[Detonate The Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/)|Medium|[Solution](/solutions/dfs.md)|
+|11|[Longest Path With Different Adjacent Characters](https://leetcode.com/problems/longest-path-with-different-adjacent-characters/)|Hard|[Solution](/solutions/dfs.md)|
 
 ## 13. Dijkstra
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Network Delay Time](https://leetcode.com/problems/network-delay-time/)|Medium|[Solution](/solutions/dijksta.md)|
+|2|[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|Medium|[Solution](/solutions/dijksta.md)|
+|3|[Path With Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)|Medium|[Solution](/solutions/dijksta.md)|
+|4|[Find The City With The Smallest Number of Neighbors At A Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)|Medium|[Solution](/solutions/dijksta.md)|
+|5|[Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)|Medium|[Solution](/solutions/dijksta.md)|
+|6|[Number of Restricted Paths From First To Last Node](https://leetcode.com/problems/number-of-restricted-paths-from-first-to-last-node/)|Medium|[Solution](/solutions/dijksta.md)|
+|7|[Number of Ways To Arrive At Destination](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/)|Medium|[Solution](/solutions/dijksta.md)|
+|8|[Minimum Cost To Reach Destination In Time](https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/)|Medium|[Solution](/solutions/dijksta.md)|
+|9|[Minimum Cost To Make At Least One Valid Path In A Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)|Hard|[Solution](/solutions/dijksta.md)|
+|10|[Reachable Nodes in Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/)|Hard|[Solution](/solutions/dijksta.md)|
+
 
 ## 14. Divide And Conquer
 
@@ -294,9 +329,14 @@
 
 ## 31. Merge Sort
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No |Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Sort List](https://leetcode.com/problems/sort-list/)|Medium|[Solution](/solutions/merge-sort.md)|
+|2|[Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)|Medium|[Solution](/solutions/merge-sort.md)|
+|3|[Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/)|Medium|[Solution](/solutions/merge-sort.md)|
+|4|[Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)|Medium|[Solution](/solutions/merge-sort.md)|
+|5|[Number of Pairs Satisfying Inequality](https://leetcode.com/problems/number-of-pairs-satisfying-inequality/)|Medium|[Solution](/solutions/merge-sort.md)|
+
 
 ## 32. Minimum Spanning Trees
 
