@@ -114,21 +114,21 @@
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
-|1|[](https://leetcode.com/problems/sum-of-left-leaves/)|Easy|[Solution](/solutions/binary-trees.md)|
-|2|[](https://leetcode.com/problems/construct-string-from-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
-|3|[](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
-|4|[](https://leetcode.com/problems/balanced-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
-|5|[](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
+|1|[Sum of Leaft Leaves](https://leetcode.com/problems/sum-of-left-leaves/)|Easy|[Solution](/solutions/binary-trees.md)|
+|2|[Construct String From Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
+|3|[Average of Levels In Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
+|4|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
+|5|[Convet Sorted Array To Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
 |6|[Sum Root To Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|Medium|[Solution](/solutions/binary-trees.md)|
-|7|[](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|Medium|[Solution](/solutions/binary-trees.md)|
-|8|[](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
-|9|[](https://leetcode.com/problems/serialize-and-deserialize-bst/)|Medium|[Solution](/solutions/binary-trees.md)|
-|10|[](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)|Medium|[Solution](/solutions/binary-trees.md)|
-|11|[](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)|Medium|[Solution](/solutions/binary-trees.md)|
-|12|[](https://leetcode.com/problems/binary-tree-pruning/)|Medium|[Solution](/solutions/binary-trees.md)|
-|13|[](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
-|14|[](https://leetcode.com/problems/distribute-coins-in-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
-|15|[](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)|Hard|[Solution](/solutions/binary-trees.md)|
+|7|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|Medium|[Solution](/solutions/binary-trees.md)|
+|8|[Lowest Common Ancestor Of A Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
+|9|[Serialize and Deserialize BST](https://leetcode.com/problems/serialize-and-deserialize-bst/)|Medium|[Solution](/solutions/binary-trees.md)|
+|10|[Construct Binary Tree From Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)|Medium|[Solution](/solutions/binary-trees.md)|
+|11|[Construct Binary Tree From Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)|Medium|[Solution](/solutions/binary-trees.md)|
+|12|[Binary Tree Pruning](https://leetcode.com/problems/binary-tree-pruning/)|Medium|[Solution](/solutions/binary-trees.md)|
+|13|[All Nodes Distance K In Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
+|14|[Distribute Coins In Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
+|15|[Vertical Order Traversal of A Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)|Hard|[Solution](/solutions/binary-trees.md)|
 
 
 ## 6. Bit Manipulation
