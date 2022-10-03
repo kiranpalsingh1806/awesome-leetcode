@@ -133,9 +133,24 @@
 
 ## 6. Bit Manipulation
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Power of Two](https://leetcode.com/problems/power-of-two/)|Easy|[Solution](/solutions/bit-manipulation.md)|
+|2|[Divide Array Into Equal Pairs](https://leetcode.com/problems/divide-array-into-equal-pairs/)|Easy|[Solution](/solutions/bit-manipulation.md)|
+|3|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|4|[Subsets](https://leetcode.com/problems/subsets/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|5|[Subsets II](https://leetcode.com/problems/subsets-ii/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|6|[Check If A String Contains All Binary Codes of Size K](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|7|[Concatenation of Consecutive Binary Numbers](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|8|[Count Number of Maximum Bitwise OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|9|[Largest Combination With Bitwise AND Greater Than Zero](https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|10|[Maximum XOR After Operations](https://leetcode.com/problems/maximum-xor-after-operations/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|11|[Smallest Subarrays With Maximum Bitwise OR](https://leetcode.com/problems/smallest-subarrays-with-maximum-bitwise-or/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|12|[Longest Subarray With Maximum Bitwise AND](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|13|[Minimize XOR](https://leetcode.com/problems/minimize-xor/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|14|[Bitwise XOR of All Pairings](https://leetcode.com/problems/bitwise-xor-of-all-pairings/)|Medium|[Solution](/solutions/bit-manipulation.md)|
+|15|[Closest Subsequence Sum](https://leetcode.com/problems/closest-subsequence-sum/)|Hard|[Solution](/solutions/bit-manipulation.md)|
+|16|[Find The Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/)|Hard|[Solution](/solutions/bit-manipulation.md)|
 
 ## 7. Bitmasks
 
@@ -432,9 +447,11 @@
 
 ## 44. Stringstream
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Reverse Words In A String-III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)|Medium|[Solution](/solutions/stringstream.md)|
+|2|[Find Duplicate File In System](https://leetcode.com/problems/find-duplicate-file-in-system/)|Medium|[Solution](/solutions/stringstream.md)|
+|3|[Apply Discount To Prices](https://leetcode.com/problems/apply-discount-to-prices/)|Medium|[Solution](/solutions/stringstream.md)|
 
 ## 45. String Matching
 
