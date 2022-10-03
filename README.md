@@ -361,9 +361,12 @@
 
 ## 33. Prefix State Map
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Contiguous Array](https://leetcode.com/problems/contiguous-array/)|Medium|[Solution](/solutions/prefix-state-map.md)|
+|2|[Find The Longest Substring Containing Vowels In Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/)|Medium|[Solution](/solutions/prefix-state-map.md)|
+|3|[Find Longest Awesome Substring](https://leetcode.com/problems/find-longest-awesome-substring/)|Medium|[Solution](/solutions/prefix-state-map.md)|
+|4|[Number of Wonderful Substrings](https://leetcode.com/problems/number-of-wonderful-substrings/submissions/)|Medium|[Solution](/solutions/prefix-state-map.md)|
 
 ## 34. Prefix Sum
 
@@ -420,9 +423,10 @@
 
 ## 41. Sieve of Eratosthenes
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Count Primes](https://leetcode.com/problems/count-primes/)|Medium|[Solution](/solutions/sieve-eratosthenes.md)|
+|2|[Four Divisors](https://leetcode.com/problems/four-divisors/)|Medium|[Solution](/solutions/sieve-eratosthenes.md)|
 
 ## 42. Sliding Window
 
