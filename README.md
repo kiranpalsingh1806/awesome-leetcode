@@ -34,30 +34,27 @@
   - [16. Greedy Scheduling](#16-greedy-scheduling)
   - [17. Heaps](#17-heaps)
   - [18. Intervals](#18-intervals)
-  - [19. KMP](#19-kmp)
-  - [20. Line Sweep](#20-line-sweep)
-  - [21. Linked List](#21-linked-list)
-  - [22. LIS](#22-lis)
-  - [23. Manacher](#23-manacher)
-  - [24. Matrix](#24-matrix)
-  - [25. Merge Sort](#25-merge-sort)
-  - [26. Minimum Spanning Trees](#26-minimum-spanning-trees)
-  - [27. Prefix State Map](#27-prefix-state-map)
-  - [28. Queries](#28-queries)
-  - [29. Quick Select](#29-quick-select)
-  - [30. Recursion](#30-recursion)
-  - [31. Rolling Hash](#31-rolling-hash)
-  - [32. Segment Tree](#32-segment-tree)
-  - [33. Sieve of Eratosthenes](#33-sieve-of-eratosthenes)
-  - [34. Sliding Window](#34-sliding-window)
-  - [35. Stack](#35-stack)
-  - [36. Stringstream](#36-stringstream)
-  - [37. String Matching](#37-string-matching)
-  - [38. Topological Sort](#38-topological-sort)
-  - [39. Trie](#39-trie)
-  - [40. Two Dimensional Plane](#40-two-dimensional-plane)
-  - [41. Two Pointer](#41-two-pointer)
-  - [42. Union Find](#42-union-find)
+  - [19. Line Sweep](#19-line-sweep)
+  - [20. Linked List](#20-linked-list)
+  - [21. LIS](#21-lis)
+  - [22. Manacher](#22-manacher)
+  - [23. Matrix](#23-matrix)
+  - [24. Merge Sort](#24-merge-sort)
+  - [25. Minimum Spanning Trees](#25-minimum-spanning-trees)
+  - [26. Prefix State Map](#26-prefix-state-map)
+  - [27. Queries](#27-queries)
+  - [28. Rolling Hash](#28-rolling-hash)
+  - [29. Segment Tree](#29-segment-tree)
+  - [30. Sieve of Eratosthenes](#30-sieve-of-eratosthenes)
+  - [31. Sliding Window](#31-sliding-window)
+  - [32. Stack](#32-stack)
+  - [33. Stringstream](#33-stringstream)
+  - [34. String Algorithms](#34-string-algorithms)
+  - [35. Topological Sort](#35-topological-sort)
+  - [36. Trie](#36-trie)
+  - [37. Two Dimensional Plane](#37-two-dimensional-plane)
+  - [38. Two Pointer](#38-two-pointer)
+  - [39. Union Find](#39-union-find)
 
 
 ## 1. Backtracking 
@@ -267,45 +264,37 @@
 |5|[My Calendar I](https://leetcode.com/problems/my-calendar-i/)|Medium|[Solution](/solutions/intervals.md)|
 |6|[Video Stitching](https://leetcode.com/problems/video-stitching/)|Medium|[Solution](/solutions/intervals.md)|
 
-
-## 19. KMP
-
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-
-
-## 20. Line Sweep
+## 19. Line Sweep
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 21. Linked List
+## 20. Linked List
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 22. LIS
+## 21. LIS
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 23. Manacher
+## 22. Manacher
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 24. Matrix
+## 23. Matrix
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 25. Merge Sort
+## 24. Merge Sort
 
 |S.No |Problem|Difficulty|Solution|
 |-|------|--------|------|
@@ -316,14 +305,14 @@
 |5|[Number of Pairs Satisfying Inequality](https://leetcode.com/problems/number-of-pairs-satisfying-inequality/)|Medium|[Solution](/solutions/merge-sort.md)|
 
 
-## 26. Minimum Spanning Trees
+## 25. Minimum Spanning Trees
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
 |1|[Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)|Medium|[Solution](/solutions/kruskal.md)|
 |2|[Find Critical And Pseudo Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/)|Medium|[Solution](/solutions/kruskal.md)|
 
-## 27. Prefix State Map
+## 26. Prefix State Map
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
@@ -332,25 +321,13 @@
 |3|[Find Longest Awesome Substring](https://leetcode.com/problems/find-longest-awesome-substring/)|Medium|[Solution](/solutions/prefix-state-map.md)|
 |4|[Number of Wonderful Substrings](https://leetcode.com/problems/number-of-wonderful-substrings/submissions/)|Medium|[Solution](/solutions/prefix-state-map.md)|
 
-## 28. Queries
+## 27. Queries
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 29. Quick Select
-
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-
-## 30. Recursion
-
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-
-## 31. Rolling Hash
+## 28. Rolling Hash
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
@@ -363,7 +340,7 @@
 |7|[Find Substring With Given Hash Value](https://leetcode.com/problems/find-substring-with-given-hash-value/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |8|[Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 32. Segment Tree
+## 29. Segment Tree
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
@@ -373,14 +350,14 @@
 |4|[Shifting Letters - II](https://leetcode.com/problems/shifting-letters-ii/)|Medium|[Solution](/solutions/segment-tree.md)|
 |5|[Falling Squares](https://leetcode.com/problems/falling-squares/)|Hard|[Solution](/solutions/segment-tree.md)|
 
-## 33. Sieve of Eratosthenes
+## 30. Sieve of Eratosthenes
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
 |1|[Count Primes](https://leetcode.com/problems/count-primes/)|Medium|[Solution](/solutions/sieve-eratosthenes.md)|
 |2|[Four Divisors](https://leetcode.com/problems/four-divisors/)|Medium|[Solution](/solutions/sieve-eratosthenes.md)|
 
-## 34. Sliding Window
+## 31. Sliding Window
 
 |S.No|Problem|Difficulty|Solution|
 |--|------|--------|------|
@@ -395,13 +372,13 @@
 |9|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)|Hard|[Solution](/solutions/sliding-window.md)|
 |10|[Substring With Concatenation Of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)|Hard|[Solution](/solutions/sliding-window.md)|
 
-## 35. Stack
+## 32. Stack
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 36. Stringstream
+## 33. Stringstream
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
@@ -409,25 +386,25 @@
 |2|[Find Duplicate File In System](https://leetcode.com/problems/find-duplicate-file-in-system/)|Medium|[Solution](/solutions/stringstream.md)|
 |3|[Apply Discount To Prices](https://leetcode.com/problems/apply-discount-to-prices/)|Medium|[Solution](/solutions/stringstream.md)|
 
-## 37. String Matching
+## 34. String Algorithms
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 38. Topological Sort
+## 35. Topological Sort
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 39. Trie
+## 36. Trie
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 40. Two Dimensional Plane
+## 37. Two Dimensional Plane
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
@@ -436,7 +413,7 @@
 |3|[Queries On Number of Points Inside A Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |4|[Detonate The Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 41. Two Pointer
+## 38. Two Pointer
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
@@ -456,7 +433,7 @@
 |14|[Sort List](https://leetcode.com/problems/sort-list/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |15|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 42. Union Find
+## 39. Union Find
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
