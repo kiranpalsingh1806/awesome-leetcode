@@ -33,3 +33,35 @@ vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
     return ans;
 }
 ```
+
+## Bitwise XOR of All Pairings
+
+<details>
+<summary> View Code </summary>
+
+```cpp
+class Solution {
+public:
+    int xorAllNums(vector<int>& nums1, vector<int>& nums2) {
+        
+        int ans = 0;
+        int M = nums1.size(), N = nums2.size();
+        
+        if (N & 1) {
+            ans = accumulate(nums1.begin(), nums1.end(), 0, [](int x, int y) {
+                return x ^ y;
+            });
+        }
+        
+        if (M & 1) {
+            ans ^= accumulate(nums2.begin(), nums2.end(), 0, [](int x, int y) {
+                return x ^ y;
+            });
+        }
+        
+        return ans;
+    }
+};
+```
+
+</details>

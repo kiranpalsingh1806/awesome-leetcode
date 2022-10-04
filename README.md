@@ -31,7 +31,6 @@
   - [13. Dynamic Programming](#13-dynamic-programming)
   - [14. Euler Circuit](#14-euler-circuit)
   - [15. Fenwick Tree](#15-fenwick-tree)
-  - [16. Games](#16-games)
   - [17. Greedy Scheduling](#17-greedy-scheduling)
   - [18. Heaps](#18-heaps)
   - [19. Intervals](#19-intervals)
@@ -231,9 +230,11 @@
 
 ## 14. Euler Circuit
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)|Hard|[Solution](/solutions/euler-circuit.md)|
+|2|[Cracking The Safe](https://leetcode.com/problems/cracking-the-safe/)|Hard|[Solution](/solutions/euler-circuit.md)|
+|3|[Valid Arrangement of Pairs](https://leetcode.com/problems/valid-arrangement-of-pairs/)|Hard|[Solution](/solutions/euler-circuit.md)|
 
 ## 15. Fenwick Tree
 
@@ -241,11 +242,6 @@
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 16. Games
-
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 17. Greedy Scheduling
 
@@ -262,9 +258,15 @@
 
 ## 19. Intervals
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Merge Intervals](https://leetcode.com/problems/merge-intervals/)|Medium|[Solution](/solutions/intervals.md)|
+|2|[Insert Interval](https://leetcode.com/problems/insert-interval/)|Medium|[Solution](/solutions/intervals.md)|
+|3|[Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|Medium|[Solution](/solutions/intervals.md)|
+|4|[Minimum Number of Arrows To Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)|Medium|[Solution](/solutions/intervals.md)|
+|5|[My Calendar I](https://leetcode.com/problems/my-calendar-i/)|Medium|[Solution](/solutions/intervals.md)|
+|6|[Video Stitching](https://leetcode.com/problems/video-stitching/)|Medium|[Solution](/solutions/intervals.md)|
+
 
 ## 20. KMP
 
