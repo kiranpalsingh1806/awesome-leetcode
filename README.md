@@ -42,7 +42,7 @@
   - [24. Manacher](#24-manacher)
   - [25. Matrix](#25-matrix)
   - [26. Merge Sort](#26-merge-sort)
-  - [27. Minimum Spanning Trees (Kruskal and Prim Algorithm)](#27-minimum-spanning-trees-kruskal-and-prim-algorithm)
+  - [27. Minimum Spanning Trees](#27-minimum-spanning-trees)
   - [28. Prefix State Map](#28-prefix-state-map)
   - [29. Queries](#29-queries)
   - [30. Quick Select](#30-quick-select)
@@ -314,7 +314,7 @@
 |5|[Number of Pairs Satisfying Inequality](https://leetcode.com/problems/number-of-pairs-satisfying-inequality/)|Medium|[Solution](/solutions/merge-sort.md)|
 
 
-## 27. Minimum Spanning Trees (Kruskal and Prim Algorithm)
+## 27. Minimum Spanning Trees
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
