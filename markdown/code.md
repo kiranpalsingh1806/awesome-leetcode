@@ -1,5 +1,3 @@
-
-
 ## Heading here
 
 <details>
