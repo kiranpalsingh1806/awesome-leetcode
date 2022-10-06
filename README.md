@@ -320,9 +320,16 @@
 
 ## 23. Matrix
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Transpost Matrix](https://leetcode.com/problems/transpose-matrix/)|Easy|[Solution](/solutions/matrix.md)|
+|2|[Count Submatrices With All Ones](https://leetcode.com/problems/count-submatrices-with-all-ones/)|Medium|[Solution](/solutions/matrix.md)|
+|3|[Maximal Square](https://leetcode.com/problems/maximal-square/)|Medium|[Solution](/solutions/matrix.md)|
+|4|[Shortest Path In Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)|Medium|[Solution](/solutions/matrix.md)|
+|5|[Sort The Matrix Diagonally](https://leetcode.com/problems/sort-the-matrix-diagonally/)|Medium|[Solution](/solutions/matrix.md)|
+|6|[Count Square Submatrices With All Ones](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)|Medium|[Solution](/solutions/matrix.md)|
+|7|[Number of Submatrices That Sum To Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)|Hard|[Solution](/solutions/matrix.md)|
+|8|[Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)|Hard|[Solution](/solutions/matrix.md)|
 
 ## 24. Merge Sort
 
@@ -353,9 +360,16 @@
 
 ## 27. Queries
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Most Beautiful Item For Each Query](https://leetcode.com/problems/most-beautiful-item-for-each-query/)|Medium|[Solution](/solutions/queries.md)|
+|2|[Queries On Number of Points Inside A Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/)|Medium|[Solution](/solutions/queries.md)|
+|3|[Range Frequency Queries](https://leetcode.com/problems/range-frequency-queries/)|Medium|[Solution](/solutions/queries.md)|
+|4|[XOR Queries of a Subarray](https://leetcode.com/problems/xor-queries-of-a-subarray/)|Medium|[Solution](/solutions/queries.md)|
+|5|[Queries On A Permutation With Key](https://leetcode.com/problems/queries-on-a-permutation-with-key/)|Medium|[Solution](/solutions/queries.md)|
+|6|[Subrectangle Queries](https://leetcode.com/problems/subrectangle-queries/)|Medium|[Solution](/solutions/queries.md)|
+|7|[Minimum Absolute Difference Queries](https://leetcode.com/problems/minimum-absolute-difference-queries/)|Medium|[Solution](/solutions/queries.md)|
+|8|[Maximum Genetic Difference Query](https://leetcode.com/problems/maximum-genetic-difference-query/)|Hard|[Solution](/solutions/queries.md)|
 
 ## 28. Rolling Hash
 
