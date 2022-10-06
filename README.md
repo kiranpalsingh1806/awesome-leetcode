@@ -107,7 +107,7 @@
 |2|[Construct String From Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
 |3|[Average of Levels In Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
 |4|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
-|5|[Convet Sorted Array To Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
+|5|[Convert Sorted Array To Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)|Easy|[Solution](/solutions/binary-trees.md)|
 |6|[Sum Root To Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|Medium|[Solution](/solutions/binary-trees.md)|
 |7|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|Medium|[Solution](/solutions/binary-trees.md)|
 |8|[Lowest Common Ancestor Of A Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|Medium|[Solution](/solutions/binary-trees.md)|
