@@ -235,9 +235,12 @@
 
 ## 15. Fenwick Tree
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Shifting Letters II](https://leetcode.com/problems/shifting-letters-ii/)|Medium|[Solution](/solutions/fenwick-tree.md)|
+|2|[Queries On A Permutation With Key](https://leetcode.com/problems/queries-on-a-permutation-with-key/)|Medium|[Solution](/solutions/fenwick-tree.md)|
+|3|[Create Sorted Array Through Instructions](https://leetcode.com/problems/create-sorted-array-through-instructions/)|Hard|[Solution](/solutions/fenwick-tree.md)|
+|4|[Count Good Triplets In An Array](https://leetcode.com/problems/count-good-triplets-in-an-array/)|Hard|[Solution](/solutions/fenwick-tree.md)|
 
 
 ## 16. Greedy Scheduling
@@ -272,15 +275,42 @@
 
 ## 20. Linked List
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|Easy|[Solution](/solutions/linked-list.md)|
+|2|[Remove Duplicates From Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|Easy|[Solution](/solutions/linked-list.md)|
+|3|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|Easy|[Solution](/solutions/linked-list.md)|
+|4|[Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)|Easy|[Solution](/solutions/linked-list.md)|
+|5|[Middle of The Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)|Easy|[Solution](/solutions/linked-list.md)|
+|6|[Intersection of Two Linked List](https://leetcode.com/problems/intersection-of-two-linked-lists/)|Easy|[Solution](/solutions/linked-list.md)|
+|7|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|Medium|[Solution](/solutions/linked-list.md)|
+|8|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|9|[Rotate List](https://leetcode.com/problems/rotate-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|10|[Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|11|[Sort List](https://leetcode.com/problems/sort-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|12|[Reorder List](https://leetcode.com/problems/reorder-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|13|[Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|Medium|[Solution](/solutions/linked-list.md)|
+|14|[Remove Duplicates From Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)|Medium|[Solution](/solutions/linked-list.md)|
+|15|[Partition List](https://leetcode.com/problems/partition-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|16|[Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|Medium|[Solution](/solutions/linked-list.md)|
+|17|[Flatten Binary Tree To Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|18|[Populating Next Right Pointers In Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)|Medium|[Solution](/solutions/linked-list.md)|
+|19|[Copy List With Random Pointers](https://leetcode.com/problems/copy-list-with-random-pointer/)|Medium|[Solution](/solutions/linked-list.md)|
+|20|[Delete Node In A Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|21|[Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|22|[Swapping Nodes In A Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/)|Medium|[Solution](/solutions/linked-list.md)|
+|23|[Merge Nodes In Between Zeros](https://leetcode.com/problems/merge-nodes-in-between-zeros/)|Medium|[Solution](/solutions/linked-list.md)|
+|24|[Reverse Nodes In K Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|Hard|[Solution](/solutions/linked-list.md)|
+|25|[Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)|Hard|[Solution](/solutions/linked-list.md)|
 
 ## 21. LIS
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|Medium|[Solution](/solutions/lis.md)|
+|2|[Increasing Triplet Subsequence](https://leetcode.com/problems/increasing-triplet-subsequence/)|Medium|[Solution](/solutions/lis.md)|
+|3|[Minimum Number of Removals To Make Mountain Array](https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/)|Hard|[Solution](/solutions/lis.md)|
+|4|[Find The Longest Valid Obstacle Course At Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/)|Hard|[Solution](/solutions/lis.md)|
 
 ## 22. Manacher
 
