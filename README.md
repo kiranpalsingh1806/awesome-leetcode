@@ -49,12 +49,11 @@
   - [31. Sliding Window](#31-sliding-window)
   - [32. Stack](#32-stack)
   - [33. Stringstream](#33-stringstream)
-  - [34. String Algorithms](#34-string-algorithms)
-  - [35. Topological Sort](#35-topological-sort)
-  - [36. Trie](#36-trie)
-  - [37. Two Dimensional Plane](#37-two-dimensional-plane)
-  - [38. Two Pointer](#38-two-pointer)
-  - [39. Union Find](#39-union-find)
+  - [34. Topological Sort](#34-topological-sort)
+  - [35. Trie](#35-trie)
+  - [36. Two Dimensional Plane](#36-two-dimensional-plane)
+  - [37. Two Pointer](#37-two-pointer)
+  - [38. Union Find](#38-union-find)
 
 
 ## 1. Backtracking 
@@ -269,9 +268,20 @@
 
 ## 19. Line Sweep
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Maximum Population Year](https://leetcode.com/problems/maximum-population-year/)|Easy|[Solution](/solutions/line-sweep.md)|
+|2|[Divide Intervals Into Minimum Number of Groups](https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/)|Medium|[Solution](/solutions/line-sweep.md)|
+|3|[Shifting Letters II](https://leetcode.com/problems/shifting-letters-ii/)|Medium|[Solution](/solutions/line-sweep.md)|
+|4|[Describe The Painting](https://leetcode.com/problems/describe-the-painting/)|Medium|[Solution](/solutions/line-sweep.md)|
+|5|[Minimum Absolute Difference Queries](https://leetcode.com/problems/minimum-absolute-difference-queries/)|Medium|[Solution](/solutions/line-sweep.md)|
+|6|[Car Pooling](https://leetcode.com/problems/car-pooling/)|Medium|[Solution](/solutions/line-sweep.md)|
+|7|[Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings/)|Medium|[Solution](/solutions/line-sweep.md)|
+|8|[My Calendar II](https://leetcode.com/problems/my-calendar-ii/)|Medium|[Solution](/solutions/line-sweep.md)|
+|9|[Minimum Interval To Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/)|Hard|[Solution](/solutions/line-sweep.md)|
+|10|[My Calendar III](https://leetcode.com/problems/my-calendar-iii/)|Hard|[Solution](/solutions/line-sweep.md)|
+|11|[The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)|Hard|[Solution](/solutions/line-sweep.md)|
+|12|[Number of Flowers In Full Bloom](https://leetcode.com/problems/number-of-flowers-in-full-bloom/)|Hard|[Solution](/solutions/line-sweep.md)|
 
 ## 20. Linked List
 
@@ -314,9 +324,10 @@
 
 ## 22. Manacher
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|Medium|[Solution](/solutions/manacher.md)|
+|2|[Maximum Product of The Length of Two Palindromic Substrings](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-substrings/)|Hard|[Solution](/solutions/manacher.md)|
 
 ## 23. Matrix
 
@@ -418,9 +429,25 @@
 
 ## 32. Stack
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|Easy|[Solution](/solutions/stack.md)|
+|2|[Implement Queue Using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)|Easy|[Solution](/solutions/stack.md)|
+|3|[Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)|Easy|[Solution](/solutions/stack.md)|
+|4|[Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)|Easy|[Solution](/solutions/stack.md)|
+|5|[Min Stack](https://leetcode.com/problems/min-stack/)|Medium|[Solution](/solutions/stack.md)|
+|6|[Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)|Medium|[Solution](/solutions/stack.md)|
+|7|[132 Patterns](https://leetcode.com/problems/132-pattern/)|Medium|[Solution](/solutions/stack.md)|
+|8|[Daily Temperatur](https://leetcode.com/problems/daily-temperatures/)|Medium|[Solution](/solutions/stack.md)|
+|9|[Score of Parentheses](https://leetcode.com/problems/score-of-parentheses/)|Medium|[Solution](/solutions/stack.md)|
+|10|[Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)|Medium|[Solution](/solutions/stack.md)|
+|11|[Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)|Medium|[Solution](/solutions/stack.md)|
+|12|[The Number of Weak Characters In The Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)|Medium|[Solution](/solutions/stack.md)|
+|13|[Construct Smallest Number From DI String](https://leetcode.com/problems/construct-smallest-number-from-di-string/)|Medium|[Solution](/solutions/stack.md)|
+|14|[Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)|Medium|[Solution](/solutions/stack.md)|
+|15|[Basic Calculator](https://leetcode.com/problems/basic-calculator/)|Medium|[Solution](/solutions/stack.md)|
+|16|[Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|Medium|[Solution](/solutions/stack.md)|
+
 
 ## 33. Stringstream
 
@@ -430,25 +457,19 @@
 |2|[Find Duplicate File In System](https://leetcode.com/problems/find-duplicate-file-in-system/)|Medium|[Solution](/solutions/stringstream.md)|
 |3|[Apply Discount To Prices](https://leetcode.com/problems/apply-discount-to-prices/)|Medium|[Solution](/solutions/stringstream.md)|
 
-## 34. String Algorithms
+## 34. Topological Sort
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 35. Topological Sort
+## 35. Trie
 
 |Problem|Difficulty|Solution|
 |------|--------|------|
 []()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 36. Trie
-
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-
-## 37. Two Dimensional Plane
+## 36. Two Dimensional Plane
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
@@ -457,7 +478,7 @@
 |3|[Queries On Number of Points Inside A Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |4|[Detonate The Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 38. Two Pointer
+## 37. Two Pointer
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
@@ -477,7 +498,7 @@
 |14|[Sort List](https://leetcode.com/problems/sort-list/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |15|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 39. Union Find
+## 38. Union Find
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
