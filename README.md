@@ -459,9 +459,16 @@
 
 ## 34. Topological Sort
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Course Schedule](https://leetcode.com/problems/course-schedule/)|Medium|[Solution](/solutions/topological-sort.md)|
+|2|[Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|Medium|[Solution](/solutions/topological-sort.md)|
+|3|[Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)|Medium|[Solution](/solutions/topological-sort.md)|
+|4|[Longest Incresing Path In A Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)|Medium|[Solution](/solutions/topological-sort.md)|
+|5|[All Ancestors of a Node In Directed Acyclic Graph](https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/)|Medium|[Solution](/solutions/topological-sort.md)|
+|6|[Number of Ways To Arrive At Destination](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/)|Medium|[Solution](/solutions/topological-sort.md)|
+|7|[Parallel Courses III](https://leetcode.com/problems/parallel-courses-iii/)|Hard|[Solution](/solutions/topological-sort.md)|
+|8|[Build A Matrix With Conditions](https://leetcode.com/problems/build-a-matrix-with-conditions/)|Hard|[Solution](/solutions/topological-sort.md)|
 
 ## 35. Trie
 
