@@ -386,11 +386,11 @@
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
-|1|[Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|2|[Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|3|[Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|4|[Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|5|[K Divisible Elements Subarrays](https://leetcode.com/problems/k-divisible-elements-subarrays/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|1|[Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)|Medium|[Solution](/solutions/rolling-hash/repeated-dna-sequences.md)|
+|2|[Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)|Medium|[Solution](/solutions/rolling-hash/shortest-palindrome.md)|
+|3|[Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/)|Medium|[Solution](/solutions/rolling-hash/longest-duplicate-substring.md)|
+|4|[Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/)|Medium|[Solution](/solutions/rolling-hash/distinct-echo-substrings.md)|
+|5|[K Divisible Elements Subarrays](https://leetcode.com/problems/k-divisible-elements-subarrays/)|Medium|[Solution](/solutions/rolling-hash/k-divisible-elements-subarray.md)|
 |6|[Sum of Scores of Built Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |7|[Find Substring With Given Hash Value](https://leetcode.com/problems/find-substring-with-given-hash-value/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |8|[Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
@@ -438,7 +438,7 @@
 |5|[Min Stack](https://leetcode.com/problems/min-stack/)|Medium|[Solution](/solutions/stack.md)|
 |6|[Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)|Medium|[Solution](/solutions/stack.md)|
 |7|[132 Patterns](https://leetcode.com/problems/132-pattern/)|Medium|[Solution](/solutions/stack.md)|
-|8|[Daily Temperatur](https://leetcode.com/problems/daily-temperatures/)|Medium|[Solution](/solutions/stack.md)|
+|8|[Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)|Medium|[Solution](/solutions/stack.md)|
 |9|[Score of Parentheses](https://leetcode.com/problems/score-of-parentheses/)|Medium|[Solution](/solutions/stack.md)|
 |10|[Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)|Medium|[Solution](/solutions/stack.md)|
 |11|[Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)|Medium|[Solution](/solutions/stack.md)|
@@ -447,7 +447,7 @@
 |14|[Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)|Medium|[Solution](/solutions/stack.md)|
 |15|[Basic Calculator](https://leetcode.com/problems/basic-calculator/)|Medium|[Solution](/solutions/stack.md)|
 |16|[Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|Medium|[Solution](/solutions/stack.md)|
-
+|17|[Using A Robot To Print The Lexicographically Smallest String](https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string/)|Medium|[Solution](/solutions/stack.md)|
 
 ## 33. Stringstream
 
