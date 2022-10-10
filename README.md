@@ -472,9 +472,16 @@
 
 ## 35. Trie
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)|Medium|[Solution](/solutions/trie/implement-trie.md)|
+|2|[Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)|Medium|[Solution](/solutions/trie/search-suggestions-system.md)|
+|3|[Maximum XOR of Two Numbers In An Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)|Medium|[Solution](/solutions/trie/maximum-xor-of-two-numbers.md)|
+|4|[K Divisible Elements Subarray](https://leetcode.com/problems/k-divisible-elements-subarrays/)|Medium|[Solution](/solutions/trie/k-divisible-elements-subarrays.md)|
+|5|[Maximum Genetic Difference Query](https://leetcode.com/problems/maximum-genetic-difference-query/)|Hard|[Solution](/solutions/trie//maximum-genetic-difference-query.md)|
+|6|[Concatenated Words](https://leetcode.com/problems/concatenated-words/)|Hard|[Solution](/solutions/trie/concatenated-words.md)|
+|7|[Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)|Hard|[Solution](/solutions/trie/palindrome-pairs.md)|
+|8|[Sum of Prefix Scores of Strings](https://leetcode.com/problems/sum-of-prefix-scores-of-strings/)|Hard|[Solution](/solutions/trie/sum-of-prefix-scores-of-strings.md)|
 
 ## 36. Two Dimensional Plane
 
