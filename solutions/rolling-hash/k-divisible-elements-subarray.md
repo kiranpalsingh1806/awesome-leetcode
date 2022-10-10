@@ -1,24 +1,23 @@
 ## K Divisible Elements Subarray
 
 ```cpp
-
 class Solution {
 public:
     int countDistinct(vector<int>& nums, int k, int p) { 
         
-        int base = 211, N = nums.size();
+        int P = 211, N = nums.size();
         unordered_set<unsigned long long>S;
         
         for (int i = 0; i < N; i++) {
-            unsigned long long hash = 0;
+            unsigned long long h = 0;
             int countDivisible = 0;
             
             for (int j = i; j < N; j++) {
-                hash = hash * base + nums[j];
+                h = h * P + nums[j];
                 countDivisible += (nums[j] % p == 0);
                 
                 if (countDivisible <= k) {
-                    S.insert(hash);
+                    S.insert(h);
                 } else {
                     break;
                 }
@@ -28,7 +27,9 @@ public:
         return (int)(S.size());
     }
 };
+```
 
+```cpp
 struct Trie {
     unordered_map<int, Trie*> ch;
     int cnt = 0;

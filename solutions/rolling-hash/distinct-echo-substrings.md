@@ -11,15 +11,16 @@ public:
         
         for (int len = 1; len <= N / 2; len++) {
             
-            long h = s[0] - 'a', p = 1;
+            long h = s[0] - 'a', d = 1, p = 26;
             unordered_set<string> visited;
             
             for (int i = 1; i < N; i++) {
                 if (i < len) {
-                    h = (h * 26 + s[i] - 'a') % M; 
-                    p = (p * 26) % M;
+                    h = (h * p + s[i] - 'a') % M; 
+                    d = (d * p) % M;
                 } else {
-                    h = ((h - (s[i - len] - 'a') * p) * 26 + s[i] - 'a') % M;
+                    h = ((h - (s[i - len] - 'a') * d) * p + s[i] - 'a') % M;
+                    
                     if (h < 0) h += M;
                     
                     if ( i - 2 * len + 1 >= 0 && hash[i - len] == h) {
@@ -31,6 +32,7 @@ public:
                         if (a == s.substr(i - len + 1, len)) cnt++;
                     }
                 }
+                
                 hash[i] = h;
             }
         }
