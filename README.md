@@ -392,8 +392,8 @@
 |4|[Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/)|Medium|[Solution](/solutions/rolling-hash/distinct-echo-substrings.md)|
 |5|[K Divisible Elements Subarrays](https://leetcode.com/problems/k-divisible-elements-subarrays/)|Medium|[Solution](/solutions/rolling-hash/k-divisible-elements-subarray.md)|
 |6|[Sum of Scores of Built Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|7|[Find Substring With Given Hash Value](https://leetcode.com/problems/find-substring-with-given-hash-value/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
-|8|[Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath/)|Hard|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|7|[Find Substring With Given Hash Value](https://leetcode.com/problems/find-substring-with-given-hash-value/)|Hard|[Solution](/solutions/rolling-hash/find-substring-with-given-hash-value.md)|
+|8|[Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath/)|Hard|[Solution](/solutions/rolling-hash/longest-common-subpath.md)|
 
 ## 29. Segment Tree
 

@@ -1,7 +1,4 @@
-## Heading here
-
-<details>
-<summary> View Code </summary>
+## Distinct Echo Substrings
 
 ```cpp
 class Solution {
@@ -42,5 +39,3 @@ public:
     }
 };
 ```
-
-</details>

@@ -1,7 +1,4 @@
-## Heading here
-
-<details>
-<summary> View Code </summary>
+## K Divisible Elements Subarray
 
 ```cpp
 
@@ -52,5 +49,3 @@ int countDistinct(vector<int>& nums, int k, int p) {
     return res;
 }
 ```
-
-</details>

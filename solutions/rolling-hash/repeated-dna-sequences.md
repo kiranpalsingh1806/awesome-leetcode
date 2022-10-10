@@ -1,7 +1,4 @@
-## Heading here
-
-<details>
-<summary> View Code </summary>
+## Repeated DNA Sequences
 
 ```cpp
 vector<string> findRepeatedDnaSequences(string s) {
@@ -29,5 +26,3 @@ vector<string> findRepeatedDnaSequences(string s) {
     return ans;
 }
 ```
-
-</details>

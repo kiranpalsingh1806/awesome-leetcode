@@ -1,10 +1,5 @@
-## Heading here
-
-<details>
-<summary> View Code </summary>
+## Longest Common Subpath
 
 ```cpp
 
 ```
-
-</details>

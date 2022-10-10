@@ -1,10 +1,5 @@
-## Heading here
-
-<details>
-<summary> View Code </summary>
+## Sum of Scores of Built Strings
 
 ```cpp
 
 ```
-
-</details>

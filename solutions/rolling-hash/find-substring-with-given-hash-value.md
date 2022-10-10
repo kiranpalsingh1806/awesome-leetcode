@@ -1,7 +1,4 @@
-## Heading here
-
-<details>
-<summary> View Code </summary>
+## Find Substring With Given Hash Value
 
 ```cpp
 class Solution {
@@ -40,5 +37,3 @@ public:
     }
 };
 ```
-
-</details>

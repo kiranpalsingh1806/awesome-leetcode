@@ -1,7 +1,4 @@
-## Heading here
-
-<details>
-<summary> View Code </summary>
+## Shortest Palindrome
 
 ```cpp
 class Solution {
@@ -18,5 +15,3 @@ public:
     }
 };
 ```
-
-</details>
