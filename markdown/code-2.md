@@ -1,6 +1,5 @@
 ## Heading here
 
-
 ```cpp
 
 ```
