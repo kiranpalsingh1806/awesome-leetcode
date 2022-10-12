@@ -253,10 +253,10 @@
 
 |S.No|Problem|Difficulty|Solution|
 |-|------|--------|------|
-|1|[Sort Array By Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency/)|Easy|[Solution](/solutions/heaps)|
-|2|[Kth Largest Element in An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|Medium|[Solution](/solutions/heaps)|
-|3|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|Medium|[Solution](/solutions/heaps)|
-|4|[Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)|Medium|[Solution](/solutions/heaps)|
+|1|[Sort Array By Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency/)|Easy|[Solution](/solutions/heaps/sort-array-by-increasing-frequency.md)|
+|2|[Kth Largest Element in An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|Medium|[Solution](/solutions/heaps/kth-largest-element-in-array.md)|
+|3|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|Medium|[Solution](/solutions/heaps/top-k-frequent-elements.md)|
+|4|[Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)|Medium|[Solution](/solutions/heaps/sort-characters-by-frequency.md)|
 |5|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)|Medium|[Solution](/solutions/heaps)|
 |6|[Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|Medium|[Solution](/solutions/heaps)|
 |7|[K Closest Points To Origin](https://leetcode.com/problems/k-closest-points-to-origin/)|Medium|[Solution](/solutions/heaps)|
