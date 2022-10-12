@@ -32,7 +32,7 @@
   - [14. Euler Circuit](#14-euler-circuit)
   - [15. Fenwick Tree](#15-fenwick-tree)
   - [16. Greedy Scheduling](#16-greedy-scheduling)
-  - [17. Heaps](#17-heaps)
+  - [17. Heaps (Priority Queues)](#17-heaps-priority-queues)
   - [18. Intervals](#18-intervals)
   - [19. Line Sweep](#19-line-sweep)
   - [20. Linked List](#20-linked-list)
@@ -249,11 +249,24 @@
 |1|[Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |2|[Single Threaded CPU](https://leetcode.com/problems/single-threaded-cpu/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
-## 17. Heaps
+## 17. Heaps (Priority Queues)
 
-|Problem|Difficulty|Solution|
-|------|--------|------|
-[]()|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|S.No|Problem|Difficulty|Solution|
+|-|------|--------|------|
+|1|[Sort Array By Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency/)|Easy|[Solution](/solutions/heaps)|
+|2|[Kth Largest Element in An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|Medium|[Solution](/solutions/heaps)|
+|3|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|Medium|[Solution](/solutions/heaps)|
+|4|[Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)|Medium|[Solution](/solutions/heaps)|
+|5|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)|Medium|[Solution](/solutions/heaps)|
+|6|[Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|Medium|[Solution](/solutions/heaps)|
+|7|[K Closest Points To Origin](https://leetcode.com/problems/k-closest-points-to-origin/)|Medium|[Solution](/solutions/heaps)|
+|8|[Reduce Array Size To The Half](https://leetcode.com/problems/reduce-array-size-to-the-half/)|Medium|[Solution](/solutions/heaps)|
+|9|[Reorganize String](https://leetcode.com/problems/reorganize-string/)|Medium|[Solution](/solutions/heaps)|
+|10|[Sender With Largest Word Count](https://leetcode.com/problems/sender-with-largest-word-count/)|Medium|[Solution](/solutions/heaps)|
+|11|[Minimum Difference In Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/)|Hard|[Solution](/solutions/heaps)|
+|12|[Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)|Hard|[Solution](/solutions/heaps)|
+|13|[Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)|Hard|[Solution](/solutions/heaps)|
+
 
 ## 18. Intervals
 
