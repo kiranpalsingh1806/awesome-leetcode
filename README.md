@@ -97,6 +97,7 @@
 |-|------|--------|------|
 |1|[Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |2|[Find First and Last Position of Element In Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|3|[Minimize Maximum of Array](https://leetcode.com/problems/minimize-maximum-of-array/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 5. Binary Trees
 
@@ -192,6 +193,7 @@
 |9|[Throne Inheritance](https://leetcode.com/problems/throne-inheritance/)|Medium|[Solution](/solutions/dfs.md)|
 |10|[Detonate The Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/)|Medium|[Solution](/solutions/dfs.md)|
 |11|[Longest Path With Different Adjacent Characters](https://leetcode.com/problems/longest-path-with-different-adjacent-characters/)|Hard|[Solution](/solutions/dfs.md)|
+|12|[Create Components With Same Value](https://leetcode.com/problems/create-components-with-same-value/)|Hard|[Solution](/solutions/dfs.md)|
 
 ## 12. Dijkstra
 
