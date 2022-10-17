@@ -439,6 +439,7 @@
 |8|[Permutation In String](https://leetcode.com/problems/permutation-in-string/)|Medium|[Solution](/solutions/sliding-window.md)|
 |9|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)|Hard|[Solution](/solutions/sliding-window.md)|
 |10|[Substring With Concatenation Of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)|Hard|[Solution](/solutions/sliding-window.md)|
+|11|[Count Subarrays With Fixed Count](https://leetcode.com/problems/count-subarrays-with-fixed-bounds/)|Hard|[Solution](/solutions/sliding-window/count-subarrays-with-fixed-count.md)|
 
 ## 32. Stack
 
