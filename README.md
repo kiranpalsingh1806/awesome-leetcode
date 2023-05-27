@@ -527,6 +527,7 @@
 |13|[Reorder List](https://leetcode.com/problems/reorder-list/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |14|[Sort List](https://leetcode.com/problems/sort-list/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 |15|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
+|16|[Lexicographically Smallest Palindrome](https://leetcode.com/problems/lexicographically-smallest-palindrome)|Medium|[Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md)|
 
 ## 38. Union Find
 
