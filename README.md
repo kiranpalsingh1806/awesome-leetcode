@@ -472,7 +472,7 @@
 | S.No | Problem                                                                                       | Difficulty | Solution                               |
 | ---- | --------------------------------------------------------------------------------------------- | ---------- | -------------------------------------- |
 | 1    | [Count Number of Homogenous Substrings](https://leetcode.com/problems/count-number-of-homogenous-substrings/description/) | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
-| 2    | [Find Duplicate File In System](https://leetcode.com/problems/number-of-substrings-with-only-1s/description/) | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
+| 2    | [Number of Substrings With Only 1s](https://leetcode.com/problems/number-of-substrings-with-only-1s/description/) | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
 
 
 ## 35. Topological Sort
