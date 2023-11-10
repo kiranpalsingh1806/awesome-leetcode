@@ -11,7 +11,7 @@
 
 </div>
 
-<img src="https://socialify.git.ci/kiranpalsingh1806/awesome-leetcode/image?description=1&descriptionEditable=An%20Open-Source%20repository%20that%20contains%20all%20the%20Data%20Structures%20and%20Algorithms%20problems%20and%20their%20implementation%20in%20several%20ways.&font=Raleway&forks=1&language=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Light" alt="Awesome-Leetcode" width="100%" height="320" align="center" />
+<!-- <img src="https://socialify.git.ci/kiranpalsingh1806/awesome-leetcode/image?description=1&descriptionEditable=An%20Open-Source%20repository%20that%20contains%20all%20the%20Data%20Structures%20and%20Algorithms%20problems%20and%20their%20implementation%20in%20several%20ways.&font=Raleway&forks=1&language=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Light" alt="Awesome-Leetcode" width="100%" height="320" align="center" /> -->
 
 <!-- # Data Structures and Algorithms -->
 
@@ -469,11 +469,10 @@
 
 ## 34. Sum of First N Natural Numbers
 
-| S.No | Problem                                                                                       | Difficulty | Solution                               |
-| ---- | --------------------------------------------------------------------------------------------- | ---------- | -------------------------------------- |
+| S.No | Problem                                                                                                                   | Difficulty | Solution                                                 |
+| ---- | ------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------- |
 | 1    | [Count Number of Homogenous Substrings](https://leetcode.com/problems/count-number-of-homogenous-substrings/description/) | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
-| 2    | [Number of Substrings With Only 1s](https://leetcode.com/problems/number-of-substrings-with-only-1s/description/) | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
-
+| 2    | [Number of Substrings With Only 1s](https://leetcode.com/problems/number-of-substrings-with-only-1s/description/)         | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
 
 ## 35. Topological Sort
 
