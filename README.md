@@ -207,6 +207,7 @@
 | 8    | [Minimum Cost To Reach Destination In Time](https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/)                                                                     | Medium     | [Solution](/solutions/dijksta.md) |
 | 9    | [Minimum Cost To Make At Least One Valid Path In A Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)                                           | Hard       | [Solution](/solutions/dijksta.md) |
 | 10   | [Reachable Nodes in Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/)                                                                                 | Hard       | [Solution](/solutions/dijksta.md) |
+| 11   | [Design Graph With Shortest Path Calculator](https://leetcode.com/problems/design-graph-with-shortest-path-calculator/)                                                                   | Hard       | [Solution](/solutions/dijksta.md) |
 
 ## 13. Dynamic Programming
 
