@@ -11,49 +11,46 @@
 
 </div>
 
-<!-- <img src="https://socialify.git.ci/kiranpalsingh1806/awesome-leetcode/image?description=1&descriptionEditable=An%20Open-Source%20repository%20that%20contains%20all%20the%20Data%20Structures%20and%20Algorithms%20problems%20and%20their%20implementation%20in%20several%20ways.&font=Raleway&forks=1&language=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Light" alt="Awesome-Leetcode" width="100%" height="320" align="center" /> -->
-
-<!-- # Data Structures and Algorithms -->
-
 - [1. Backtracking](#1-backtracking)
-- [2. Bellman Ford](#2-bellman-ford)
-- [3. BFS](#3-bfs)
-- [4. Binary Search](#4-binary-search)
-- [5. Binary Trees](#5-binary-trees)
-- [6. Bit Manipulation](#6-bit-manipulation)
-- [7. Bitmasks](#7-bitmasks)
-- [8. Count Pairs In Array](#8-count-pairs-in-array)
-- [9. Custom Comparator](#9-custom-comparator)
-- [10. Design and Implementation](#10-design-and-implementation)
-- [11. DFS](#11-dfs)
-- [12. Dijkstra](#12-dijkstra)
-- [13. Dynamic Programming](#13-dynamic-programming)
-- [14. Euler Circuit](#14-euler-circuit)
-- [15. Fenwick Tree](#15-fenwick-tree)
-- [16. Greedy Scheduling](#16-greedy-scheduling)
-- [17. Heaps (Priority Queues)](#17-heaps-priority-queues)
-- [18. Intervals](#18-intervals)
-- [19. Line Sweep](#19-line-sweep)
-- [20. Linked List](#20-linked-list)
-- [21. LIS](#21-lis)
-- [22. Manacher](#22-manacher)
-- [23. Matrix](#23-matrix)
-- [24. Merge Sort](#24-merge-sort)
-- [25. Minimum Spanning Trees](#25-minimum-spanning-trees)
-- [26. Prefix State Map](#26-prefix-state-map)
-- [27. Queries](#27-queries)
-- [28. Rolling Hash](#28-rolling-hash)
-- [29. Segment Tree](#29-segment-tree)
-- [30. Sieve of Eratosthenes](#30-sieve-of-eratosthenes)
-- [31. Sliding Window](#31-sliding-window)
-- [32. Stack](#32-stack)
-- [33. Stringstream](#33-stringstream)
-- [34. Sum of First N Natural Numbers](#34-sum-of-first-n-natural-numbers)
-- [35. Topological Sort](#35-topological-sort)
-- [36. Trie](#36-trie)
-- [37. Two Dimensional Plane](#37-two-dimensional-plane)
-- [38. Two Pointer](#38-two-pointer)
-- [39. Union Find](#39-union-find)
+- [2. Base Conversion](#2-base-conversion)
+- [3. Bellman Ford](#3-bellman-ford)
+- [4. BFS](#4-bfs)
+- [5. Binary Search](#5-binary-search)
+- [6. Binary Trees](#6-binary-trees)
+- [7. Bit Manipulation](#7-bit-manipulation)
+- [8. Bitmasks](#8-bitmasks)
+- [9. Count Pairs In Array](#9-count-pairs-in-array)
+- [10. Custom Comparator](#10-custom-comparator)
+- [11. Design and Implementation](#11-design-and-implementation)
+- [12. DFS](#12-dfs)
+- [13. Dijkstra](#13-dijkstra)
+- [14. Dynamic Programming](#14-dynamic-programming)
+- [15. Euler Circuit](#15-euler-circuit)
+- [16. Fenwick Tree](#16-fenwick-tree)
+- [17. Greedy Scheduling](#17-greedy-scheduling)
+- [18. Heaps (Priority Queues)](#18-heaps-priority-queues)
+- [19. Intervals](#19-intervals)
+- [20. Line Sweep](#20-line-sweep)
+- [21. Linked List](#21-linked-list)
+- [22. LIS](#22-lis)
+- [23. Manacher](#23-manacher)
+- [24. Matrix](#24-matrix)
+- [25. Merge Sort](#25-merge-sort)
+- [26. Minimum Spanning Trees](#26-minimum-spanning-trees)
+- [27. Prefix State Map](#27-prefix-state-map)
+- [28. Queries](#28-queries)
+- [29. Rolling Hash](#29-rolling-hash)
+- [30. Segment Tree](#30-segment-tree)
+- [31. Sieve of Eratosthenes](#31-sieve-of-eratosthenes)
+- [32. Sliding Window](#32-sliding-window)
+- [33. Stack](#33-stack)
+- [34. Stringstream](#34-stringstream)
+- [35. Sum of First N Natural Numbers](#35-sum-of-first-n-natural-numbers)
+- [36. Topological Sort](#36-topological-sort)
+- [37. Trie](#37-trie)
+- [38. Two Dimensional Plane](#38-two-dimensional-plane)
+- [39. Two Pointer](#39-two-pointer)
+- [40. Union Find](#40-union-find)
 
 ## 1. Backtracking
 
@@ -75,21 +72,27 @@
 | 14   | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)                             | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 15   | [Combination Sum III ](https://leetcode.com/problems/combination-sum-iii/)                                    | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 2. Bellman Ford
+## 2. Base Conversion
+
+| S.No | Problem                                                                                           | Difficulty | Solution                                  |
+| ---- | ------------------------------------------------------------------------------------------------- | ---------- | ----------------------------------------- |
+| 1    | [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/description/) | Medium     | [Solution](/solutions/base-conversion.md) |
+
+## 3. Bellman Ford
 
 | S.No | Problem                                                                                           | Difficulty | Solution                               |
 | ---- | ------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------- |
 | 1    | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | Medium     | [Solution](/solutions/bellman-ford.md) |
 | 2    | [Network Delay Time](https://leetcode.com/problems/network-delay-time/)                           | Medium     | [Solution](/solutions/bellman-ford.md) |
 
-## 3. BFS
+## 4. BFS
 
 | S.No | Problem                                                                                             | Difficulty | Solution                                                                              |
 | ---- | --------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
 | 1    | [Average of Levels In Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/) | Easy       | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 2    | [Number of Islands](https://leetcode.com/problems/number-of-islands/)                               | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 4. Binary Search
+## 5. Binary Search
 
 | S.No | Problem                                                                                                                                           | Difficulty | Solution                                                                              |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
@@ -97,7 +100,7 @@
 | 2    | [Find First and Last Position of Element In Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 3    | [Minimize Maximum of Array](https://leetcode.com/problems/minimize-maximum-of-array/)                                                             | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 5. Binary Trees
+## 6. Binary Trees
 
 | S.No | Problem                                                                                                                                                 | Difficulty | Solution                               |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------- |
@@ -117,7 +120,7 @@
 | 14   | [Distribute Coins In Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/)                                                       | Medium     | [Solution](/solutions/binary-trees.md) |
 | 15   | [Vertical Order Traversal of A Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)                                   | Hard       | [Solution](/solutions/binary-trees.md) |
 
-## 6. Bit Manipulation
+## 7. Bit Manipulation
 
 | S.No | Problem                                                                                                                                         | Difficulty | Solution                                   |
 | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------ |
@@ -138,21 +141,21 @@
 | 15   | [Closest Subsequence Sum](https://leetcode.com/problems/closest-subsequence-sum/)                                                               | Hard       | [Solution](/solutions/bit-manipulation.md) |
 | 16   | [Find The Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/)                                                   | Hard       | [Solution](/solutions/bit-manipulation.md) |
 
-## 7. Bitmasks
+## 8. Bitmasks
 
 | S.No | Problem                                                                                                                 | Difficulty | Solution                                                                              |
 | ---- | ----------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
 | 1    | [Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/)                             | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 2    | [Count Number of Maximum Bitwise OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/) | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 8. Count Pairs In Array
+## 9. Count Pairs In Array
 
 | S.No | Problem                                                                                     | Difficulty | Solution                                                                              |
 | ---- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
 | 1    | [Count Nice Pairs In An Array](https://leetcode.com/problems/count-nice-pairs-in-an-array/) | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 2    | [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/)       | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 9. Custom Comparator
+## 10. Custom Comparator
 
 | S.No | Problem                                                                                   | Difficulty | Solution                                    |
 | ---- | ----------------------------------------------------------------------------------------- | ---------- | ------------------------------------------- |
@@ -160,7 +163,7 @@
 | 2    | [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)               | Medium     | [Solution](/solutions/custom-comparator.md) |
 | 3    | [Bitwise XOR of All Pairings](https://leetcode.com/problems/bitwise-xor-of-all-pairings/) | Medium     | [Solution](/solutions/custom-comparator.md) |
 
-## 10. Design and Implementation
+## 11. Design and Implementation
 
 | S.No | Problem                                                                                     | Difficulty | Solution                         |
 | ---- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------- |
@@ -175,7 +178,7 @@
 | 9    | [Design Movie Rental System](https://leetcode.com/problems/design-movie-rental-system/)     | Hard       | [Solution](/solutions/design.md) |
 | 10   | [Design A Text Editor](https://leetcode.com/problems/design-a-text-editor/)                 | Hard       | [Solution](/solutions/design.md) |
 
-## 11. DFS
+## 12. DFS
 
 | S.No | Problem                                                                                                                           | Difficulty | Solution                      |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------- |
@@ -193,7 +196,7 @@
 | 12   | [Create Components With Same Value](https://leetcode.com/problems/create-components-with-same-value/)                             | Hard       | [Solution](/solutions/dfs.md) |
 | 13   | [Restore the Array From Adjacent Pairs](https://leetcode.com/problems/restore-the-array-from-adjacent-pairs/description/)         | Medium     | [Solution](/solutions/dfs.md) |
 
-## 12. Dijkstra
+## 13. Dijkstra
 
 | S.No | Problem                                                                                                                                                                                   | Difficulty | Solution                          |
 | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------------------------- |
@@ -209,7 +212,7 @@
 | 10   | [Reachable Nodes in Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/)                                                                                 | Hard       | [Solution](/solutions/dijksta.md) |
 | 11   | [Design Graph With Shortest Path Calculator](https://leetcode.com/problems/design-graph-with-shortest-path-calculator/)                                                                   | Hard       | [Solution](/solutions/dijksta.md) |
 
-## 13. Dynamic Programming
+## 14. Dynamic Programming
 
 | S.No | Problem                                                                                           | Difficulty | Solution                     |
 | ---- | ------------------------------------------------------------------------------------------------- | ---------- | ---------------------------- |
@@ -224,7 +227,7 @@
 | 9    | [Word Break](https://leetcode.com/problems/word-break/)                                           | Medium     | [Solution](/solutions/dp.md) |
 | 10   | [Coin Change](https://leetcode.com/problems/coin-change/)                                         | Medium     | [Solution](/solutions/dp.md) |
 
-## 14. Euler Circuit
+## 15. Euler Circuit
 
 | S.No | Problem                                                                                 | Difficulty | Solution                                |
 | ---- | --------------------------------------------------------------------------------------- | ---------- | --------------------------------------- |
@@ -232,7 +235,7 @@
 | 2    | [Cracking The Safe](https://leetcode.com/problems/cracking-the-safe/)                   | Hard       | [Solution](/solutions/euler-circuit.md) |
 | 3    | [Valid Arrangement of Pairs](https://leetcode.com/problems/valid-arrangement-of-pairs/) | Hard       | [Solution](/solutions/euler-circuit.md) |
 
-## 15. Fenwick Tree
+## 16. Fenwick Tree
 
 | S.No | Problem                                                                                                             | Difficulty | Solution                               |
 | ---- | ------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------- |
@@ -241,14 +244,14 @@
 | 3    | [Create Sorted Array Through Instructions](https://leetcode.com/problems/create-sorted-array-through-instructions/) | Hard       | [Solution](/solutions/fenwick-tree.md) |
 | 4    | [Count Good Triplets In An Array](https://leetcode.com/problems/count-good-triplets-in-an-array/)                   | Hard       | [Solution](/solutions/fenwick-tree.md) |
 
-## 16. Greedy Scheduling
+## 17. Greedy Scheduling
 
 | S.No | Problem                                                                                                                       | Difficulty | Solution                                                                              |
 | ---- | ----------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
 | 1    | [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/) | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 2    | [Single Threaded CPU](https://leetcode.com/problems/single-threaded-cpu/)                                                     | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 17. Heaps (Priority Queues)
+## 18. Heaps (Priority Queues)
 
 | S.No | Problem                                                                                                                                     | Difficulty | Solution                                                           |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------ |
@@ -266,7 +269,7 @@
 | 12   | [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)                                                                   | Hard       | [Solution](/solutions/heaps)                                       |
 | 13   | [Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)                                                           | Hard       | [Solution](/solutions/heaps)                                       |
 
-## 18. Intervals
+## 19. Intervals
 
 | S.No | Problem                                                                                                                 | Difficulty | Solution                            |
 | ---- | ----------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------------- |
@@ -277,7 +280,7 @@
 | 5    | [My Calendar I](https://leetcode.com/problems/my-calendar-i/)                                                           | Medium     | [Solution](/solutions/intervals.md) |
 | 6    | [Video Stitching](https://leetcode.com/problems/video-stitching/)                                                       | Medium     | [Solution](/solutions/intervals.md) |
 
-## 19. Line Sweep
+## 20. Line Sweep
 
 | S.No | Problem                                                                                                                         | Difficulty | Solution                             |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------ |
@@ -294,7 +297,7 @@
 | 11   | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)                                                       | Hard       | [Solution](/solutions/line-sweep.md) |
 | 12   | [Number of Flowers In Full Bloom](https://leetcode.com/problems/number-of-flowers-in-full-bloom/)                               | Hard       | [Solution](/solutions/line-sweep.md) |
 
-## 20. Linked List
+## 21. Linked List
 
 | S.No | Problem                                                                                                                   | Difficulty | Solution                              |
 | ---- | ------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------- |
@@ -324,7 +327,7 @@
 | 24   | [Reverse Nodes In K Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)                                       | Hard       | [Solution](/solutions/linked-list.md) |
 | 25   | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)                                               | Hard       | [Solution](/solutions/linked-list.md) |
 
-## 21. LIS
+## 22. LIS
 
 | S.No | Problem                                                                                                                                           | Difficulty | Solution                      |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------- |
@@ -333,14 +336,14 @@
 | 3    | [Minimum Number of Removals To Make Mountain Array](https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/)             | Hard       | [Solution](/solutions/lis.md) |
 | 4    | [Find The Longest Valid Obstacle Course At Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/) | Hard       | [Solution](/solutions/lis.md) |
 
-## 22. Manacher
+## 23. Manacher
 
 | S.No | Problem                                                                                                                                                   | Difficulty | Solution                           |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------- |
 | 1    | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)                                                             | Medium     | [Solution](/solutions/manacher.md) |
 | 2    | [Maximum Product of The Length of Two Palindromic Substrings](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-substrings/) | Hard       | [Solution](/solutions/manacher.md) |
 
-## 23. Matrix
+## 24. Matrix
 
 | S.No | Problem                                                                                                             | Difficulty | Solution                         |
 | ---- | ------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------- |
@@ -353,7 +356,7 @@
 | 7    | [Number of Submatrices That Sum To Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | Hard       | [Solution](/solutions/matrix.md) |
 | 8    | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)                                               | Hard       | [Solution](/solutions/matrix.md) |
 
-## 24. Merge Sort
+## 25. Merge Sort
 
 | S.No | Problem                                                                                                       | Difficulty | Solution                             |
 | ---- | ------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------ |
@@ -363,14 +366,14 @@
 | 4    | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)                                                 | Medium     | [Solution](/solutions/merge-sort.md) |
 | 5    | [Number of Pairs Satisfying Inequality](https://leetcode.com/problems/number-of-pairs-satisfying-inequality/) | Medium     | [Solution](/solutions/merge-sort.md) |
 
-## 25. Minimum Spanning Trees
+## 26. Minimum Spanning Trees
 
 | S.No | Problem                                                                                                                                                             | Difficulty | Solution                          |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------------------------- |
 | 1    | [Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)                                                                     | Medium     | [Solution](/solutions/kruskal.md) |
 | 2    | [Find Critical And Pseudo Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/) | Medium     | [Solution](/solutions/kruskal.md) |
 
-## 26. Prefix State Map
+## 27. Prefix State Map
 
 | S.No | Problem                                                                                                                                                   | Difficulty | Solution                                   |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------ |
@@ -379,7 +382,7 @@
 | 3    | [Find Longest Awesome Substring](https://leetcode.com/problems/find-longest-awesome-substring/)                                                           | Medium     | [Solution](/solutions/prefix-state-map.md) |
 | 4    | [Number of Wonderful Substrings](https://leetcode.com/problems/number-of-wonderful-substrings/submissions/)                                               | Medium     | [Solution](/solutions/prefix-state-map.md) |
 
-## 27. Queries
+## 28. Queries
 
 | S.No | Problem                                                                                                                   | Difficulty | Solution                          |
 | ---- | ------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------------------------- |
@@ -392,7 +395,7 @@
 | 7    | [Minimum Absolute Difference Queries](https://leetcode.com/problems/minimum-absolute-difference-queries/)                 | Medium     | [Solution](/solutions/queries.md) |
 | 8    | [Maximum Genetic Difference Query](https://leetcode.com/problems/maximum-genetic-difference-query/)                       | Hard       | [Solution](/solutions/queries.md) |
 
-## 28. Rolling Hash
+## 29. Rolling Hash
 
 | S.No | Problem                                                                                                     | Difficulty | Solution                                                                              |
 | ---- | ----------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
@@ -405,7 +408,7 @@
 | 7    | [Find Substring With Given Hash Value](https://leetcode.com/problems/find-substring-with-given-hash-value/) | Hard       | [Solution](/solutions/rolling-hash/find-substring-with-given-hash-value.md)           |
 | 8    | [Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath/)                             | Hard       | [Solution](/solutions/rolling-hash/longest-common-subpath.md)                         |
 
-## 29. Segment Tree
+## 30. Segment Tree
 
 | S.No | Problem                                                                                                | Difficulty | Solution                               |
 | ---- | ------------------------------------------------------------------------------------------------------ | ---------- | -------------------------------------- |
@@ -415,14 +418,14 @@
 | 4    | [Shifting Letters - II](https://leetcode.com/problems/shifting-letters-ii/)                            | Medium     | [Solution](/solutions/segment-tree.md) |
 | 5    | [Falling Squares](https://leetcode.com/problems/falling-squares/)                                      | Hard       | [Solution](/solutions/segment-tree.md) |
 
-## 30. Sieve of Eratosthenes
+## 31. Sieve of Eratosthenes
 
 | S.No | Problem                                                       | Difficulty | Solution                                     |
 | ---- | ------------------------------------------------------------- | ---------- | -------------------------------------------- |
 | 1    | [Count Primes](https://leetcode.com/problems/count-primes/)   | Medium     | [Solution](/solutions/sieve-eratosthenes.md) |
 | 2    | [Four Divisors](https://leetcode.com/problems/four-divisors/) | Medium     | [Solution](/solutions/sieve-eratosthenes.md) |
 
-## 31. Sliding Window
+## 32. Sliding Window
 
 | S.No | Problem                                                                                                                         | Difficulty | Solution                                                                  |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------- |
@@ -438,7 +441,7 @@
 | 10   | [Substring With Concatenation Of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)           | Hard       | [Solution](/solutions/sliding-window.md)                                  |
 | 11   | [Count Subarrays With Fixed Count](https://leetcode.com/problems/count-subarrays-with-fixed-bounds/)                            | Hard       | [Solution](/solutions/sliding-window/count-subarrays-with-fixed-count.md) |
 
-## 32. Stack
+## 33. Stack
 
 | S.No | Problem                                                                                                                                                     | Difficulty | Solution                        |
 | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------- |
@@ -460,7 +463,7 @@
 | 16   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)                                                                       | Medium     | [Solution](/solutions/stack.md) |
 | 17   | [Using A Robot To Print The Lexicographically Smallest String](https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string/) | Medium     | [Solution](/solutions/stack.md) |
 
-## 33. Stringstream
+## 34. Stringstream
 
 | S.No | Problem                                                                                       | Difficulty | Solution                               |
 | ---- | --------------------------------------------------------------------------------------------- | ---------- | -------------------------------------- |
@@ -468,14 +471,14 @@
 | 2    | [Find Duplicate File In System](https://leetcode.com/problems/find-duplicate-file-in-system/) | Medium     | [Solution](/solutions/stringstream.md) |
 | 3    | [Apply Discount To Prices](https://leetcode.com/problems/apply-discount-to-prices/)           | Medium     | [Solution](/solutions/stringstream.md) |
 
-## 34. Sum of First N Natural Numbers
+## 35. Sum of First N Natural Numbers
 
 | S.No | Problem                                                                                                                   | Difficulty | Solution                                                 |
 | ---- | ------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------- |
 | 1    | [Count Number of Homogenous Substrings](https://leetcode.com/problems/count-number-of-homogenous-substrings/description/) | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
 | 2    | [Number of Substrings With Only 1s](https://leetcode.com/problems/number-of-substrings-with-only-1s/description/)         | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
 
-## 35. Topological Sort
+## 36. Topological Sort
 
 | S.No | Problem                                                                                                                                 | Difficulty | Solution                                   |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------ |
@@ -488,7 +491,7 @@
 | 7    | [Parallel Courses III](https://leetcode.com/problems/parallel-courses-iii/)                                                             | Hard       | [Solution](/solutions/topological-sort.md) |
 | 8    | [Build A Matrix With Conditions](https://leetcode.com/problems/build-a-matrix-with-conditions/)                                         | Hard       | [Solution](/solutions/topological-sort.md) |
 
-## 36. Trie
+## 37. Trie
 
 | S.No | Problem                                                                                                         | Difficulty | Solution                                                         |
 | ---- | --------------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------- |
@@ -501,7 +504,7 @@
 | 7    | [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)                                             | Hard       | [Solution](/solutions/trie/palindrome-pairs.md)                  |
 | 8    | [Sum of Prefix Scores of Strings](https://leetcode.com/problems/sum-of-prefix-scores-of-strings/)               | Hard       | [Solution](/solutions/trie/sum-of-prefix-scores-of-strings.md)   |
 
-## 37. Two Dimensional Plane
+## 38. Two Dimensional Plane
 
 | S.No | Problem                                                                                                                   | Difficulty | Solution                                                                              |
 | ---- | ------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
@@ -510,7 +513,7 @@
 | 3    | [Queries On Number of Points Inside A Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/) | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 4    | [Detonate The Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/)                                   | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 38. Two Pointer
+## 39. Two Pointer
 
 | S.No | Problem                                                                                                      | Difficulty | Solution                                                                              |
 | ---- | ------------------------------------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------- |
@@ -531,7 +534,7 @@
 | 15   | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)                          | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 16   | [Lexicographically Smallest Palindrome](https://leetcode.com/problems/lexicographically-smallest-palindrome) | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 39. Union Find
+## 40. Union Find
 
 | S.No | Problem                                                                                                    | Difficulty | Solution                                                                              |
 | ---- | ---------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
