@@ -41,16 +41,17 @@
 - [28. Queries](#28-queries)
 - [29. Rolling Hash](#29-rolling-hash)
 - [30. Segment Tree](#30-segment-tree)
-- [31. Sieve of Eratosthenes](#31-sieve-of-eratosthenes)
-- [32. Sliding Window](#32-sliding-window)
-- [33. Stack](#33-stack)
-- [34. Stringstream](#34-stringstream)
-- [35. Sum of First N Natural Numbers](#35-sum-of-first-n-natural-numbers)
-- [36. Topological Sort](#36-topological-sort)
-- [37. Trie](#37-trie)
-- [38. Two Dimensional Plane](#38-two-dimensional-plane)
-- [39. Two Pointer](#39-two-pointer)
-- [40. Union Find](#40-union-find)
+- [31. Sets](#31-sets)
+- [32. Sieve of Eratosthenes](#32-sieve-of-eratosthenes)
+- [33. Sliding Window](#33-sliding-window)
+- [34. Stack](#34-stack)
+- [35. Stringstream](#35-stringstream)
+- [36. Sum of First N Natural Numbers](#36-sum-of-first-n-natural-numbers)
+- [37. Topological Sort](#37-topological-sort)
+- [38. Trie](#38-trie)
+- [39. Two Dimensional Plane](#39-two-dimensional-plane)
+- [40. Two Pointer](#40-two-pointer)
+- [41. Union Find](#41-union-find)
 
 ## 1. Backtracking
 
@@ -418,14 +419,20 @@
 | 4    | [Shifting Letters - II](https://leetcode.com/problems/shifting-letters-ii/)                            | Medium     | [Solution](/solutions/segment-tree.md) |
 | 5    | [Falling Squares](https://leetcode.com/problems/falling-squares/)                                      | Hard       | [Solution](/solutions/segment-tree.md) |
 
-## 31. Sieve of Eratosthenes
+## 31. Sets
+
+| S.No | Problem                                                                                                | Difficulty | Solution                               |
+| ---- | ------------------------------------------------------------------------------------------------------ | ---------- | -------------------------------------- |
+| 1    | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)  | Medium     | [Solution](/solutions/sets.md) |
+
+## 32. Sieve of Eratosthenes
 
 | S.No | Problem                                                       | Difficulty | Solution                                     |
 | ---- | ------------------------------------------------------------- | ---------- | -------------------------------------------- |
 | 1    | [Count Primes](https://leetcode.com/problems/count-primes/)   | Medium     | [Solution](/solutions/sieve-eratosthenes.md) |
 | 2    | [Four Divisors](https://leetcode.com/problems/four-divisors/) | Medium     | [Solution](/solutions/sieve-eratosthenes.md) |
 
-## 32. Sliding Window
+## 33. Sliding Window
 
 | S.No | Problem                                                                                                                         | Difficulty | Solution                                                                  |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------- |
@@ -441,7 +448,7 @@
 | 10   | [Substring With Concatenation Of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)           | Hard       | [Solution](/solutions/sliding-window.md)                                  |
 | 11   | [Count Subarrays With Fixed Count](https://leetcode.com/problems/count-subarrays-with-fixed-bounds/)                            | Hard       | [Solution](/solutions/sliding-window/count-subarrays-with-fixed-count.md) |
 
-## 33. Stack
+## 34. Stack
 
 | S.No | Problem                                                                                                                                                     | Difficulty | Solution                        |
 | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------- |
@@ -463,7 +470,7 @@
 | 16   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)                                                                       | Medium     | [Solution](/solutions/stack.md) |
 | 17   | [Using A Robot To Print The Lexicographically Smallest String](https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string/) | Medium     | [Solution](/solutions/stack.md) |
 
-## 34. Stringstream
+## 35. Stringstream
 
 | S.No | Problem                                                                                       | Difficulty | Solution                               |
 | ---- | --------------------------------------------------------------------------------------------- | ---------- | -------------------------------------- |
@@ -471,14 +478,14 @@
 | 2    | [Find Duplicate File In System](https://leetcode.com/problems/find-duplicate-file-in-system/) | Medium     | [Solution](/solutions/stringstream.md) |
 | 3    | [Apply Discount To Prices](https://leetcode.com/problems/apply-discount-to-prices/)           | Medium     | [Solution](/solutions/stringstream.md) |
 
-## 35. Sum of First N Natural Numbers
+## 36. Sum of First N Natural Numbers
 
 | S.No | Problem                                                                                                                   | Difficulty | Solution                                                 |
 | ---- | ------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------- |
 | 1    | [Count Number of Homogenous Substrings](https://leetcode.com/problems/count-number-of-homogenous-substrings/description/) | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
 | 2    | [Number of Substrings With Only 1s](https://leetcode.com/problems/number-of-substrings-with-only-1s/description/)         | Medium     | [Solution](/solutions/sum-of-first-n-natural-numbers.md) |
 
-## 36. Topological Sort
+## 37. Topological Sort
 
 | S.No | Problem                                                                                                                                 | Difficulty | Solution                                   |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------ |
@@ -491,7 +498,7 @@
 | 7    | [Parallel Courses III](https://leetcode.com/problems/parallel-courses-iii/)                                                             | Hard       | [Solution](/solutions/topological-sort.md) |
 | 8    | [Build A Matrix With Conditions](https://leetcode.com/problems/build-a-matrix-with-conditions/)                                         | Hard       | [Solution](/solutions/topological-sort.md) |
 
-## 37. Trie
+## 38. Trie
 
 | S.No | Problem                                                                                                         | Difficulty | Solution                                                         |
 | ---- | --------------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------- |
@@ -504,7 +511,7 @@
 | 7    | [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)                                             | Hard       | [Solution](/solutions/trie/palindrome-pairs.md)                  |
 | 8    | [Sum of Prefix Scores of Strings](https://leetcode.com/problems/sum-of-prefix-scores-of-strings/)               | Hard       | [Solution](/solutions/trie/sum-of-prefix-scores-of-strings.md)   |
 
-## 38. Two Dimensional Plane
+## 39. Two Dimensional Plane
 
 | S.No | Problem                                                                                                                   | Difficulty | Solution                                                                              |
 | ---- | ------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
@@ -513,7 +520,7 @@
 | 3    | [Queries On Number of Points Inside A Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/) | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 4    | [Detonate The Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/)                                   | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 39. Two Pointer
+## 40. Two Pointer
 
 | S.No | Problem                                                                                                      | Difficulty | Solution                                                                              |
 | ---- | ------------------------------------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------- |
@@ -534,7 +541,7 @@
 | 15   | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)                          | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 16   | [Lexicographically Smallest Palindrome](https://leetcode.com/problems/lexicographically-smallest-palindrome) | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 
-## 40. Union Find
+## 41. Union Find
 
 | S.No | Problem                                                                                                    | Difficulty | Solution                                                                              |
 | ---- | ---------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
