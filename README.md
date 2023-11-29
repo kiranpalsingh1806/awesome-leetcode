@@ -141,6 +141,7 @@
 | 14   | [Bitwise XOR of All Pairings](https://leetcode.com/problems/bitwise-xor-of-all-pairings/)                                                       | Medium     | [Solution](/solutions/bit-manipulation.md) |
 | 15   | [Closest Subsequence Sum](https://leetcode.com/problems/closest-subsequence-sum/)                                                               | Hard       | [Solution](/solutions/bit-manipulation.md) |
 | 16   | [Find The Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/)                                                   | Hard       | [Solution](/solutions/bit-manipulation.md) |
+| 17   | [Number of One Bits](https://leetcode.com/problems/number-of-1-bits/)                                                                           | Easy       | [Solution](/solutions/bit-manipulation.md) |
 
 ## 8. Bitmasks
 
@@ -421,9 +422,9 @@
 
 ## 31. Sets
 
-| S.No | Problem                                                                                                | Difficulty | Solution                               |
-| ---- | ------------------------------------------------------------------------------------------------------ | ---------- | -------------------------------------- |
-| 1    | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)  | Medium     | [Solution](/solutions/sets.md) |
+| S.No | Problem                                                                                                             | Difficulty | Solution                       |
+| ---- | ------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------ |
+| 1    | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | Medium     | [Solution](/solutions/sets.md) |
 
 ## 32. Sieve of Eratosthenes
 
