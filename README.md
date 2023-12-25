@@ -228,6 +228,7 @@
 | 8    | [House Robber](https://leetcode.com/problems/house-robber/)                                       | Medium     | [Solution](/solutions/dp.md) |
 | 9    | [Word Break](https://leetcode.com/problems/word-break/)                                           | Medium     | [Solution](/solutions/dp.md) |
 | 10   | [Coin Change](https://leetcode.com/problems/coin-change/)                                         | Medium     | [Solution](/solutions/dp.md) |
+| 11   | [Count Number of Texts](https://leetcode.com/problems/count-number-of-texts/description/)         | Medium     | [Solution](/solutions/dp.md) |
 
 ## 15. Euler Circuit
 
