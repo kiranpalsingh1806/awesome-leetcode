@@ -556,3 +556,6 @@
 | 7    | [Satifiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/) | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 8    | [Smallest String With Swaps](https://leetcode.com/problems/smallest-string-with-swaps/)                    | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
 | 9    | [Number of Good Paths](https://leetcode.com/problems/number-of-good-paths/)                                | Medium     | [Solution](https://github.com/kiranpalsingh1806/awesome-dsa/blob/master/SOLUTIONS.md) |
+
+
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=kiranpalsingh1806&label=Views&color=blue&style=plastic" alt="kiranpalsingh" /> </p>
